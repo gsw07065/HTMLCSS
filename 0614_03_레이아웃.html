@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .parent {
+        width: 500px;
+        /* px=고정 수치 */
+        height: 500px;
+        border: 1px solid #000;
+        position: relative;
+        /* left: 100px; */
+        /* 부모에 넣으면 자식도 따라감 */
+      }
+      .child {
+        width: 10%;
+        /* 부모의 10% (상대 수치) */
+        height: 20%;
+        background-color: red;
+        position: absolute;
+        /* 부모의 포지션 없으면 body를 따라감 */
+        right: 0;
+        bottom: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="child"></div>
+    </div>
+  </body>
+</html>
