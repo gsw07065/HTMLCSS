@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .parent {
+        width: 1200px;
+        background-color: #ccc;
+        margin: 20px auto;
+      }
+      .parent > div {
+        width: 200px;
+        height: 100px;
+      }
+      .parent > div:nth-child(1) {
+        background-color: red;
+      }
+      .parent > div:nth-child(2) {
+        background-color: blue;
+      }
+      .parent > div:nth-child(3) {
+        background-color: yellow;
+      }
+      .top {
+        overflow: hidden;
+      }
+      .top > div {
+        float: left;
+      }
+      .center {
+        position: relative;
+        height: 100px;
+        /* position 사용 시 부모에 height를 안주면 아래 형태와 겹치게 됨 */
+      }
+      .center > div {
+        position: absolute;
+      }
+      .center > div:first-child {
+        left: 0;
+      }
+      .center > div:nth-child(2) {
+        left: 200px;
+      }
+      .center > div:nth-child(3) {
+        left: 400px;
+      }
+      .bottom {
+        font-size: 0;
+        /* 인라인블록 처리할 때 사이 간격 없애줌 (주석처리 따로 안해도 됨) */
+      }
+      .bottom > div {
+        display: inline-block;
+        font-size: 16px;
+        /* 글자 들어가면 폰트 사이즈 따로 넣어줘야함 */
+        vertical-align: top;
+        /* 인라인 속성을 가지고 있는 경우만 적용됨 */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent top">
+      <div>111</div>
+      <div>222</div>
+      <div></div>
+    </div>
+    <div class="parent center">
+      <div>111</div>
+      <div>222</div>
+      <div></div>
+    </div>
+    <div class="parent bottom">
+      <div>111</div>
+      <div>222</div>
+      <div></div>
+    </div>
+  </body>
+</html>

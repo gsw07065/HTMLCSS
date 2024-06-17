@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        position: relative;
+      }
+      div:first-child {
+        height: 300px;
+        width: 300px;
+        background-color: red;
+        z-index: 1;
+        /* 되도록 음의 값 주지 않을 것, 컨텐츠 안 보일 수 있음 */
+      }
+      div:nth-child(2) {
+        height: 200px;
+        width: 200px;
+        background-color: yellow;
+        top: -50px;
+        z-index: 1;
+      }
+      div:nth-child(3) {
+        height: 100px;
+        width: 100px;
+        background-color: blue;
+        top: -100px;
+      }
+      p {
+        left: 100px;
+        top: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <p>문단태그</p>
+  </body>
+</html>

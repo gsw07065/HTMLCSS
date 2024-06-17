@@ -26,11 +26,17 @@
       }
       p:nth-child(2) {
         color: blue;
+        /* p 중에 몇번째인지X!
+      부모인 body 자식요소 중에 몇번째인지 체크 */
       }
-      p:last-child {
+      p:last-of-type {
         color: blue;
-        /* 라이브서버에서는 적용 안됨 */
       }
+      /* last-child를 하면 동일 부모 마지막에 위치한 a 태그 때문에 적용 안됨! */
+
+      /* p:nth-last-child(2) {
+        color: blue;
+      } */
       a:hover::before {
         content: "♥";
       }

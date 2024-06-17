@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        /* 작업자가 설정하지 않은 기본여백 초기화  */
+      }
+      .parent {
+        width: 1200px;
+        margin: 0 auto;
+      }
+      .parent > div:nth-child(1) {
+        height: 100px;
+        background-color: red;
+      }
+      .parent > div:nth-child(2) {
+        height: 100px;
+        background-color: blue;
+      }
+      .one {
+        overflow: hidden;
+        /* or height로 높이값을 주거나 */
+      }
+      .one > div {
+        height: 500px;
+        float: left;
+      }
+      .one > div:nth-child(1) {
+        width: 20%;
+        background-color: green;
+      }
+      .one > div:nth-child(2) {
+        width: 70%;
+        background-color: pink;
+      }
+      .one > div:nth-child(3) {
+        width: 10%;
+        background-color: green;
+      }
+      .parent > div:last-child {
+        height: 100px;
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div>1</div>
+      <div>2</div>
+      <div class="one">
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+      </div>
+      <div>6</div>
+    </div>
+  </body>
+</html>

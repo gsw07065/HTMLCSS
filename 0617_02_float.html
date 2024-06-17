@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .parent {
+        height: 65px;
+      }
+      .parent,
+      .parent1 {
+        width: 1200px;
+        margin: 0 auto;
+        border: 1px solid;
+        /* border 컬러 생략시 블랙으로 뜸 */
+        position: relative;
+        background-color: yellow;
+      }
+      .parent > div {
+        position: absolute;
+      }
+      .parent > div:first-child {
+        left: 0;
+      }
+      .parent > div:nth-child(2) {
+        right: 0;
+      }
+      /* div:first-child로 할 시, body의 첫 자식요소인 div도 함께 포함됨! */
+      .parent1 {
+        overflow: hidden;
+        /* 높이를 잃어버린 부모의 높이 값 찾아줌 (absolute일 때는 다 계산해야함) */
+      }
+      .parent1 > div:first-child {
+        float: left;
+        /* float 주면 absolute와 마찬가지로 부모의 높이 사라짐 */
+      }
+      .parent1 > div:last-child {
+        float: right;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div>left<br />left<br />left</div>
+      <div>right</div>
+    </div>
+    <div class="parent1">
+      <div>left<br />left<br />left<br />left</div>
+      <div>right</div>
+    </div>
+  </body>
+</html>

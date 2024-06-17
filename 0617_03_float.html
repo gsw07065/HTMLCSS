@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .parent {
+        width: 1200px;
+        margin: 0 auto;
+        border: 1px solid;
+        /* border 컬러 생략시 블랙으로 뜸 */
+
+        background-color: yellow;
+      }
+      .parent {
+        overflow: hidden;
+      }
+      /* child 요소에 float 속성을 지정하면 부모요소가 높이를 상실하고
+      아래 요소(.parent1)를 자석처럼 끌어당김
+      그 단점을 부모요소에 overflow:hidden을 지정하면 보완됨 */
+      .parent > div:first-child {
+        float: left;
+      }
+      .parent > div:nth-child(2) {
+        float: right;
+      }
+      .parent1 {
+        width: 200px;
+        border: 1px solid;
+        overflow: hidden;
+        margin: 0 auto;
+      }
+      .parent1 > div {
+        float: left;
+      }
+      .parent2 {
+        width: 200px;
+        border: 1px solid;
+        position: relative;
+        height: 25px;
+        margin: 0 auto;
+      }
+      .parent2 > div:first-child {
+        position: absolute;
+        left: 0;
+      }
+      .parent2 > div:nth-child(2) {
+        position: absolute;
+        left: 25px;
+      }
+      .parent2 > div:nth-child(3) {
+        position: absolute;
+        left: 70px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div>left<br />left<br />left</div>
+      <div>right</div>
+    </div>
+    <div class="parent1">
+      <div>left왼쪽</div>
+      <div>center</div>
+      <div>right</div>
+    </div>
+    <div class="parent2">
+      <div>left왼쪽</div>
+      <div>center</div>
+      <div>right</div>
+    </div>
+  </body>
+</html>
