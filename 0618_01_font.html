@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      /* html {
+        font-size: 30px;
+      } 
+      아래 루트와 동일한 뜻 */
+      :root {
+        font-size: 30px;
+      }
+      p {
+        font-size: 200%;
+        /* 30px의 200% = 60px */
+        font-family: Arial, "돋움", sans-serif;
+        background-color: red;
+        margin: 50px 0;
+        padding: 50px;
+        width: 1em;
+        /* width height 지정하지 않으면 auto */
+      }
+      .parent {
+        /* font-size: 10em; */
+
+        font-size: 50px;
+        background-color: red;
+        width: 2em;
+        height: 500px;
+      }
+      .child {
+        background-color: yellow;
+        width: auto;
+        height: auto;
+        /* width height 지정하지 않으면 auto (padding,border 적용안됨?) */
+        padding: 50px;
+        opacity: 0.5;
+        font-size: 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <p>그린컴퓨터아트학원Web Design</p>
+    <p>web design</p>
+    <div class="parent">
+      parent
+      <div class="child">child</div>
+    </div>
+  </body>
+</html>
