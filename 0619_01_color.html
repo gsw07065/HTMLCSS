@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    h1{color: rgb(255, 0, 0); background-color: beige;
+      letter-spacing: 10px; word-spacing: 30px;  padding: 50px;
+      text-transform:capitalize; text-shadow: 5px 5px 5px rgba(0, 0, 0, .4), -5px -5px 5px rgba(0, 0, 0, .4);}
+      /* text-transform 영문 대소문자 변화 */
+      h1:hover{text-decoration: underline;text-underline-offset: 10px;text-decoration-color: blue; text-decoration-style:dashed;
+      text-decoration-thickness: 5px; text-indent: 20px;}
+      /* text-indent 들여쓰기 (블록요소에만 적용 가능) */
+    /* p,a{color: #0f0;} */
+    /* p {text-shadow: 0 0 5px rgba(255, 0, 0, 1); font-size: 40px;} */
+    p{text-align: center; width: 500px; border: 1px solid; margin: 10px auto; height: 500px; vertical-align: middle; display: table-cell;
+    text-indent: -100px;}
+    /* p text-align p안에 있는 글자들만 정렬 (justify - 양끝 수평정렬) */
+    img{vertical-align: baseline;}
+    /* 인라인 속성에만 vertical-align(수직정렬) 적용 가능! */
+  </style>
+</head>
+<body>
+  <h1>제목태그 title</h1>
+  <p>문단태그</p>
+  <p><a href="#">링크태그</a></p>
+  <!-- a태그 컬러 선택시 주의 -->
+  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+  <p><img src="images/cake.jpg" alt="cake">cake</p>
+</body>
+</html>
