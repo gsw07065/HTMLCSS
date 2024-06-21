@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>복습</title>
+  <style>
+    .clearfix::before,.clearfix::after{content: ""; display: block;}
+    .clearfix::after{clear: both;}
+    /* 플롯 준 요소의 부모에 class="clearfix"로 만들어서 위처럼 적용*/
+
+  body{text-align: center;}
+  /* 부모에 text-align: center 주면 인라인블록 중앙정렬 가능 */
+  div,span{width: 50px; border: 1px solid;
+    /* display: inline-block; margin: 50px auto; */
+  }
+  /* inline-block - 줄바꿈은 안됨(인라인), width는 가짐(블록) margin중앙정렬X(인라인) */
+  /* article{overflow: hidden;} */
+  /* 플롯 준 요소는 부모 꼭 만들어줄 것 */
+  div{float: left;}
+  span{float: right; margin: 0 3px;}
+  /* float 주면 인라인요소도 블록 속성을 따라감! */
+  section{width: 50px; border: 1px solid; margin: 0 auto;
+    /* clear: both; */
+  }
+  /* clear: both로 줄 정렬 바꿔줌 */
+  
+  nav{float: right;}
+  nav span{float: left;}
+  /* 우측 역순 정렬 바꿔줌 (부모를 right로, 자식요소를 left로 적용) */
+  </style>
+</head>
+<body>
+  <article class="clearfix">
+    <div>블록요소</div>
+    <div>블록요소</div>
+    <div>블록요소</div>
+    <div>블록요소</div>
+    <div>블록요소</div>
+    <span>인라인요소1</span>
+    <span>인라인요소2</span>
+    <span>인라인요소3</span>
+    <span>인라인요소4</span>
+    <span>인라인요소5</span>
+    <section>블록요소</section>
+  </article>
+  <article class="clearfix">
+    <div>블록요소</div>
+    <div>블록요소</div>
+    <div>블록요소</div>
+    <div>블록요소</div>
+    <div>블록요소</div>
+    <nav>
+      <span>인라인요소1</span>
+      <span>인라인요소2</span>
+      <span>인라인요소3</span>
+      <span>인라인요소4</span>
+      <span>인라인요소5</span>
+    </nav>
+  </article>
+  <section>블록요소</section>
+</body>
+</html>

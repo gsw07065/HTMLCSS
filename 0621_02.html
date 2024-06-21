@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>02</title>
+  <style>
+ *{margin: 0; padding: 0;}
+ .wrap{width: 800px; margin: 0 auto; font-size: 0;}
+ .dir{overflow: hidden;}
+ .dir>div{float: left;}
+ .dir .directory{margin-left: 200px; font-size: 10px;}
+ .dir .directory ul{list-style: none;}
+ .dir .directory ul li{float: left; margin-right: 40px; text-transform: uppercase;}
+ .dir .food02{float: right;}
+ .con{overflow: hidden;}
+ .con>div{float: left;}
+ .con .food{position: relative; z-index: 1;}
+ .con .side{position: relative; top: 170px;}
+ .number{border-left: 1px solid #ccc;} 
+.side .num08{width: 110px; height: 110px; text-align:center; border-radius: 50%; background-color: #FDDEE1; color:#E0A0A6; align-content:center; font-size: 50px; letter-spacing: 3px; margin: 0 auto;
+}
+/* align-content:center 한줄일 경우에는 line-height:110px(들어있는 공간과 동일한 크기) 로도 가능 */
+.side{position: relative;}
+.side .word{width: 90%; height: 20px; line-height: 20px; background-color:#FDDEE1; color:#EB5A68;
+  font-size: 12px; margin-top: 10px; letter-spacing: 2px; text-transform: uppercase; margin: 10px auto 0; padding-left: 10px;}
+  /* text-indent: 5px = padding-left: 10px */
+  .nav {font-size: 11px; width: 130px; position: relative; left: 0;}
+  .nav .up p{border-bottom: 1px solid #ccc; margin: 12px auto; padding-bottom: 3px;}
+  .nav .down {position: relative; bottom: -100px;}
+  .nav .down p{border: 1px solid #ccc; height: 45px; background-color: #ddd; margin:5px auto;
+  text-align: center; align-content: center; text-transform: uppercase;}
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><img src="images/food_img/top.gif" alt="top"></div>
+  <div class="dir">
+    <div class="food01"><img src="images/food_img/food_01.gif" alt="food_01"></div>
+    <div class="directory">
+      <ul>
+        <li>august / 2003 /</li>
+        <li>summer</li>
+        <li>special</li>
+        <li>e· magazine</li>
+      </ul>
+    </div>
+    <div class="food02"><img src="images/food_img/food_02.gif" alt="food_02"></div>
+  </div>
+  <div class="con">
+    <div class="note"><img src="images/food_img/note.gif" alt="note"></div>
+    <div class="food"><img src="images/food_img/image.gif" alt="image"></div>
+    <div class="side">
+      <div class="number">
+        <p class="num08"><strong>08</strong></p>
+        <p class="word">food&diet</p>
+      </div>
+      <div class="nav">
+        <div class="up">
+          <p>01. contents</p>
+          <p>02. contents</p>
+          <p>03. contents</p>
+          <p>04. contents</p>
+          <p>05. contents</p>
+        </div>
+        <div class="down">
+          <p>contents banner</p>
+          <p>contents banner</p>
+          <p>contents banner</p>
+        </div>
+      </div>
+      <div class="page"><img src="images/food_img/page.gif" alt="page"></div>
+  </div>
+    </div>
+  <div class="bot"><img src="images/food_img/bottom.gif" alt="bottom"></div>
+</div>
+</body>
+</html>
+<!-- 이미지는 항상 부모를 가져야함 div -->
