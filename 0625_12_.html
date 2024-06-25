@@ -1,43 +1,88 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-     @font-face {
+    @font-face {
       font-family: nanumsquareb;
       src: url(webfonts/NanumSquareEB.otf) format("opentype");
     }
+
     @font-face {
       font-family: nanumsquarer;
       src: url(webfonts/NanumSquareR.otf) format("opentype");
     }
+
     @font-face {
       font-family: nanumbarunl;
       src: url(webfonts/NanumBarunGothicLight.otf) format("opentype");
     }
 
-    *{margin: 0; padding: 0;}
-  section{width: 1480px; height: 440px; margin: 50px auto;
-  background: url(images/bg_story_1.jpg) left center/720px no-repeat; border-radius: 10px;}
-  section div {float: left;}
-  /* section div img{width: 720px; border-radius: 10px;} */
-  section .text {margin-left: 100px; margin-top: 150px;}
-  section div p {padding: 10px;}
-  section div p:first-child{font: 24px nanumbarunl; color: #777;}
-  section div p:nth-child(2){font: 48px nanumsquarer; color: #222;}
-  section div p:nth-child(3){font:48px nanumsquareb; color: #ffc72c;}
-</style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    section {
+      width: 1480px;
+      height: 440px;
+      margin: 50px auto;
+    }
+
+    section div {
+      float: left;
+    }
+
+    section div:first-child {
+      width: 720px;
+      height: 440px;
+      background: url(images/bg_story_1.jpg) center/720px no-repeat;
+      border-radius: 10px;
+      margin-left: 30px;
+    }
+
+    section .text {
+      float: right;
+      width: 45%;
+      margin-top: 130px;
+    }
+
+    /* section div img{width: 720px; border-radius: 10px;} */
+
+    section div p {
+      padding: 10px;
+    }
+
+    section div p:first-child {
+      font: 24px nanumbarunl;
+      color: #777;
+    }
+
+    section div p:nth-child(2) {
+      font: 48px nanumsquarer;
+      color: #222;
+    }
+
+    section div p:nth-child(3) {
+      font: 48px nanumsquareb;
+      color: #ffc72c;
+    }
+  </style>
 </head>
+
 <body>
   <section>
     <!-- <div><img src="images/bg_story_1.jpg" alt="bg_story_1"></div> -->
-    <div class="text">
+    <div></div>
+    <div class=text>
       <p>여행의 새로운 가치를 알립니다</p>
       <p>가치를 전달하는 여행</p>
       <p>Value-Creating</p>
     </div>
   </section>
 </body>
+
 </html>
