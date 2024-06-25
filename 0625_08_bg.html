@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/all.css">
+  <style>
+p{width: 200px; height: 200px; background-color: red;
+background-image: url(images/photo1.jpg);}
+ p:nth-child(1){background-size: cover;}
+ /* cover 큰 거에 맞춤 (비율 안깨짐) */
+ p:nth-child(2){background-size: contain;}
+ /* contain 작은 거에 맞춤 (비율 안깨짐) */
+ p:nth-child(3){background-size: 100px;}
+ /* background-clip 배경 컬러일 때 어디서부터 넣을지 결정 (이미지일 땐 origin) */
+</style>
+</head>
+<body>
+  <p>1</p>
+  <p>2</p>
+  <p>3</p>
+</body>
+</html>

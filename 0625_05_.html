@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/all.css">
+  <style>
+    @font-face {
+      font-family: nanumbarunb;
+      src: url(webfonts/NanumBarunGothicBold.otf) format("opentype");
+    }
+    @font-face {
+      font-family: nanumbarun;
+      src: url(webfonts/NanumBarunGothicLight.otf) format("opentype");
+    }
+    *{margin: 0; padding: 0;}
+  section{width: 920px; margin: 20px auto; overflow: hidden;}
+  article{border: 1px solid #ddd; width: 450px; overflow: hidden; float: left;}
+  article:last-child{float: right;}
+  /* 사이 간격 나누기 */
+  article div{float: left; width: 50%;}
+  /* width: 50% 각 크기 50%씩 차지 (이미지,텍스트) */
+  article div:last-child {color: #434343;  word-break: keep-all;}
+  /* word-break: keep-all = 단어를 유지한 상태로 줄바꿔지게 함 (br대체) */
+  article div h3{font: 20px nanumbarunb; line-height: 60px; text-indent: 20px;}
+  article div p{font: 16px nanumbarun; line-height: 30px; width: 80%; margin: 0 auto;}
+  
+  article img{vertical-align: middle;}
+  </style>
+</head>
+<body>
+<section>
+  <article>
+    <div>
+      <img src="images/recruit_nav_list01.png" alt="recruit_nav_list01">
+    </div>
+    <div>
+      <h3>인재상</h3>
+      <p>다양한 변화를 수용하면서 열린 마음으로 바른 길을 지향하는 참다운 인재를 추구합니다.</p>
+    </div>
+  </article>
+  <article>
+    <div>
+      <img src="images/recruit_nav_list02.png" alt="recruit_nav_list02">
+    </div>
+    <div>
+      <h3>인사제도</h3>
+      <p>능력과 업적에 따른 인사제도 실현, 인격과 개성을 존중하는 기업문화 정착을 추구합니다.</p>
+    </div>
+  </article>
+  </section>
+  <section>
+  <article>
+    <div>
+      <img src="images/recruit_nav_list03.png" alt="recruit_nav_list03">
+    </div>
+    <div>
+      <h3>복리후생</h3>
+      <p>일과 삶의 균형 각종 복리후생 제도를 통하여 직원들의 삶의 질 향상을 도모하고 있습니다.</p>
+    </div>
+  </article>
+  <article>
+    <div>
+      <img src="images/recruit_nav_list03.png" alt="recruit_nav_list03">
+    </div>
+    <div>
+      <h3>복리후생</h3>
+      <p>일과 삶의 균형 각종 복리후생 제도를 통하여 직원들의 삶의 질 향상을 도모하고 있습니다.</p>
+    </div>
+  </article>
+</section>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/all.css">
+  <style>
+  body>p{width: 1200px; height: 1300px; border: 1px solid;}
+  body>p:first-child{background-color: red; }
+  body>p:nth-child(2){background-image: url(images/photo1.jpg);}
+  body>p:nth-child(3){
+  background-image: url(images/photo1.jpg);
+  background-position: 100% 0; background-repeat: no-repeat;
+  background-attachment: fixed;}
+  /* background-position 보이고자 하는 위치 지정 (px로 지정시 그 px에서부터 보여지게 함)*/
+  /* background-repeat 반복 여부 설정 */
+  /* background-attachment: fixed 배경 고정 */
+  div p{border-width: 20px; padding: 100px; 
+        width: 200px; height: 200px;
+        border-color: rgba(0,0,0,0.3);background-image: url(images/photo1.jpg);
+        background-position: 0 0; border-style: solid; background-repeat: no-repeat;}
+  div p:first-child{background-origin: border-box;}
+  div p:nth-child(2){background-origin: padding-box;}
+  div p:nth-child(3){background-origin: content-box;}
+  /* background-origin 백그라운드 이미지를 어디서부터 넣을지 결정 */
+</style>
+</head>
+<body>
+  <p></p>
+  <p></p>
+  <p></p>
+  <div>
+    <p>border-box</p>
+    <p>padding-box</p>
+    <p>content-box</p>
+  </div>
+</body>
+</html>
