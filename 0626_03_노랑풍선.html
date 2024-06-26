@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>노랑풍선3</title>
+  <style>
+    @font-face {
+      font-family: ybmedium;
+      src: url(webfonts/YbFontMedium.woff) format("woff");
+    }
+    @font-face {
+      font-family: notob;
+      src: url(webfonts/NotoSans-Bold.woff) format("woff");
+    }
+
+    *{margin: 0; padding: 0;}
+    .con{width: 1200px; height: 500px; margin: 50px auto;}
+    .con h1 {margin-bottom: 30px;
+     margin-left: 26px;
+    font-family: ybmedium;
+    font-size: 36px; color: #222;}
+    .con div{width: 214px; height: 156.97px;
+    float: left;
+    margin-left: calc((100% - (214px * 5)) / 5);}
+    .con div h3 {font-size: 24px; font-weight: bold; color: #4567ad; margin-bottom: 50px;
+    position: relative; font-family: notob; 
+    }
+    .con div h3::after{
+      content: "";
+      width: 100%; /* 100% 주는 대신 부모 position: relative 줘야함 (.con div h3) */
+      height: 1px; background-color: #ddd; position: absolute;
+      bottom: -25px; left: 0
+    }
+    .con div p {font-size: 16px; color: #555;
+      word-break: keep-all;}
+   </style>
+</head>
+
+<body>
+  <div class="con">
+    <h1>노랑풍선<br>고객서비스 헌장</h1>
+    <div>
+        <h3>거품없는 여행상품</h3>
+        <p>거품없는 여행상품으로
+          최고의 만족을 드리겠습니다.</p>
+    </div>
+      <div>
+      <h3>고객의 안전</h3>
+      <p>고객의 안전을 최우선으로 하여
+        여행문화를 선도하겠습니다.</p>
+      </div>
+    <div>
+      <h3>친절한 서비스</h3>
+      <p>친절한 서비스로
+        고객감동경영을 실천하겠습니다.</p>
+    </div>
+    <div>
+      <h3>약속 준수</h3>
+      <p>고객과의 약속을 준수하며
+        업무를 신속하고 정확하게
+        처리하겠습니다.</p>
+    </div>
+    <div>
+      <h3>소중한 의견</h3>
+      <p>고객의 소중한 의견을
+        경영에 충실히 반영하겠습니다.</p>
+    </div>
+  </div>
+</body>
+
+</html>

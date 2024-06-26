@@ -17,8 +17,8 @@
     }
 
     @font-face {
-      font-family: nanumbarunl;
-      src: url(webfonts/NanumBarunGothicLight.otf) format("opentype");
+      font-family: nanumbarun;
+      src: url(webfonts/NanumBarunGothic.otf) format("opentype");
     }
 
     * {
@@ -36,28 +36,26 @@
       float: left;
     }
 
-    section div:first-child {
+    section .bg {
       width: 720px;
       height: 440px;
-      background: url(images/bg_story_1.jpg) center/720px no-repeat;
+      background: url(images/bg_story_1.jpg) left center/720px no-repeat;
       border-radius: 10px;
-      margin-left: 30px;
+      /* margin-left: 20px; */
     }
 
-    section .text {
+    section div:last-child {
       float: right;
       width: 45%;
       margin-top: 130px;
     }
-
-    /* section div img{width: 720px; border-radius: 10px;} */
 
     section div p {
       padding: 10px;
     }
 
     section div p:first-child {
-      font: 24px nanumbarunl;
+      font: 24px nanumbarun;
       color: #777;
     }
 
@@ -74,10 +72,9 @@
 </head>
 
 <body>
-  <section>
-    <!-- <div><img src="images/bg_story_1.jpg" alt="bg_story_1"></div> -->
-    <div></div>
-    <div class=text>
+  <section class="con">
+    <div class="bg"></div>
+    <div class="text">
       <p>여행의 새로운 가치를 알립니다</p>
       <p>가치를 전달하는 여행</p>
       <p>Value-Creating</p>
