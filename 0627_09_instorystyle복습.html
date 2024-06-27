@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    .index {width: 1000px; height: 1000px; margin: 0 auto; background-color: #d3222a;}
+    .index .high {position: relative;}
+    .index .top {position: absolute; height: 30px; right: 100px;}
+    .index .pattern {width: 800px; height: 100px;
+      background: url(images/pattern.gif);
+      position: absolute;
+      left: 100px;
+      top: 30px;
+    }
+    .index .main div:first-child {position: relative;
+    left: 100px; top: 130px;}
+    .index .main div:nth-child(2) {position: absolute;
+    left: 130px; top:160px;}
+
+  </style>
+</head>
+<body>
+<div class="index">
+  <div class="high">
+    <div class="top"><img src="images/index_top.gif" alt="index_top"></div>
+    <div class="pattern"></div>
+  </div>
+  <div class="main">
+    <div><img src="images/index_main_01.jpg" alt="index_main_01"></div>
+    <div><img src="images/instory_logo.gif" alt="logo"></div>
+    <div></div>
+    <p>메인페이지입니다</p>
+  </div>
+  <div class="bottom"></div>
+</div>
+</body>
+</html>
