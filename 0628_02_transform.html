@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .clearfix::before,.clearfix::after{
+      content: "";
+      display: block;
+    }
+    .clearfix::after{
+      clear: both;
+    }
+
+    *{margin: 0; padding: 0;}
+    ul{width: 1200px;
+      margin: 50px auto;
+      list-style: none;
+      border: 1px solid;}
+    ul li{width: 25%;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      padding: 10px 10px 20px;
+      box-sizing: border-box; /* 300안에서 border,padding값 다 해결 */
+      box-shadow: 10px 10px 10px #aaa;
+      float: left;}
+    ul li p:first-child {
+      height: 250px;
+    }
+    ul li p img {
+      width: 100%; height: 100%;
+      object-fit: cover; /* 이미지변형 막기 위해 활용 */
+    }
+    ul li p:nth-child(2) {
+      text-align: center;
+      padding-top: 20px;
+    }
+    ul li:first-child,ul li:nth-child(3){transform: rotate(-5deg);}
+    ul li:nth-child(2),ul li:nth-child(4){transform: rotate(5deg);}
+  </style>
+</head>
+<body>
+<ul class="clearfix">
+  <li>
+    <p><img src="images/photo1.jpg" alt="photo1"></p>
+    <p>그린컴퓨터아트학원</p>
+  </li>
+  <li>
+    <p><img src="images/photo2.jpg" alt="photo2"></p>
+    <p>그린컴퓨터아트학원</p>
+  </li>
+  <li>
+    <p><img src="images/photo3.jpg" alt="photo3"></p>
+    <p>그린컴퓨터아트학원</p>
+  </li>
+  <li>
+    <p><img src="images/photo4.jpg" alt="photo4"></p>
+    <p>그린컴퓨터아트학원</p>
+  </li>
+</ul>
+</body>
+</html>

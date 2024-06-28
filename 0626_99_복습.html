@@ -10,44 +10,76 @@
       margin: 0;
       padding: 0;
     }
-    div.con {width: 1480px; height: 500px;
-    margin: 50px auto;
-    overflow: hidden;}
-    div.con div {width: 171px; height: 500px;
-    background-image: url(images/bg_category_1.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 10px;
-    position: relative;
-    float: left;
-    margin-left: calc((100% - 171px * 8) / 7);}
-    div.con div::after {content: "";
-    width: 100%; height: 100%;
-    background-color: rgba(0, 0, 0, .3);
-    border-radius: 10px;
-    position: absolute; top: 0; left: 0;}
+    body {}
+    .wrap {/* width: 1000px; margin: 0 auto; */
+      background-color: #d3222a;}
+    .top {text-align: right; width: 1000px;
+     margin: 0 auto; overflow: hidden;}
+     .top ul {list-style: none;
+    float: right;}
+     .top ul li {float: left;}
+     .top ul li a {color: #fff;
+      text-decoration: none;
+      text-transform: uppercase;
+      line-height: 50px;}
+      .top ul li a::after{
+        content: "|";
+        padding: 0 10px;
+      }
+      .top ul li:last-child a:after{
+        content: "";}
 
-    div.con div:first-child {margin-left: 0;}
+    .pattern {background-image: url(images/pattern.gif); height: 82px;
+       width: 100%;}
+    .pattern_inner {width: 1000px; margin: 0 auto;}
+    .main {height: 625px; overflow: hidden;
+      width: 1000px; margin: 0 auto;}
 
-    div.con div p {font-size: 24px; color: #fff;
-    font-weight: bold; text-align: center;
-    padding-top: 225px; text-transform:capitalize;
-    position: relative; z-index: 1;}
+      .main div {float: left;}
 
+    .main div:first-child {background-image: url(images/index_main_01.gif);
+      width: 486px; height: 625px;
+    }
+    .main div:last-child{
+      background-image: url(images/index_main_02.gif);
+      width: 514px; height: 100%;
+    }
+    .foot {height: 100px;
+      background-color: #fff;
+    clear: left;
+    border: 1px solid #ddd;}
+    .foot_inner {width: 1000px; margin: 0 auto;
+    text-align: center; line-height: 100px;}
   </style>
 </head>
 
 <body>
-  <div class="con">
-    <div><p>package</p></div>
-    <div><p>package</p></div>
-    <div><p>package</p></div>
-    <div><p>package</p></div>
-    <div><p>package</p></div>
-    <div><p>package</p></div>
-    <div><p>package</p></div>
-    <div><p>package</p></div>
+  <div class="wrap">
+    <div class="top">
+      <ul>
+        <li><a href="#">회원가입</a></li>
+        <li><a href="#">로그인</a></li>
+        <li><a href="#">japanese</a></li>
+        <li><a href="#">chinese</a></li>
+        <li><a href="#">italian</a></li>
+      </ul>
+    </div>
+    <div class="pattern">
+      <div class="pattern_inner">
+        <img src="images/index_pattern.gif" alt="pattern">
+      </div>
+    </div>
+    <div class="main">
+      <div></div>
+     
+
+      <div><p>home 메인페이지입니다</p></div>
+    </div>
+    <div class="foot">
+      <div class="foot_inner">
+        <img src="images/copyright.gif" alt="foot">
+      </div>
+    </div>
   </div>
 </body>
 
