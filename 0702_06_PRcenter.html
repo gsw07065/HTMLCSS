@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0; padding: 0;}
+     ul{list-style: none;}
+     .wrap {width: 1280px; height: 650px; margin: 50px auto;}
+     .title {text-align: center; color: #222;
+      margin-bottom: 50px;
+      }
+     .title h1 {font-size: 40px;}
+     
+      .main {overflow: hidden;}
+
+    .left {float: left;}
+     .left li {width: 340px;
+      color: #fff;
+      position: relative;
+      float: left; overflow: hidden;}
+      .left li .img {position: relative; transition: 1s;}
+      .left li:hover .img  {transform: scale(1.5);}
+      .left .lefttxt {width: 240px;
+      position: absolute; left: 50%; top: 90%;
+      transform: translate(-50%, -90%);}
+    .left .lefttxt h1 {font-size: 50px;}
+    .left .lefttxt p {margin: 20px 0;}
+    .left li:nth-child(2) {margin-top: 50px;}
+    .left .lefttxt p img {transition: .5s;}
+      .left li:hover .lefttxt p img {transform: translateX(20px);}
+
+
+    .right {overflow: hidden; width: calc(100% - 680px); float: left;}
+    .right li {width: 265px; height: 270px;
+      background-color: #f0f0f0; margin: 10px 0px 0px 10px;
+      position: relative; float: left;}
+      .right li div {position: absolute; left: 30%; top: 50%;
+      transform: translate(-30%, -50%);}
+      .right li div h1 {font-weight: normal;}
+      .right li div h1 span {display: block; font-weight: bold;}
+      .right li div p:nth-of-type(1) {margin: 10px 0;}
+      .line {position: absolute; /* 포지션 주면 블록으로 변경 안해줘도 됨 */
+      background-color: #07348c;}
+      .line-top{width: 100%; height: 5px;
+      left: 0;
+      transform: scaleX(0);
+      transform-origin: 0 0;
+      transition: all .1s ease-in-out .3s;}
+      .line-right{width: 5px; height: 100%;
+      right: 0;
+      transform: scaleY(0);
+      transform-origin: 0 0;
+      transition: all .1s ease-in-out .2s;}
+      .line-bottom{width: 100%; height: 5px;
+      bottom: 0;
+      transform: scaleX(0);
+      transform-origin: 100% 0;
+      transition: all .1s ease-in-out .1s;}
+      .line-left{width: 5px; height: 100%;
+      left: 0;
+      transform: scaleY(0);
+      transform-origin: 0 100%;
+      transition: all .1s ease-in-out;}
+      .right li:hover .line-top{transform: scaleX(1);
+        transition: all .1s ease-in-out;}
+      .right li:hover .line-right{transform: scaleX(1);
+        transition: all .1s ease-in-out .1s;}
+        .right li:hover .line-bottom{transform: scaleX(1);
+        transition: all .1s ease-in-out .2s;}
+        .right li:hover .line-left{transform: scaleX(1);
+        transition: all .1s ease-in-out .3s;}
+        .right li div img {transition: .4s;}
+      .right li:hover div img {transform: translateX(20px);}
+
+      .right_up{margin-top: 40px;}
+      </style>
+</head>
+<body>
+  <section class="wrap">
+    <div class="title">
+      <h1>PR Center</h1>
+      <p>세상에 없던 신기술을 개척하는 기업,극동건설이 기술의 진보를 선도합니다</p>
+    </div>
+    <div class="main">
+      <ul class="left">
+        <li>
+          <div class="img img_1">
+            <img src="images/pr_img1.jpg" alt="pr_img1">
+          </div>
+             <div class="lefttxt">
+               <h1>극동뉴스</h1>
+               <p>극동건설의 다양한 소식을 가장 빠르게<br> 전달해드립니다.</p>
+               <p><img src="images/next_bar_wh.png" alt="next_bar_wh"></p>
+             </div>
+            </li> 
+        <li>
+          <div class="img img_2">
+            <img src="images/pr_img2.jpg" alt="pr_img2"></div>
+           <div class="lefttxt">
+               <h1>R&D</h1>
+               <p>끊임없는 신기술 개발과 혁신으로<br>
+                극동건설이 건축기술의 진보를 위해<br>
+                노력하고 있습니다</p>
+               <p><img src="images/next_bar_wh.png" alt="next_bar_wh"></p>
+             </div>
+            
+          </li>
+      </ul>
+     <ul class="right right_up">
+      <li>
+        <div>
+          <h1>언론속의 <span>극동</span></h1>
+          <p>언론에 소개되는 극동의 소식을<br> 안내해드립니다.</p>
+          <p><img src="images/next_bar_bk.png" alt="next"></p>
+        </div>
+        <span class="line line-top"></span>
+        <span class="line line-right"></span>
+        <span class="line line-bottom"></span>
+        <span class="line line-left"></span>
+      </li>
+      <li>
+        <div>
+          <h1>입주고객 <span>A/S안내</span></h1>
+          <p>스타클래스 입주 후 A/S 신청에<br>대한 안내 입니다.</p>
+          <p><img src="images/next_bar_bk.png" alt="next"></p>
+        </div>
+        <span class="line line-top"></span>
+        <span class="line line-right"></span>
+        <span class="line line-bottom"></span>
+        <span class="line line-left"></span>
+      </li>
+    </ul>
+     <ul class="right right_down">
+      <li>
+        <div>
+          <h1>극동건설 <span>인재채용</span></h1>
+          <p>극동건설과 함께 성장해 나갈<br> 인재를 모집합니다.</p>
+          <p><img src="images/next_bar_bk.png" alt="next"></p>
+        </div>
+        <span class="line line-top"></span>
+        <span class="line line-right"></span>
+        <span class="line line-bottom"></span>
+        <span class="line line-left"></span>
+      </li>
+      <li>
+        <div>
+          <h1>기업 <span>홍보영상</span></h1>
+          <p>극동건설의 다양한 홍보영상을<br> 소개합니다.</p>
+          <p><img src="images/next_bar_bk.png" alt="next"></p>
+        </div>
+        <span class="line line-top"></span>
+        <span class="line line-right"></span>
+        <span class="line line-bottom"></span>
+        <span class="line line-left"></span>
+      </li>
+    </ul>
+  </div>
+</section>
+</body>
+</html>
