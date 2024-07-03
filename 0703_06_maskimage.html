@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    ul{list-style: none;
+    width: 370px;}
+    ul li {overflow: hidden; cursor: pointer;}
+    ul li p{float: left;
+      width: 72px; height: 72px;
+      background-color: #000;
+      mask-image: url(images/ico_business_item01.svg);
+      mask-repeat: no-repeat;}
+      ul li .right {float: right; overflow: hidden;
+        height: 72px;}
+      ul li .right h3 {font-size: 21px; float: left; line-height: 72px;}
+      ul li .right h1 {float: left;}
+      ul li .right h1 img {}
+
+      ul li:hover {
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      text-decoration-color:#be8226;
+      text-decoration-style:solid;
+      text-decoration-thickness: 3px;}
+      ul li:hover p{background-color: #be8226;
+      mask-image: url(images/ico_business_item01.svg);
+      mask-repeat: no-repeat;}
+      ul li:hover .right h3{color: #be8226;}
+      ul li:hover .right h1{
+        content: url(images/ico_circle_arrow_active.png);}
+  </style>
+</head>
+<body>
+  <ul>
+    <li>
+        <p></p>
+        <div class="right">
+          <h3>건축</h3>
+          <h1><img src="images/ico_circle_arrow.png" alt="화살표"></h1>
+        </div>
+    </li>
+  </ul>
+ 
+</body>
+</html>
