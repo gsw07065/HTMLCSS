@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>menu</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    ul {list-style: none;}
+    a {color: #333;
+      text-decoration: none;}
+      #wrap {width: 1200px; margin: 0 auto;}
+      #wrap header {height: 100px; background-color: antiquewhite; position: relative;}
+      #wrap .logo {float: left;
+      width: 200px; height: 40px;
+      position: absolute; top: 50%;
+      transform: translateY(-50%);
+      background-color: #ccc;
+      margin-left: 20px;}
+      #wrap .menu {float: right;}
+      #wrap .menu > ul {width: 800px; height: 50px;
+      margin-top: 20px; margin-right: 20px;}
+      #wrap .menu > ul > li {float: left; width: 25%; position: relative;}
+      #wrap .menu > ul > li > a {display: block;
+      border: 1px solid #333;
+      border-left: none; /* 겹치는 부분 두껍게 보임 방지 */
+      line-height: 50px; text-align: center;
+      background-color: #fff;}
+      #wrap .menu > ul > li:first-child > a {border-left: 1px solid #333;}
+      #wrap .menu > ul .sub {
+      background-color: #fff;
+      height: 0; overflow: hidden;
+      transition: .8s;
+      position: absolute; /* slide이미지랑 겹치기 위해서 */
+      left: 0; top: 52px; /* 상단 메뉴 border 2px까지 포함해서 길이줘야함 */
+      width: 100%;}
+      #wrap .menu > ul:hover .sub {height: 160px; border-bottom: 1px solid #333;}
+      #wrap .menu > ul .sub li {line-height: 40px; text-align: center;}
+      #wrap .menu > ul>li:first-child .sub {border-left: 1px solid #333;}
+      #wrap .menu > ul>li:last-child .sub {border-right: 1px solid #333;}
+      #wrap .menu > ul>li:hover>a {background-color: #000; color: #fff;}
+      #wrap .menu > ul .sub li:hover a{background-color: #000; color: #fff;
+      display: block; /* 백그라운드 사이즈 변경 */}
+      </style>
+</head>
+<body>
+<div id="wrap">
+  <header>
+    <div class="logo"></div>
+    <div class="menu">
+      <ul>
+        <li>
+          <a href="#">탑</a>
+          <ul class="sub">
+            <li><a href="#">블라우스</a></li>
+            <li><a href="#">티</a></li>
+            <li><a href="#">셔츠</a></li>
+            <li><a href="#">니트</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">아우터</a>
+          <ul class="sub">
+            <li><a href="#">자켓</a></li>
+            <li><a href="#">코트</a></li>
+            <li><a href="#">가디건</a></li>
+            <li><a href="#">머플러</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">팬츠</a>
+          <ul class="sub">
+            <li><a href="#">청바지</a></li>
+            <li><a href="#">짧은바지</a></li>
+            <li><a href="#">긴바지</a></li>
+            <li><a href="#">레깅스</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">악세서리</a>
+          <ul class="sub">
+            <li><a href="#">귀고리</a></li>
+            <li><a href="#">목걸이</a></li>
+            <li><a href="#">반지</a></li>
+            <li><a href="#">팔찌</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <div class="slide"><img src="images/slide02.jpg" alt="slide02"></div>
+</div>
+</body>
+</html>
