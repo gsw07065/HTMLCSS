@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>오설록</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    ul {list-style: none;}
+    a {text-decoration: none; color: black;}
+    /* body{background-color:bisque;} */
+    #wrap {}
+    #wrap .bg_cover {position: relative;}
+    #wrap .bg {width: 100%; height: 630px;
+      background-image: url(images/osl_mainimg1.jpg);
+      background-repeat: no-repeat;
+      position: absolute;
+      top:-80px; z-index: -1;}
+    #wrap header {height: 80px; 
+    transition: .3s;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, .25), transparent)}
+    /* #wrap .bg .bg_gra {background: linear-gradient(gray, transparent);} */
+    #wrap header:hover {background: #fff;}
+
+    #wrap header .top {width: 1520px; margin: 0 auto;}
+    #wrap .logo {float: left;
+    height: 80px; width: 160px;
+    position: relative;}
+    #wrap .logo a{
+    display: block; width: 100%; height: 36px;
+    background-image: url(images/osl_logo_white.png);
+    background-size: 109px 36px;
+    background-repeat: no-repeat;
+    position: absolute; top: 50%;
+    transform: translateY(-50%);
+    }
+    #wrap header:hover .logo a {
+      background-image: url(images/osl_logo_bk.png);
+    }
+
+    #wrap .menu {}
+    #wrap .menu>ul {float: left;}
+    #wrap .menu>ul>li {float: left; margin: 0 10px;
+    position: relative; width: 130px;}
+    #wrap .menu>ul>li:last-child {margin-left: 30px;}
+    #wrap .menu>ul>li>a {display: block;
+      line-height: 80px;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;}
+    #wrap header:hover .menu>ul>li>a {
+      color: #555;
+    }
+    #wrap .menu>ul>li:hover>a {
+      color:darkseagreen;
+    }
+
+    #wrap .menu>ul>li .sub {padding-top: 40px;
+    height: 0; overflow: hidden;
+    position: absolute;
+    left: 0; top: 80px;
+    width: 100%;
+    z-index: 1;
+    }
+    #wrap .menu>ul:hover .sub {
+      height: 300px;
+    }
+
+    #wrap .menu .sub li {text-align: center;
+    padding: 10px 0;}
+    #wrap .menu .sub li a {color: #777;}
+    #wrap .menu>ul>li:first-child .sub li:first-child{
+      font-weight: bold;
+    }
+    .menu .sub li:hover a {color: darkseagreen;}
+
+    .menu_bg {position: absolute; left: 0; top: 80px;
+      width: 100%; height: 0;
+      transition: .4s;
+      border-top: 1px solid transparent;}
+      #wrap .menu > ul:hover ~ .menu_bg {
+        height: 300px;
+        background-color: #fff;
+        border-color: #eee;
+      }
+  </style>
+</head>
+<body>
+<div id="wrap">
+  
+    <header>
+      <div class="top">
+        <div class="logo"><a href="#"></a></div>
+        <div class="menu">
+          <ul>
+            <li>
+              <a href="#">제품</a>
+              <ul class="sub">
+                <li><a href="#">베스트</a></li>
+                <li><a href="#">티제품</a></li>
+                <li><a href="#">티푸드</a></li>
+                <li><a href="#">티웨어</a></li>
+                <li><a href="#">라이프스타일</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">선물추천</a>
+              <ul class="sub">
+    
+              </ul>
+            </li>
+            <li>
+              <a href="#">브랜드</a>
+              <ul class="sub">
+                <li><a href="#">오설록 스토리</a></li>
+                <li><a href="#">제주 티뮤지엄</a></li>
+                <li><a href="#">매장 소개 및 예약</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">단체 및 기업 구매</a>
+              <ul class="sub">
+              </ul>
+            </li>
+          </ul>
+          <div class="menu_bg"></div>
+        </div>
+        <!-- <div class="right_cover">
+          <div class="right">
+            <ul>
+              <li><a href="#">로그인</a></li>
+              <li><a href="#">KOREAN<img src="images/osl_icon_drop_white.png" alt="drop"></a></li>
+            </ul>
+          </div>
+        </div> -->
+      </div>
+      <!-- <div class="slide">
+        <img src="images/osl_mainimg1.jpg" alt="slide">
+      </div> -->
+      
+    </header>
+    <div class="bg_cover">
+      <div class="bg">
+      </div>
+      
+    </div>
+  
+  
+</div>
+</body>
+</html>
