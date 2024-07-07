@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>웰리미메뉴</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    a {
+      text-decoration: none;
+      color: #222;
+      letter-spacing: -1.5px;
+    }
+
+    body {
+      background-color: #f6f6f6;
+    }
+
+    .wrap {}
+
+    .wrap header {
+      height: 80px;
+    }
+
+    .wrap header:hover {
+      background-color: #fff;
+    }
+
+    .wrap header .top {
+      width: 1400px;
+      margin: 0 auto;
+    }
+
+    .wrap header .top .logo {
+      float: left;
+      width: 178px;
+      height: 80px;
+      position: relative;
+    }
+
+    .wrap header .top .logo img {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .wrap .top .leftmenu {
+      float: left;
+    }
+
+    .wrap .top .leftmenu>ul {
+      margin-left: 50px;
+      height: 80px;
+    }
+
+    .wrap .top .leftmenu>ul>li {
+      float: left;
+      width: 170px;
+      position: relative;
+    }
+
+    .wrap .top .leftmenu>ul>li>a {
+      color: #555;
+      line-height: 80px;
+      font-weight: bold;
+    }
+
+    .wrap .top .leftmenu>ul>li:hover>a {
+      color: #ff9001;
+    }
+
+    .wrap .top .leftmenu .sub {
+      margin-top: 30px;
+      height: 0px;
+      overflow: hidden;
+      transition: .2s;
+      position: absolute;
+      left: 0;
+      top: 80px;
+      width: 100%;
+      z-index: 1;
+    }
+
+    .wrap .leftmenu>ul:hover .sub {
+      height: 200px;
+    }
+
+    .wrap .top .leftmenu .sub li {
+      height: 40px;
+    }
+
+    .wrap .top .leftmenu .sub li a {
+      font-size: 14px;
+    }
+
+    .wrap .top .leftmenu .sub li:hover a {
+      color: #ff9001;
+    }
+
+    .bg {
+      height: 0px;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: 80px;
+      transition: .4s;
+    }
+
+    .wrap .leftmenu>ul:hover~.bg {
+      height: 200px;
+      background-color: #fff;
+      border-top: 1px solid #ddd;
+    }
+
+    .wrap .rightmenu {
+      width: 100%;
+      height: 80px;
+    }
+
+    .wrap .rightmenu ul {
+      float: right;
+    }
+
+    .wrap .rightmenu ul li {
+      float: left;
+      margin: 0 20px;
+
+    }
+
+    .wrap .rightmenu ul li a {
+      font-weight: bold;
+      color: #333;
+      font-size: 14px;
+      line-height: 80px;
+    }
+
+    .rightmenu ul li:last-child a::before {
+      content: "";
+      width: 17px;
+      height: 17px;
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 5px;
+      margin-top: -3px;
+      background-image: url(image/wrm_language_icon.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+
+    .rightmenu ul li:last-child a::after {
+      content: "";
+      width: 10px;
+      height: 10px;
+      display: inline-block;
+      margin-left: 5px;
+      background-image: url(image/wrm_language_arrow.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <div class="top">
+        <div class="logo"><img src="image/wrm_logo.PNG" alt="logo"></div>
+        <div class="leftmenu">
+          <ul>
+            <li>
+              <a href="#">개발진 소개</a>
+              <ul class="sub">
+                <li><a href="#">한국어초등국어교육연구소</a></li>
+                <li><a href="#">미래엔</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">검사 안내</a>
+              <ul class="sub">
+                <li><a href="#">맛보기 검사</a></li>
+                <li><a href="#">검사 소개</a></li>
+                <li><a href="#">검사 방법</a></li>
+                <li><a href="#">검사 시작</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">검사 관리</a>
+              <ul class="sub">
+                <li><a href="#">개인 검사 관리</a></li>
+                <li><a href="#">단체 검사 관리</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">한글 학습 교재</a>
+              <ul class="sub">
+                <li><a href="#">교재 소개</a></li>
+                <li><a href="#">자료실</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">고객 센터</a>
+              <ul class="sub">
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">묻고 답하기</a></li>
+                <li><a href="#">회원 정보 수정</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div class="bg"></div>
+        </div>
+        <div class="rightmenu">
+          <ul>
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">회원가입</a></li>
+            <li><a href="#">한국어</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div class="slide"><img src="image/wrm_img.PNG" alt="slide"></div>
+
+  </div>
+</body>
+
+</html>
