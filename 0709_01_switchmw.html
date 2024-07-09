@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>swith</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .wrap{width: 1600px; margin: 100px auto;}
+    .wrap .left {width: 50%; height: 100%; float: left;}
+    .wrap .left h1 {font-size: 117px;
+    line-height: 95px; height: 240px; 
+    font-weight: normal;
+  }
+
+    .wrap .right {width: 50%; float: left;}
+    .wrap .right>ul {}
+    .wrap .right>ul>li {line-height: 70px;
+    border-bottom: 1px solid #000;}
+    .wrap .right>ul>li:first-child {border-top: 1px solid #000;}
+    .wrap .right>ul>li>a {font-size: 30px; color: #000;}
+    .wrap .right>ul>li>span {font-size: 30px; color: #000; float: right;}
+    .wrap .right>ul>li:hover span {}
+
+    .wrap .right>ul .sub {} 
+    .wrap .right>ul .sub li {height: 0; overflow: hidden; transition: .3s;} 
+    .wrap .right>ul .sub li p {font-size: 14px; color: #0000009c;}
+    .wrap .right>ul>li:hover .sub li {height: 50px;}
+    .wrap .right>ul>li:hover .sub li p {margin-top: -30px;}
+  </style>
+</head>
+
+<body>
+ <div class="wrap">
+  <div class="left">
+    <h1>Our<br>
+      Services.</h1>
+  </div>
+  <div class="right">
+    <ul>
+      <li>
+        <a href="#">UX/UI</a> <span>&#x2b;</span>
+        <ul class="sub">
+          <li>
+            <p>Concept Proposal / UX Planning /  UI Design</p>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Motion</a> <span>&#x2b;</span>
+        <ul class="sub">
+          <li>
+            <p>Scenario Planning / 2D Motion graphic Design / 3D Modeling & Animation / 3D VFX</p>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Production</a> <span>&#x2b;</span>
+        <ul class="sub">
+          <li>
+            <p>Pre-Production / Production / Post-Production</p>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+ </div>
+</body>
+
+</html>
