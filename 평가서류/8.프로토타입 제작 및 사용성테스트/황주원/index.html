@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>index</title>
+  <style>
+    * {margin: 0; padding: 0;}
+    ul {list-style: none;}
+    a {text-decoration: none; color: #222;}
+
+    #first {background-color: #e2fdfe;}
+    #first .icon {width: 1080px; height: 100px; padding: 50px 0; margin: auto;}
+    #first .icon li {float: left; width: 180px; height: 100%;
+    text-align: center;
+    border-left: 1px solid #e0e0e0;
+    box-sizing: border-box;
+    position: relative;
+    }
+    #first .icon li:first-child {
+      border-left: none;
+    }
+
+     #first .icon li a:first-child {
+      width: 50px; height: 50px;
+      border-radius: 50%;
+      background-color: #e2fdfe;
+      transition: .2s;
+      display: block;
+      position: absolute; top: 0; left: 50%;
+      transform: translateX(-50%);
+      }
+    #first .icon li:hover a:first-child {
+      content: "";
+      width: 50px; height: 50px;
+      border-radius: 50%;
+      background-color: #D6F0F1;
+      display: block;
+    }
+    #first .icon li a p {line-height: 50px; margin-top: 50px;}
+    
+
+    #second {background-color: #E2F3FC;}
+    #second .two {width: 1080px; height: 460px; padding: 50px 0; margin: auto;}
+    #second .two li {float: left; position: relative; width: 270px; height: 100%;
+    }
+    #second .two li .photo {width: 100%;
+    }
+    #second .two li .photo a:first-child {display: block; width: 192px; height: 256px;
+    background-color: #ccc; border-radius: 20px;
+    overflow: hidden;position: absolute; left: 50%;
+    transform: translateX(-50%);}
+    #second .two li .photo a:first-child img {width: 100%; height: 100%; transition: .3s;}
+    #second .two li:hover .photo a:first-child img {
+      transform: scale(1.2);
+    }
+
+    #second .two li .photo a:last-child {position: absolute;
+    right: -10px; bottom: 170px;}
+    #second .two li:nth-child(1) .photo a:last-child {
+      background-image: url(images/special_mlon_1_shd.png);
+    }
+    #second .two li:nth-child(2) .photo a:last-child {
+      background-image: url(images/special_mlon_2_shd.png);
+    }
+    #second .two li:nth-child(3) .photo a:last-child {
+      background-image: url(images/special_mlon_3_shd.png);
+    }
+    #second .two li:nth-child(4) .photo a:last-child {
+      background-image: url(images/special_mlon_4_shd.png);
+    }
+
+    #second .two li .txt {
+      width: 100%;
+      text-align: center;
+      position: absolute; left: 50%; top: 256px;
+      transform: translateX(-50%);
+      margin-top: 50px;
+      height: 150px;
+    }
+    #second .two li .txt h2 {
+      font-size: 24px; font-weight: normal;
+    }
+    #second .two li .txt h4 {
+      font-size: 18px; font-weight:lighter;
+      letter-spacing: -3px;
+    }
+    #second .two li .txt p {
+      color: #333;
+      font-size: 18px;
+      margin-top: 30px;
+    }
+
+
+    #third {}
+    #third .three {width: 1080px; height: 400px; padding: 50px 0; margin: auto; }
+    #third .three li {float: left; width: 230px;
+    text-align: center;
+    margin-left: calc((100% - 230px * 4) / 3);
+    position: relative;
+    }
+    #third .three li:first-child {margin-left: 0;}
+    #third .three li::before {
+    content: "";
+    position: absolute;
+    top: 135px;
+    bottom: 60px;
+    left: -25px;
+    width: 1px;
+    height: 150px;
+    background-color: #d9d9d9;
+    }
+    #third .three li:first-child:before {
+      content: none;
+    }
+    #third .three li:first-child a {margin-left: -45px;}
+    #third .three li .txt h2 {
+      font-size: 24px; font-weight: normal;
+    }
+    #third .three li .txt p {
+      color: #333;
+      font-size: 18px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <div id="first">
+    <ul class="icon">
+      <li>
+        <a href="#" class="clearfix">
+         <img src="images/ico_quick_menu1.png" alt="ico_quick_menu1">
+        </a>
+        <a href="#"><p>이용대금명세서</p></a>
+      </li>
+      <li>
+        <a href="#"><img src="images/ico_quick_menu2.png" alt="ico_quick_menu2"></a>
+        <a href="#"><p>결제예상금액</p></a>
+      </li>
+      <li>
+        <a href="#"><img src="images/ico_quick_menu3.png" alt="ico_quick_menu3"></a>
+        <a href="#"><p>이용내역조회</p></a>
+      </li>
+      <li>
+        <a href="#"><img src="images/ico_quick_menu4.png" alt="ico_quick_menu4"></a>
+        <a href="#"><p>내정보변경</p></a>
+      </li>
+      <li>
+        <a href="#"><img src="images/ico_quick_menu5.png" alt="ico_quick_menu5"></a>
+        <a href="#"><p>카드분실신고</p></a>
+      </li>
+      <li>
+        <a href="#"><img src="images/ico_quick_menu6.png" alt="ico_quick_menu6"></a>
+        <a href="#"><p>카드사용등록</p></a>
+      </li>
+    </ul>
+  </div>
+  <div id="second">
+    <ul class="two">
+      <li>
+        <div class="photo">
+          <a href="#"><img src="images/special_mlon_1_bg.png" alt="mlon1"></a>
+          <a href="#"><img src="images/special_mlon_1_obj.png" alt="obj1"></a>
+        </div>
+        <div class="txt">
+          <a href="#"><h2>단기카드대출</h2></a>
+          <a href="#"><h4>(현금서비스)</h4></a>
+          <a href="#"><p>현금이 급할 때 바로<br>찾아쓰는,<br>편리한 생활자금 마련방법</p></a>
+        </div>
+      </li>
+      <li>
+        <div class="photo">
+          <a href="#"><img src="images/special_mlon_2_bg.png" alt="mlon2"></a>
+          <a href="#"><img src="images/special_mlon_2_obj.png" alt="obj2"></a>
+        </div>
+        <div class="txt">
+          <a href="#"><h2>장기카드대출</h2></a>
+          <a href="#"><h4>(카드론)</h4></a>
+          <a href="#"><p>목돈이 필요할 때<br>복잡한 심사 과정 없이<br>간편하게</p></a>
+        </div>
+      </li>
+      <li>
+        <div class="photo">
+          <a href="#"><img src="images/special_mlon_3_bg.png" alt="mlon3"></a>
+          <a href="#"><img src="images/special_mlon_3_obj.png" alt="obj3"></a>
+        </div>
+        <div class="txt">
+          <a href="#"><h2>일부결제금액이월약정</h2></a>
+          <a href="#"><h4>(리볼빙)</h4></a>
+          <a href="#"><p>원하는 만큼만 결제하고 매월<br>결제금액을 계획적으로 관리</p></a>
+        </div>
+      </li>
+      <li>
+        <div class="photo">
+          <a href="#"><img src="images/special_mlon_4_bg.png" alt="mlon4"></a>
+          <a href="#"><img src="images/special_mlon_4_obj.png" alt="obj4"></a>
+        </div>
+        <div class="txt">
+          <a href="#"><h2>올인원대출</h2></a>
+          <a href="#"><h4>(신용대출)</h4></a>
+          <a href="#"><p>우리카드가 없어도 서류없이,<br>방문없이, 내 신용만으로</p></a>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="third">
+    <ul class="three">
+      <li>
+        <a href="#"><img src="images/special_mbnf_1_obj.png" alt="mbnf1"></a>
+        <div class="txt">
+          <h2>해외이용의 정석</h2>
+          <p>여행, 직구, 항공<br>무엇이든 우리카드로</p>
+        </div>
+      </li>
+      <li>
+        <a href="#"><img src="images/special_mbnf_2_obj.png" alt="mbnf2"></a>
+        <div class="txt">
+          <h2>MY Pick 서비스</h2>
+          <p>혜택도 맞춤!<br> 나만을 위한 맞춤 혜택</p>
+        </div>
+      </li>
+      <li>
+        <a href="#"><img src="images/special_mbnf_3_obj.png" alt="mbnf3"></a>
+        <div class="txt">
+          <h2>우리V클럽</h2>
+          <p>특별함을 원하는<br>고객을 위한 VIP우대 혜택</p>
+        </div>
+      </li>
+      <li>
+        <a href="#"><img src="images/special_mbnf_4_obj.png" alt="mbnf4"></a>
+        <div class="txt">
+          <h2>우리 Point</h2>
+          <p>차곡차곡 쌓아<br> 다양한 곳에서 사용가능</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>
