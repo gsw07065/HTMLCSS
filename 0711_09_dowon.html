@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>glassdome8</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    ul{list-style: none;}
+    a{text-decoration: none; color: #333;}
+     
+    .con {width: 300px; margin: 50px auto; padding: 50px;
+    background-color: #222; overflow: hidden;
+    position: relative;}
+    .con p {float: left; text-align: center;
+    position: absolute; left: 10px; top: 50%;
+    transform: translateY(-50%);
+    line-height: 50px;
+    cursor: pointer;}
+    
+    .con p:first-child {color: #fff; width: 0; overflow: hidden;
+      transition: .5s; white-space: nowrap;}
+    .con:hover p:first-child {
+      width: 100px;
+      left: 0;
+    }
+
+    .con p:last-child {
+      width: 50px; height: 50px;
+      border-radius: 50%;
+      background-color: #fff;
+      font-size: 20px; font-weight: bold;
+      transition: .5s;
+    }
+    .con:hover p:last-child {
+      background-color: #ae874e;
+      color: #fff;
+      left: 100px;}
+    
+  </style>
+</head>
+<body>
+  <div class="con">
+    <p>View more</p>
+    <p>+</p>
+  </div>
+  </body>
+</html>

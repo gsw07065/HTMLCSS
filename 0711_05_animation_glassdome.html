@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>glassdome</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    ul{list-style: none;}
+    a{text-decoration: none; color: #333;}
+    .txt {font-size: 70px;
+      font-weight: bold;
+      position: relative;}
+    .black {position: absolute;
+      left: 0; top: 0;
+      animation: txt 3s;
+      overflow: hidden;
+      white-space: nowrap; /* 줄바꿈처리XX */}
+    .gray {color: #e6e6e6;}
+    .black2 {width: 0;
+      animation-delay: .5s;
+      animation-fill-mode: forwards;}
+
+    @keyframes txt {
+      0% {width: 0;}
+      100% {width: 100%;}
+    }
+
+    h1 {-webkit-text-stroke: 2px red; /* webkit꼭붙이기! */
+    color: transparent;
+    font-size: 100px;}
+  </style>
+</head>
+<body>
+  <div class="txt">
+    <p class="black">Harness Your Data to</p>
+    <p class="gray">Harness Your Data to</p>
+  </div>
+  <div class="txt">
+    <p class="black black2">Boost Efficiency and Reduce Emissions</p>
+    <p class="gray">Boost Efficiency and Reduce Emissions</p>
+  </div>
+  <h1>text-stroke</h1>
+</body>
+</html>

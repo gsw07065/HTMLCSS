@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>kb3</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    ul{list-style: none;}
+    a{text-decoration: none; color: #333;}
+    div {width: 100px; height: 100px;
+    background: green;
+    margin: 10px;
+    animation: move 5s 1s;}
+    div.none {animation-fill-mode:none;} /* 처음green(기존) / 끝나면 처음 */
+    div.forwards {animation-fill-mode:forwards;} /* 처음green(기존) / 끝난 그대로 유지 */
+    div.backwards {animation-fill-mode:backwards;} /* 처음red / 끝나면 처음 */
+    div.both {animation-fill-mode:both;} /* 처음red / 끝난 그대로 유지 */
+
+
+    @keyframes move {
+      0% {transform: translateX(0); background-color: red;}
+      100% {transform: translateX(500px); background-color: yellow;}
+    }
+  </style>
+</head>
+<body>
+  <div class="none">none</div>
+  <div class="forwards">forwards</div>
+  <div class="backwards">backwards</div>
+  <div class="both">both</div>
+</body>
+</html>
