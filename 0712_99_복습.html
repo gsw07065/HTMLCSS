@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0712복습</title>
+    <style>
+    *{margin: 0; padding: 0;}
+   ul{list-style: none;}
+   a{text-decoration: none; color: #333;}
+
+   .txt {font-size: 70px;
+    font-weight: bold;
+    position: relative;}
+   .txt .bk {position: absolute;
+    left: 0; top: 0;
+    animation: txt 3s;
+    overflow: hidden;
+    white-space: nowrap;
+    }
+    .gr {color: #e6e6e6;}
+
+    @keyframes txt {
+      0% {width: 0;}
+      100% {width: 100%;}
+    }
+
+    .txt:nth-child(2) .bk {
+      animation-delay: .5s;
+    }
+    </style>
+  </head>
+  <body>
+   <div class="txt">
+    <p class="bk">
+      Harness Your Data to
+    </p>
+    <p class="gr">
+      Harness Your Data to
+    </p>
+   </div>
+   <div class="txt">
+    <p class="bk">
+      Boost Efficiency and Reduce Emissions
+    </p>
+    <p class="gr">
+      Boost Efficiency and Reduce Emissions
+    </p>
+   </div>
+  </body>
+</html>

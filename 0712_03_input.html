@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>input3</title>
+    <style>
+    img {width: 200px;}
+    #photo{display: none;}
+    #photo:checked ~ p img {
+      display: none;
+    } /* 아래형제나 자식 등으로 종속되어있어야함 */
+    #photo:checked ~ label img {display: none;} 
+    </style>
+  </head>
+  <body>
+   <input type="checkbox" id="photo">
+   <label for="photo">이미지토글</label>
+   <p><img src="images/photo1.jpg" alt="photo1"></p>
+   <label for="photo"><img src="images/photo2.jpg" alt="photo2"></label>
+   <!-- 이미지 자체에도 라벨 적용 가능 -->
+  </body>
+</html>

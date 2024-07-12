@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>input4</title>
+    <style>
+      *{margin: 0; padding: 0;}
+      ul {list-style: none;}
+      a {text-decoration: none; color: #333;}
+      
+      #menu {display: none;}
+      #menu:checked ~ nav {left: 0;}
+      p {transition: .5s;}
+      #menu:checked ~ p {transform: translateX(300px);}
+      /* label은 인라인속성이라 블록으로 부모 만들어야 이동 가능 */
+
+      nav {width: 300px; height: 100%; /* 포지션fixed일경우만 적용됨 */
+      position: fixed; background: #000;
+      left: -400px; top: 0;
+      transition: .5s;}
+      nav ul li a {color: #fff;
+      font-size: 20px;}
+    </style>
+  </head>
+  <body>
+   <input type="checkbox" id="menu">
+   <p><label for="menu">Menu</label></p>
+   <nav>
+    <ul>
+      <li><a href="#">메뉴1</a></li>
+      <li><a href="#">메뉴2</a></li>
+      <li><a href="#">메뉴3</a></li>
+      <li><a href="#">메뉴4</a></li>
+    </ul>
+   </nav>
+  </body>
+</html>
