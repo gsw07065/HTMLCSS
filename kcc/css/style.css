@@ -116,22 +116,25 @@ ul{list-style: none;}
   font-size: 14px;
 }
 .business .right ul li:nth-child(1) .tip1{
-  left: 320px; top: 60px;
+  left: 320px; top: 100px;
   width: 50px;
   opacity: 0;
 }
 .business .right ul li:nth-child(1) .tip2{
-  left: 120px; top: 170px;
+  left: 120px; top: 210px;
   width: 100px;
   height: 100px;
   opacity: 0;
 }
-#item1:checked ~ .business .right ul li:nth-child(1) .tip1,
-#item1:checked ~ .business .right ul li:nth-child(1) .tip2
-{
-  top:0; transition: .5s .5s;
+#item1:checked ~ .business .right ul li:nth-child(1) .tip1{
+  top:60px; transition: .5s .5s;
   opacity: 1;
 }
+#item1:checked ~ .business .right ul li:nth-child(1) .tip2{
+  top:170px; transition: .5s .7s;
+  opacity: 1;
+}
+
 .business .right ul li .tip::after{
   content: "";
   position: absolute;

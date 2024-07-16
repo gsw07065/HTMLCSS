@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>02 어나더하우스</title>
+  <style>
+    @font-face {
+      font-family: LGEI-L;
+      src: url(webfonts/LGEIText-Light.woff) format(woff);
+    }
+    @font-face {
+      font-family: LGEI;
+      src: url(webfonts/LGEIText-SemiBold.woff) format(woff);
+    }
+   div {position: relative; width: 100%;}
+   video {object-fit: cover;}
+   div h6 {
+    position: absolute; top: 37%; left: 50%;
+    transform: translateX(-50%);
+    font-size: 22px;
+    font-family: LGEI-L;
+   }
+   div p:nth-of-type(1) {
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 42px;
+    line-height: 70px;
+    font-family: LGEI;
+   }
+   div h6, div p:nth-of-type(1) {
+    width: 100%;
+    color: #fff;
+    text-align: center;
+   }
+   div .logo {position: absolute; top: 10px; left: 50%;
+    transform: translateX(-50%);}
+  </style>
+</head>
+
+<body>
+  <div>
+    <video width="1872" height="966" muted autoplay loop>
+      <source src="video/main.mp4" type="video/mp4">
+    </video>
+    <h6>어나더하우스</h6>
+    <p>사람을 좋아하는 LG전자가 여행을 좋아하는 당신을 위해 준비한
+      <br>어나더하우스로 여행을 떠나보세요</p>
+    <p class="logo"><img src="images/another_logo.png" alt="logo"></p>
+  </div>
+</body>
+
+</html>
