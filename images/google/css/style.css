@@ -93,11 +93,6 @@ input[type="search"]{
   height: 48px;
   border: 1px solid #ddd;
   border-radius: 50px;
-  /* background-image: url(../image/search.svg), url(../image/keyboard.gif), url(../image/misc.svg), url(../image/img_search.JPG);
-  background-repeat: no-repeat;
-  background-position: 20px center, 461px center, 500px center, 540px center;
-  background-size: 15px 15px, 19px 11px, 20px 20px, 24px 24px;
-  object-fit: contain; */
 }
 input[type="search"]:hover
 {
