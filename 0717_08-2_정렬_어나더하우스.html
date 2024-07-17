@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>08-2어나더하우스</title>
+  <style>
+    *{margin: 0;padding: 0;}
+    .content {width: 1400px; margin: 50px auto;
+      display: flex; justify-content: space-between;}
+    
+    div.left, div.right {width: 452px; display: flex; flex-wrap: wrap;
+      justify-content: space-between;
+      align-content: space-between;}
+
+    div.review1,
+    div.review7{
+      width: 452px; height: 226px;
+    }
+    div.review2, div.review3,
+    div.review5,div.review6{
+      width: 215px; height: 215px;
+    }
+    div.review4,div.review8{
+      width: 215px; height: 463px;
+    }
+    div img{width: 100%; height: 100%; object-fit: cover;}
+
+
+
+    .review {position: relative;}
+    .review .hov {
+      position: absolute; top: 0; height: 0; padding: 30px 20px;
+      width: 100%; height: 100%; box-sizing: border-box;
+      color: #fff; background-color: rgba(0, 0, 0, .5);
+      opacity: 0; cursor: pointer;
+    }
+    .review .hov h3 {overflow: hidden; white-space: nowrap; text-overflow:ellipsis;}
+    .review .hov h5 {margin-top: 20px; font-size: 15px;}
+    .review .hov h6 {
+      text-decoration: underline;
+      text-underline-offset: 5px;
+      font-size: 15px;
+      text-align: right;
+      position: absolute; bottom: 30px; right: 20px;
+    }
+    .review:hover .hov {opacity: 1;}
+  </style>
+</head>
+<body>
+  <div class="content">
+    <div class="left">
+      <div class="review review1">
+        <img src="images/review1.jpg" alt="review">
+        <div class="hov">
+          <h3>3박 3일 프라이빗 제주여행</h3>
+          <h5>두모옴팡집</h5>
+          <h6>자세히 보기</h6>
+        </div>
+      </div>
+      <div class="review review2">
+        <img src="images/review2.jpeg" alt="review">
+        <div class="hov">
+          <h3>3박 3일 프라이빗 제주여행</h3>
+          <h5>두모옴팡집</h5>
+          <h6>자세히 보기</h6>
+        </div>
+      </div>
+      <div class="review review3">
+        <img src="images/review3.jpeg" alt="review">
+        <div class="hov">
+          <h3>3박 3일 프라이빗 제주여행</h3>
+          <h5>두모옴팡집</h5>
+          <h6>자세히 보기</h6>
+        </div>
+      </div>
+    </div>
+    <div class="review review4">
+      <img src="images/review4.jpg" alt="review">
+      <div class="hov">
+        <h3>3박 3일 프라이빗 제주여행</h3>
+        <h5>두모옴팡집</h5>
+        <h6>자세히 보기</h6>
+      </div>
+    </div>
+    <div class="right">
+      <div class="review review5">
+        <img src="images/review5.JPG" alt="review">
+        <div class="hov">
+          <h3>3박 3일 프라이빗 제주여행</h3>
+          <h5>두모옴팡집</h5>
+          <h6>자세히 보기</h6>
+        </div>
+      </div>
+      <div class="review review6">
+        <img src="images/review6.jpeg" alt="review">
+        <div class="hov">
+          <h3>3박 3일 프라이빗 제주여행</h3>
+          <h5>두모옴팡집</h5>
+          <h6>자세히 보기</h6>
+        </div>
+      </div>
+      <div class="review review7">
+        <img src="images/review7.jpeg" alt="review">
+        <div class="hov">
+          <h3>3박 3일 프라이빗 제주여행</h3>
+          <h5>두모옴팡집</h5>
+          <h6>자세히 보기</h6>
+        </div>
+      </div>
+    </div>
+    <div class="review review8">
+      <img src="images/review8.jpeg" alt="review">
+      <div class="hov">
+        <h3>3박 3일 프라이빗 제주여행</h3>
+        <h5>두모옴팡집</h5>
+        <h6>자세히 보기</h6>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
