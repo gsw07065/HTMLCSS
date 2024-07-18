@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mad2</title>
+  <style>
+    *{padding: 0; margin: 0;}
+    ul{list-style: none;}
+
+    .list{width: 1504px; margin: 50px auto;}
+    .list>ul{display: flex; font-size: 0;}
+    .list>ul>li{position: relative;}
+    .list>ul>li:nth-child(2)>img:nth-child(1),
+    .list>ul>li:nth-child(2)>img:nth-child(2){width: 246px; height: 246px;}
+    .list>ul>li>img{transition: .5s; object-fit: cover; }
+    /* .list>ul>li:hover>img{transform: scale(1.25);} */
+
+    .list>ul>li .over{
+      position: absolute; left: 0; top: 0px;
+      display: flex; flex-direction: column;
+      justify-content: center; align-items: center;
+      width: 100%; height: 100%;
+      text-align: center;
+      background: rgba(0, 0, 0, 0);
+      box-sizing: border-box;
+      transition: .5s;
+    }
+    .list>ul>li:hover .over{
+      background: rgba(0, 0, 0, .5);
+    }
+    .list>ul>li:hover .over p{
+      transform: translateY(0);
+      transition: .5s;}
+    .list>ul>li .over a{
+      text-decoration: none;
+      color: #333;
+      font-size: 11px;
+      width: 120px; line-height: 35px;
+      margin-top: 30px;
+      background-color: #fff;
+      transition: .5s; opacity: 0;
+    }
+    .list>ul>li:hover .over p{
+      transform: translateY(-20px);
+    }
+    .list>ul>li:hover .over a{
+      opacity: 1;
+      transform: translateY(-20px);
+    }
+  </style>
+</head>
+<body>
+  <div class="list">
+    <ul>
+      <li>
+        <img src="images/img1.jpg" alt="img1">
+        <div class="over">
+          <p><img src="images/mfg_white.png" alt="mfg"></p>
+          <a href="#">자세히 보기</a>
+        </div>
+      </li>
+      <li>
+        <img src="images/img2.png" alt="img2">
+        <img src="images/img3.png" alt="img3">
+        <img src="images/img4.jpg" alt="img4">
+      </li>
+      <li>
+        <img src="images/img5.png" alt="img5">
+        <img src="images/img6.png" alt="img6">
+      </li>
+    </ul>
+  </div>
+</body>
+</html>

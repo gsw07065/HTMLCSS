@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>lg생활건강_index</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    ul{list-style: none;}
+
+    .con{width: 1376px; margin: 50px auto;}
+    .con>ul{display: flex;
+    width: 100%; height: 406px;justify-content: space-evenly;}
+    .con>ul>li{flex: 0 1 10%;
+      transition: .3s;
+      cursor: pointer;
+    }
+    .con>ul>li:first-child{flex-basis: 55%;
+    }
+    .con>ul>li{width: 100%; height: 100%; position: relative;}
+    .con>ul>li img{width: 100%; height: 100%; object-fit: cover;
+      border-radius: 20px;
+    }
+
+    .con>ul:hover>li {flex-basis: 55%;}
+    .con>ul:hover>li:not(:hover) {flex: 0 1 10%;
+    }
+
+    .con>ul>li .txt{
+      position: absolute; top: 0; left: 0;
+      width: 100%; height: 100%; box-sizing: border-box;
+      color: #fff;
+      padding: 40px 0;
+      
+    }
+    .con>ul>li:first-child .txt{
+      padding: 40px
+    }
+    .con>ul>li:hover .txt{
+      padding: 40px;
+    }
+    .con>ul>li .txt p:nth-child(1){display: none;}
+    .con>ul>li:first-child .txt p:nth-child(1){display: block;}
+
+    .con>ul>li .txt p:nth-child(2){
+      font-size: 20px; font-weight: normal;
+    }
+    .con>ul>li:first-child .txt p:nth-child(2){
+      font-size: 30px; font-weight: bold;
+    }
+    .con>ul:hover>li:not(:hover) .txt{
+      padding: 40px 0;
+      background: rgba(0, 0, 0, .5);
+      border-radius: 20px;
+    }
+    .con>ul:hover>li .txt p:nth-child(1){display: block;}
+    .con>ul:hover>li:not(:hover) .txt p:nth-child(1){
+      display: none;
+    }
+    .con>ul:hover>li .txt p:nth-child(2){
+      font-size: 30px; font-weight: bold;
+    }
+    .con>ul:hover>li:not(:hover) .txt p:nth-child(2){
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="con">
+    <ul>
+      <li>
+        <img src="images/new_esg_img1.jpg" alt="img1">
+        <div class="txt">
+          <p>LG생활건강이 만드는</p>
+          <p>지속 가능한 삶</p>
+        </div>
+      </li>
+      <li>
+        <img src="images/new_esg_img2.jpg" alt="img2">
+        <div class="txt">
+          <p>LG생활건강이 만드는</p>
+          <p>지속 가능한 삶</p>
+        </div>
+      </li>
+      <li>
+        <img src="images/new_esg_img3.jpg" alt="img3">
+        <div class="txt">
+          <p>LG생활건강이 만드는</p>
+          <p>지속 가능한 삶</p>
+        </div>
+      </li>
+      <li>
+        <img src="images/new_esg_img4.jpg" alt="img4">
+        <div class="txt">
+          <p>LG생활건강이 만드는</p>
+          <p>지속 가능한 삶</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>
