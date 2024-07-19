@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>09_grid align</title>
+  <style>
+   .grid-container{
+    width: 1200px; height: 500px; margin: 50px auto;
+    background: #ccc;
+    display: grid;
+    grid-template-columns: repeat(9,10%);
+    /* grid-template-rows: 200px; */
+    /*justify-items: center; align-items: center;  column,row 가진 값의 가운데로 정렬 */
+    place-items: end center; /* 수직,수평순 */
+  }
+  .grid-item{
+    background-color: #ddd; border: 1px solid;
+  }
+  </style>
+</head>
+<body>
+  <div class="grid-container">
+    <div class="grid-item"><h1>1</h1></div>
+    <div class="grid-item"><h4>2</h4></div>
+    <div class="grid-item"><h5>3</h5></div>
+    <div class="grid-item"><h2>4</h2></div>
+    <div class="grid-item"><h6>5</h6></div>
+    <div class="grid-item"><h3>6</h3></div>
+    <div class="grid-item">7<br>77<br>777</div>
+    <div class="grid-item">8</div>
+    <div class="grid-item"><h1>9</h1></div>
+  </div>
+</body>
+</html>

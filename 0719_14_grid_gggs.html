@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>13_grid_gggs</title>
+  <style>
+  .con{width: 1800px; margin: 50px auto;
+  display: grid; gap: 20px;
+  grid-template-columns: 864px 432px 432px;
+  grid-template-rows: 400px 400px;
+  }
+  
+  .con .img1{grid-column: 2; }
+  .con .img2{grid-column: 3;}
+  .con .img3{grid-column: 1; grid-row: 2;}
+  .con .img4{grid-column: 2;}
+  .con .img5{grid-column: 3;}
+ .con>div{overflow: hidden; border-radius: 20px;}
+ .con>div a{width: 100%; height: 100%; display: block; position: relative;
+}
+  .con div img {width: 100%; height: 100%; object-fit: cover; 
+    transition: .5s;
+  }
+  .con div:hover img{transform: scale(1.25);}
+  .con div.img4:hover img{transform: none;}
+
+  .con>div a span{width: 100%; height: 100%; display: block;
+  background: rgba(0, 0, 0, .5);
+  position: absolute; top: 0; left: 0; transition: .5s;}
+  .con>div:hover a span{opacity: 0;}
+  .con>div a p{
+    position: absolute;  left: 10%; bottom: 5%;
+    color: #fff; font-size: 30px; font-weight: bold;
+  }
+  </style>
+</head>
+<body>
+  <div class="con">
+    <div class="img1">
+      <a href="#">
+        <img src="images/gggs_img1.png" alt="img1">
+        <span></span>
+        <p>박사과정</p>
+      </a>
+    </div>
+    <div class="img2">
+      <a href="#">
+        <img src="images/gggs_img2.png" alt="img2">
+        <span></span>
+        <p>군학 프로그램</p>
+      </a>
+    </div>
+    <div class="img3">
+      <a href="#"
+      ><img src="images/gggs_img3.png" alt="img3">
+      <span></span>
+      <p>석사과정</p>
+    </a>
+    </div>
+    <div class="img4">
+      <img src="images/gggs_img4.png" alt="img4">
+    </div>
+    <div class="img5">
+      <a href="#">
+        <img src="images/gggs_img5.png" alt="img5">
+        <span></span>
+        <p>외국인 전형</p>
+      </a>
+    </div>
+  </div>
+</body>
+</html>
