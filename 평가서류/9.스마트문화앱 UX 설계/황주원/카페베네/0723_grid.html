@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>카페베네grid</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    body{background-color: #f2f2f2;}
+    .con{
+      width: 1190px; margin: 50px auto;
+      display: grid;
+      grid-template-columns: 300px 300px 590px;
+      grid-template-rows: 242px 376px 100px 600px;
+    }
+    .con .img1{grid-column: 1 / span 2;}
+    .con .img2{grid-column: 1; grid-row: 2 / span 2;
+    display: flex; flex-direction: column;
+    justify-content: center; align-items: center;
+    text-align: center;
+    background-color: #fff;
+    cursor: pointer;
+    }
+    .con .img2 p:first-child{
+      margin-bottom: 30px;
+    }
+    .con .img3{grid-column: 2; grid-row: 2 / span 2; cursor: pointer;}
+    .con .img4{grid-column: 1; grid-row: 4; cursor: pointer;}
+    .con .img5{grid-column: 3; grid-row: 1 / span 2;}
+    .con .img6{grid-column: 3; grid-row: 3 / span 2;}
+    .con p img {width: 100%; height: 100%; object-fit: cover;}
+  </style>
+</head>
+<body>
+  <div class="con">
+    <div class="img1"><img src="http://caffebene.co.kr/uploads/sbanner/20230314322177.jpg" alt="img1"></div>
+    <div class="img2">
+      <p><img src="http://caffebene.co.kr/uploads/sbanner/20200623865131.gif" alt="img2"></p>
+      <p>'좋은’ 사람들이<br>‘좋은’ 원두로<br>‘좋은’ 커피를 내리는 곳<br>바로 카페베네입니다.</p>
+    </div>
+    <div class="img3"><img src="http://caffebene.co.kr/uploads/sbanner/20230314819418.jpg" alt="img3"></div>
+    <div class="img4"><img src="http://caffebene.co.kr/uploads/sbanner/20230314120130.jpg" alt="img4"></div>
+    <div class="img5"><img src="http://caffebene.co.kr/uploads/sbanner/20230309868280.gif" alt="img5"></div>
+    <div class="img6"><img src="http://caffebene.co.kr/uploads/sbanner/20230314423839.jpg" alt="img6"></div>
+  </div>
+</body>
+</html>
