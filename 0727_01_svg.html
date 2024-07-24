@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    svg{
+      width: 500px; height: 500px;
+      border: 2px solid;
+    }
+
+    .mic path{
+      transform: scale(10); /* svg=크기손상X */
+    }
+  </style>
+</head>
+<body>
+  <!-- svg=인라인태그 -->
+  <svg> <!-- 미설정시 기본값 w300 h150 -->
+    <rect width="300" height="100" style="fill:none;
+    stroke-width:3;stroke:rgb(0,0,0)" /> <!-- style로 묶어서 쓸 때 서식 -->
+    <!-- rect사각형 -->
+  </svg>
+  <svg>
+    <rect x="-10" y="10" width="300" height="100" fill="none"
+    stroke-width="3" stroke="rgb(0,0,0)" /> <!-- style 없이 각자 쓸 때 서식 -->
+  </svg>
+
+
+  <svg width="100" height="100">
+    <!-- <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" /> -->
+    <!-- cx=가로축 cy=세로축 r=반지름 -->
+    <circle cx="0" cy="0" r="40" stroke="green" stroke-width="4" fill="yellow" />
+    <circle cx="500" cy="0" r="40" stroke="green" stroke-width="4" fill="yellow" />
+    <circle cx="0" cy="500" r="40" stroke="green" stroke-width="4" fill="yellow" />
+    <circle cx="500" cy="500" r="40" stroke="green" stroke-width="4" fill="yellow" />
+  </svg>
+  <svg width="100" height="100">
+    <g stroke="#000" stroke-width="4" fill="yellow">
+      <circle cx="0" cy="0" r="40" />
+      <circle cx="500" cy="0" r="40" />
+      <circle cx="0" cy="500" r="40" />
+      <circle cx="500" cy="500" r="40" />
+    </g><!-- g=group태그(cx,cy,r은 이동불가) -->
+  </svg>
+
+
+  <svg height="140" width="500">
+    <ellipse cx="200" cy="80" rx="100" ry="50"
+    style="fill:yellow;stroke:purple;stroke-width:2" />
+    <!-- rx,ry=축 길이(장축,단축) -->
+  </svg>
+
+
+  <svg height="210" width="500">
+    <line x1="0" y1="0" x2="200" y2="200"
+    style="stroke:rgb(255,0,0);stroke-width:20;stroke-linecap:round;" />
+    <!-- x1,y1=시작점위치 x2,y2=끝점위치 stroke-linecap=끝점모양 -->
+  </svg>
+
+
+  <svg height="250" width="500">
+    <polygon points="250,0 0,500 500,500" 
+   style="fill:lime;stroke:purple;stroke-width:1" />
+  </svg>
+  <svg height="250" width="500">
+    <polygon points="0,50 50,0 450,0 500,50 500,450 450,500 50,500 0,450" 
+   style="fill:lime;stroke:purple;stroke-width:1" />
+  </svg>
+   
+
+  <svg height="200" width="500">
+    <polyline points="20,20 40,25 60,40 80,120 120,140 200,180"
+    style="fill:none;stroke:black;stroke-width:3" />
+  </svg>
+
+
+  <svg height="210" width="400">
+    <path d="M150 0 L75 200 L225 200 Z" />
+    <!-- 대문자=절대위치 -->
+  </svg>
+  <svg height="210" width="400">
+    <path d="m150 0 l75 200 l225 200 z" />
+    <!-- 소문자=상대위치 (이전 점에서 이동한 위치) -->
+  </svg>
+  <svg height="210" width="400">
+    <path d="m150 0 l-75 200 l150 0 z" />
+  </svg>
+
+
+  <svg>
+    <polygon points="146,43 162.39,93.44 215.43,93.44 172.52,124.62 188.91,175.06 146,143.88 103.09,175.06 
+	119.48,124.62 76.57,93.44 129.61,93.44 "
+  style="fill:lime;stroke:purple;stroke-width:1"/>
+  </svg>
+
+  <svg class="mic"> <!-- 일러스트 save a copy / svg code 활용 -->
+    <path d="M14.12,2.87C13.54,2.29,12.83,2,12,2s-1.54,0.29-2.12,0.88S9,4.17,9,5v6c0,0.83,0.29,1.54,0.88,2.12
+	  S11.17,14,12,14s1.54-0.29,2.12-0.88S15,11.83,15,11V5C15,4.17,14.71,3.46,14.12,2.87z"
+    fill="#00B7F1"/>
+    <path d="M8.46,14.54C7.49,13.56,7,12.38,7,11H5c0,1.75,0.57,3.28,1.7,4.6c0.26,0.3,0.53,0.56,0.82,0.8l1.08-1.75
+	  C8.56,14.61,8.51,14.58,8.46,14.54z" fill="#FAA326"/>
+    <path d="M17,11c0,1.38-0.49,2.56-1.46,3.54C14.56,15.51,13.38,16,12,16c-1.32,0-2.45-0.46-3.4-1.35L7.52,16.4
+	  c0.98,0.83,2.14,1.34,3.48,1.52V21h2v-3.08c1.73-0.23,3.17-1.01,4.3-2.33c1.13-1.32,1.7-2.85,1.7-4.6H17z" fill="#9ACA3C"/>
+  </svg>
+</body>
+</html>

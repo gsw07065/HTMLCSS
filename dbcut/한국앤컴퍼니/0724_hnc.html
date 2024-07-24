@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>hnc</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    ul{list-style: none;}
+    a{text-decoration: none;}
+
+    .content{
+      width: 1180px; height: 1120px; margin: 50px auto;
+      display: flex; flex-direction: column; flex-wrap: wrap;
+      justify-content: space-between; align-content: space-between; /* align-items로는 적용안됨 */
+      font-size: 0;
+    }
+
+    .content div{
+      width: 380px; height: 620px; 
+    }
+    .content div.con2,
+    .content div.con3,
+    .content div.con6{
+      height: 480px;
+    }
+    .content div a{
+      display: block; width: 100%; height: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+    .content div a img{
+      width: 100%; height: 100%; object-fit: cover;
+      transition: .4s;
+    }
+    .content div:hover a img{
+      transform: scale(1.1);
+    }
+    .content div a p{
+      position: absolute; bottom: 0; left: 0;
+      font-size: 24px;
+      color: #fff;
+      padding: 50px 30px;
+      word-break:keep-all;
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <div class="con1">
+      <a href="#">
+        <img src="images/main_1.jpg" alt="con1">
+        <p>팬데믹 이전으로 부활한 CES 2024</p>
+      </a>
+    </div>
+    <div class="con2">
+      <a href="#">
+        <img src="images/main_2.jpg" alt="con2">
+        <p>지속 가능한 환경을 위한 지속 불가능한 규제</p>
+      </a>
+    </div>
+    <div class="con3">
+      <a href="#">
+        <img src="images/main_3.jpg" alt="con3">
+        <p>닛산, 항상 도전한다</p>
+      </a>
+    </div>
+    <div class="con4">
+      <a href="#">
+        <img src="images/main_4.jpg" alt="con4">
+        <p>포뮬러 E 시즌 10 프리뷰</p>
+      </a>
+    </div>
+    <div class="con5">
+      <a href="#">
+        <img src="images/main_5.jpg" alt="con5">
+        <p>포뮬러 E 백스테이지</p>
+      </a>
+    </div>
+    <div class="con6">
+      <a href="#">
+        <img src="images/main_6.jpg" alt="con6">
+        <p>챗GPT 이후…<br>
+          2024년 우리가 주목할 기술</p>
+      </a>
+    </div>
+  </div>
+</body>
+</html>

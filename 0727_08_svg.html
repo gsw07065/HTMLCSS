@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>svg8</title>
+  <style>
+    *{margin: 0; padding: 0;}
+   svg{
+    width: 1920px; height: 1080px;
+   }
+   svg path{
+    fill: none;
+    stroke-width: 50px;
+    stroke: #000;
+    stroke-dasharray: 6000;
+    stroke-dashoffset: 6000;
+    stroke-linecap: round;
+    animation: ani 4s infinite;
+   }
+
+   @keyframes ani {
+    0% {stroke-dashoffset: 0;}
+    100% {stroke-dashoffset: 6000;}
+   }
+  </style>
+</head>
+<body>
+  <svg>
+    <path class="st0" d="M215.73,654.19c29.39-190.45,161.63-344.32,334.8-388.8c198.85-51.07,457.6,32.64,527.27,212.41
+	c58.45,150.81-33.28,306.17-134.87,332.99c-105.7,27.91-255.97-70.82-268.2-232.2c-18-237.6,241.31-395.36,466.2-397.8
+	c239.4-2.6,475.38,207.25,529.2,514.8"/>
+  </svg>
+</body>
+</html>

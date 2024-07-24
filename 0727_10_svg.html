@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>svg10</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    section{position: relative; width: 500px; height: 500px;
+    margin: 50px auto;}
+    section p {clip-path: url(#path1);
+    position: absolute; left: 0; top: 0; width: 100%; height: 100%;}
+    svg{position: absolute; left: 0; top: 0;
+    width: 100%; height: 100%;}
+  </style>
+</head>
+<body>
+  <section>
+    <p><img src="images/photo2.jpg" alt="photo2"></p>
+    <svg>
+      <!-- <clipPath id="path1" clipPathUnits="userSpaceOnUse"> -->
+        <!-- userSpaceOnUse 전체크기에 맞춰서 제작해야함 -->
+      <clipPath id="path1" clipPathUnits="objectBoundingBox">
+        <!-- objectBoundingBox 1px영역 안에 만들고, 크기에 맞춰서 커지고 작아짐
+        부모에 크기 줘야 그 크기에 맞춰서 적용됨 -->
+        <path class="st0" d="M1,0.5C1,0.78,0.5,1,0.5,1S0,0.78,0,0.5S0.5,0,0.5,0S1,0.22,1,0.5z"/>
+      </clipPath>
+    </svg>
+  </section>
+</body>
+</html>
