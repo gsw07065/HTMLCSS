@@ -30,12 +30,14 @@
     transform: translate(-50%, -50%);
     background: rgba(255, 255, 255, .2);
     width: 100%; height: 100%;}
+    /* after로 흰색효과 적용시 z-index 따로 안줘도 됨,
+    before에 적용시 전체 뒤로 깔려서 z-index 줘야함 _08참고 */
   </style>
 </head>
 <body>
   <div class="imgBox">
     <img src="https://glassdome.com/img/front/main/platform_img2.webp" alt="">
-    <div class="blurBox">
+    <div class="blurBox"> <!-- 필터블러적용 -->
       <img src="https://glassdome.com/img/front/main/platform_img2.webp" alt="">
     </div>
   </div>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>02카카오</title>
+  <style>
+@font-face {
+  font-family: KakaoBig-R;
+  src: url(webfonts/KakaoBig-Regular-v1.0.woff2) format("woff");
+}
+@font-face {
+  font-family: KakaoBig-B;
+  src: url(webfonts/KakaoBig-Bold-v1.0.woff2) format("woff");
+}
+ 
+    *{margin: 0; padding: 0;}
+    ul{list-style: none;}
+    a{text-decoration: none;}
+    .wrap{margin: 100px auto; width: 1316px;}
+    
+/*     @media screen and (max-width: 1280px) {
+
+    } */
+    .wrap h1{line-height: 72px; font-size: 48px; font-weight: normal;
+      font-family: KakaoBig-R;}
+    .wrap h1 img{width: 72px; vertical-align: top;}
+
+    .wrap>.ul_wrap{
+      display: flex; gap: 15px;
+      flex-wrap: wrap;
+      margin-top: 50px;
+    }
+    .wrap>.ul_wrap>ul{width: 47%; height: 160px;}
+    .wrap>.ul_wrap>ul>li{
+      width: 100%; height: 100%;
+      background: #f3f3f3;
+      border-radius: 30px;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 0 50px; box-sizing: border-box;
+    }
+    .wrap>.ul_wrap>ul>li p{
+      font-size: 30px;
+      font-family: KakaoBig-B;
+    }
+    .wrap>.ul_wrap>ul>li .sub{}
+    .wrap>.ul_wrap>ul>li .sub li{}
+    .wrap>.ul_wrap>ul>li .sub li a{}
+    .wrap>.ul_wrap>ul>li .sub li a img{width: 56px; height: 56px; object-fit: cover;}
+    .wrap>.ul_wrap>ul>li .sub li a:last-child:hover img{
+      content: url(images/kakao_plus_hover.svg);
+    }
+
+    .wrap a.full{
+      display: block;
+      text-align: center; margin: 50px auto;
+      font-size: 22px;
+      width: 20%; height: 76px;
+      background-color: #f3f3f3;
+      line-height: 76px;
+      border-radius: 150px;
+      color: #000;
+      font-family: KakaoBig-R;
+    }
+    .wrap a.full span{
+      display: inline-block;
+      width: 25px; height: 25px;
+      position: relative;
+      margin-left: 10px;
+    }
+    .wrap a.full span::after{
+      content: "→";
+      width: 100%; height: 100%;
+      line-height: 25px; font-size: 13px;
+      color: #fff;
+      background-color: #000;
+      border-radius: 50%;
+      vertical-align: middle;
+      position: absolute; right: 0; top: 0;
+      margin-top: 5px;
+    }
+    .wrap a.full:hover span::after{
+      background-color: rgba(0, 0, 0, .8);
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1><img src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/service/ico_tit_service.gif" alt=""> 더 나은 세상을 만드는 카카오 서비스</h1>
+    <div class="ul_wrap">
+      <ul>
+        <li>
+          <p>커뮤니케이션</p>
+          <ul class="sub">
+            <li>
+              <a href="#"><img src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/kakaoService/cc08d9e2018e00001.png" alt="kakaotalk"></a>
+              <a href="#"><img src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/kakaoService/c9425290018c00001.png" alt="daum"></a>
+              <a href="#"><img src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/kakaoService/c942653a018c00001.png" alt="story"></a>
+              <a href="#"><img src="images/kakao_plus.svg" alt="plus"></a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <p>비즈니스</p>
+          <ul class="sub">
+            <li>
+              <a href="#"><img src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/kakaoService/c9468d8a018c00001.png" alt="kakaoch"></a>
+              <a href="#"><img src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/kakaoService/c9469d4a018c00001.png" alt="cloud"></a>
+              <a href="#"><img src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/kakaoService/c946aa55018c00001.png" alt="agit"></a>
+              <a href="#"><img src="images/kakao_plus.svg" alt="plus"></a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <p>일상편의</p>
+          <ul class="sub">
+            <li>
+              <a href="#"><img src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/kakaoService/c947f606018c00001.png" alt="kakaomap"></a>
+              <a href="#"><img src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/kakaoService/c94804d8018c00001.png" alt="kakaotaxi"></a>
+              <a href="#"><img src="	https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/kakaoService/c9481249018c00001.png" alt="kakaobank"></a>
+              <a href="#"><img src="images/kakao_plus.svg" alt="plus"></a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <p>쇼핑</p>
+          <ul class="sub">
+            <li>
+              <a href="#"><img src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/kakaoService/c94a2627018c00001.png" alt="kakaogift"></a>
+              <a href="#"><img src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/kakaoService/c94a89d4018c00001.png" alt="kakaoshowping"></a>
+              <a href="#"><img src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/kakaoService/c94a96f9018c00001.png" alt="zigzag"></a>
+              <a href="#"><img src="images/kakao_plus.svg" alt="plus"></a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <p>엔터테인먼트</p>
+          <ul class="sub">
+            <li>
+              <a href="#"><img src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/kakaoService/c94b668f018c00001.png" alt="kakaopage"></a>
+              <a href="#"><img src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/kakaoService/c94b7687018c00001.png" alt="bi-smile"></a>
+              <a href="#"><img src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/kakaoService/c94b83e3018c00001.png" alt="melon"></a>
+              <a href="#"><img src="images/kakao_plus.svg" alt="plus"></a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <p>소셜임팩트</p>
+          <ul class="sub">
+            <li>
+              <a href="#"><img src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/kakaoService/c94c09cc018c00001.png" alt="bi-heart"></a>
+              <a href="#"><img src="images/kakao_plus.svg" alt="plus"></a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <a class="full" href="#">서비스 전체보기 <span></span></a>
+  </div>
+</body>
+</html>

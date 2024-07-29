@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>02-2_카카오learn</title>
+  <style>
+*{margin: 0; padding: 0;}
+ul{list-style: none;}
+
+.service{
+  width: 80%;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+.service h1{
+  font-size: 48px; font-weight: normal;
+  display: flex;
+  align-items: center;
+}
+.service h1 img{
+  width: 72px; vertical-align: middle;
+}
+.service h1 strong{margin-left: 20px;}
+.service>ul{
+  display: flex;
+  flex-wrap: wrap; gap: 20px;
+}
+.service>ul>li{
+  flex: 1 1 45%;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 50px 40px; box-sizing: border-box;
+  background: #f3f3f3;
+}
+.service>ul>li ul.icon{
+  display: flex;
+}
+.service>ul>li ul.icon img{width: 56px;}
+
+
+
+@media screen and (max-width: 1439px) {
+  .service{width: 948px;}
+  .service h1{font-size: 32px;}
+  .service h1 img{width: 48px;}
+  .service>ul>li ul.icon img{width: 46px;}
+}
+
+
+
+@media screen and (max-width: 948px){
+  .service{width: 700px;}
+  .service>ul>li ul.icon li:nth-child(3){
+    display: none;
+  }
+}
+
+
+
+@media screen and (max-width: 767px) {
+  .service{
+  width: 100%; padding: 14px;
+  box-sizing: border-box;
+  }
+  .service h1{font-size: 26px;}
+  .service h1 img{display: none;}
+  .service h1 strong{margin-left: 0;}
+  .service>ul>li{flex-direction: column;}
+  .service>ul>li{padding: 12px;}
+}
+
+
+
+@media screen and (max-width: 535px) {
+  .service h1{
+    word-break: keep-all;
+  }
+}
+  </style>
+</head>
+<body>
+ <div class="service">
+  <h1>
+    <span><img src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/service/ico_tit_service.gif" alt="title"></span>
+    <strong>더 나은 세상을 만드는 카카오 서비스</strong>
+  </h1>
+  <ul>
+    <li>
+      <h2>커뮤니케이션</h2>
+      <ul class="icon">
+        <li><img src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/kakaoService/cc08d9e2018e00001.png" alt="kakaotalk"></li>
+        <li><img src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/kakaoService/c9425290018c00001.png" alt="daum"></li>
+        <li><img src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/kakaoService/c942653a018c00001.png" alt="story"></li>
+        <li><img src="images/kakao_plus.svg" alt="plus"></li>
+      </ul>
+    </li>
+    <li>
+      <h2>비즈니스</h2>
+      <ul class="icon">
+        <li><img src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/kakaoService/c9468d8a018c00001.png" alt="kakaoch"></li>
+        <li><img src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/kakaoService/c9469d4a018c00001.png" alt="cloud"></li>
+        <li><img src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/kakaoService/c946aa55018c00001.png" alt="agit"></li>
+        <li><img src="images/kakao_plus.svg" alt="plus"></li>
+      </ul>
+    </li>
+    <li>
+      <h2>일상편의</h2>
+      <ul class="icon">
+        <li><img src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/kakaoService/cc08d9e2018e00001.png" alt="kakaotalk"></li>
+        <li><img src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/kakaoService/c9425290018c00001.png" alt="daum"></li>
+        <li><img src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/kakaoService/c942653a018c00001.png" alt="story"></li>
+        <li><img src="images/kakao_plus.svg" alt="plus"></li>
+      </ul>
+    </li>
+    <li>
+      <h2>쇼핑</h2>
+      <ul class="icon">
+        <li><img src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/kakaoService/cc08d9e2018e00001.png" alt="kakaotalk"></li>
+        <li><img src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/kakaoService/c9425290018c00001.png" alt="daum"></li>
+        <li><img src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/kakaoService/c942653a018c00001.png" alt="story"></li>
+        <li><img src="images/kakao_plus.svg" alt="plus"></li>
+      </ul>
+    </li>
+    <li>
+      <h2>엔터테인먼트</h2>
+      <ul class="icon">
+        <li><img src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/kakaoService/cc08d9e2018e00001.png" alt="kakaotalk"></li>
+        <li><img src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/kakaoService/c9425290018c00001.png" alt="daum"></li>
+        <li><img src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/kakaoService/c942653a018c00001.png" alt="story"></li>
+        <li><img src="images/kakao_plus.svg" alt="plus"></li>
+      </ul>
+    </li>
+    <li>
+      <h2>소셜임팩트</h2>
+      <ul class="icon">
+        <li><img src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/kakaoService/cc08d9e2018e00001.png" alt="kakaotalk"></li>
+        <li><img src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/kakaoService/c9425290018c00001.png" alt="daum"></li>
+        <li><img src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/kakaoService/c942653a018c00001.png" alt="story"></li>
+        <li><img src="images/kakao_plus.svg" alt="plus"></li>
+      </ul>
+    </li>
+  </ul>
+ </div>
+</body>
+</html>
