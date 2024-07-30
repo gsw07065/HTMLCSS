@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>삼양그룹learn2</title>
+  <style>
+  @font-face {
+  font-family: SYFotfB;
+  src: url(webfonts/SYFotfBo00.woff2) format("woff");
+  }
+  @font-face {
+  font-family: NotoSansKR-B;
+  src: url(webfonts/NotoSansKR-Bold.woff2) format("woff");
+  }
+
+    *{margin: 0; padding: 0;}
+    ul{list-style: none;}
+    a{text-decoration: none;}
+
+    ul.cardList{
+      width: 100%; max-width: 1600px; margin: 0 auto;
+      display: flex; flex-wrap: wrap; justify-content: center;
+      transition: .5s ease-in;
+    }
+    ul.cardList li{
+      flex: 1 0 20%;
+      height: 360px;
+      transition: .5s;
+      position: relative;
+      overflow: hidden;
+    }
+    ul.cardList li a{
+      display: block;
+      width: 100%; height: 100%;
+      padding: 30px; box-sizing: border-box;
+      background-size: cover; transition: .5s;
+    }
+
+    ul.cardList li a::after{
+      content: "";
+      position: absolute; left: 0; top: 0;
+      width: 100%; height: 100%; opacity: 0;
+    }
+    ul.cardList li:nth-child(1) a::after{background-color: rgba(0, 163, 241, .84);}
+    ul.cardList li:nth-child(2) a::after{background-color: rgba(219, 92, 41, .79);}
+    ul.cardList li:nth-child(3) a::after{background-color: rgba(139, 135, 6, .76);}
+    ul.cardList li:nth-child(4) a::after{background-color: rgba(0, 163, 241, .64);}
+    ul.cardList li:hover a::after{opacity: 1;}
+
+    ul.cardList li a p{color: #fff; margin-bottom: 20px; z-index: 1; position: relative; transition: .5s;}
+   
+    ul.cardList li a p:nth-child(1){
+      font-size: 36px; font-weight: bold; position: relative;
+      font-family: SYFotfB;
+    }
+    ul.cardList li a p:nth-child(2){
+      font-size: 19px; position: absolute; top: 150px; opacity: 0;
+      font-family: NotoSansKR-B;
+    }
+    ul.cardList li a p:nth-child(3){position: absolute; top: 200px; opacity: 0;}
+    ul.cardList li:hover a p:nth-child(2){top: 100px; opacity: 1;}
+    ul.cardList li:hover a p:nth-child(3){top: 150px; opacity: 1;}
+
+    ul.cardList li .bg{
+      position: absolute; left: 0; top: 0; width: 100%; height: 100%;
+      background-size: cover; transform: scale(1); transition: .5s;
+    }
+    ul.cardList li:nth-child(1) .bg{background-image: url(images/bg1.jpg);}
+    ul.cardList li:nth-child(2) .bg{background-image: url(images/bg2.png);}
+    ul.cardList li:nth-child(3) .bg{background-image: url(images/bg3.jpg);}
+    ul.cardList li:nth-child(4) .bg{background-image: url(images/bg4.jpg);}
+    ul.cardList li:hover .bg{transform: scale(1.2);}
+
+
+    @media screen and (max-width:1530px) {
+      ul.cardList{max-width: 1280px;}
+    }
+    @media screen and (max-width:1024px) {
+      ul.cardList{width: 90%;}
+      ul.cardList li{flex: 1 0 50%; height: 250px;}
+      ul.cardList li:nth-child(1) .bg{background-image: url(images/bg_m1.jpg);}
+      ul.cardList li:nth-child(2) .bg{background-image: url(images/bg_m2.png);}
+      ul.cardList li:nth-child(3) .bg{background-image: url(images/bg_m3.jpg);}
+      ul.cardList li:nth-child(4) .bg{background-image: url(images/bg_m4.jpg);}
+      ul.cardList li:hover .bg{transform: scale(1);}
+      ul.cardList li:hover a::after{opacity: 0;}
+    
+      ul.cardList li a p:nth-child(3){top: 85px; opacity: 1;}
+      ul.cardList li:hover a p:nth-child(2){opacity: 0;}
+      ul.cardList li:hover a p:nth-child(3){top: 85px;}
+    }
+    @media screen and (max-width:768px) {
+      ul.cardList li{flex: 1 0 100%; height: 175px;}
+    }
+  </style>
+</head>
+<body>
+  <ul class="cardList">
+    <li>
+      <a href="#">
+        <p>화학</p>
+        <p>언제나 편리하게</p>
+        <p><img src="images/arrow.svg" alt="arrow"></p>
+        <div class="bg"></div>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <p>식품</p>
+        <p>누구나 풍요롭게</p>
+        <p><img src="images/arrow.svg" alt="arrow"></p>
+        <div class="bg"></div>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <p>의약바이오</p>
+          <p>오래도록 건강하게</p>
+        <p><img src="images/arrow.svg" alt="arrow"></p>
+        <div class="bg"></div>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <p>패키징</p>
+        <p>어디서나 즐겁게</p>
+        <p><img src="images/arrow.svg" alt="arrow"></p>
+        <div class="bg"></div>
+      </a>
+    </li>
+  </ul>
+</body>
+</html>

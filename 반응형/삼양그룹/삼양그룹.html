@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>삼양그룹</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    ul{list-style: none;}
+    a{text-decoration: none;}
+
+    ul.content{
+      width: 100%; max-width: 1600px; 
+      margin: 100px auto;
+      display: flex; justify-content: center;
+    }
+    .content li{
+      width: 25%; height: 360px;
+    }
+    .content li a{
+      width: 100%; height: 100%; display: block;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      position: relative;
+      /* transition: .5s; */
+    }
+    .content li:nth-child(1) a{background-image: url(images/bg1.jpg);}
+    .content li:nth-child(2) a{background-image: url(images/bg2.png);}
+    .content li:nth-child(3) a{background-image: url(images/bg3.jpg);}
+    .content li:nth-child(4) a{background-image: url(images/bg4.jpg);}
+    /* .content li:hover a{background-size: 115%;} */
+    
+    .content li a::after{transition: 1s;}
+    .content li a:hover:after{
+      content: "";
+      position: absolute; left: 0; top: 0;
+      width: 100%; height: 100%; opacity: .8;
+    }
+    .content li:nth-child(1) a:hover:after{background-color: skyblue;}
+    .content li:nth-child(2) a:hover:after{background-color: coral;}
+    .content li:nth-child(3) a:hover:after{background-color: lightgreen;}
+    .content li:nth-child(4) a:hover:after{background-color: skyblue;}
+
+    .content li a .txt{
+      position: relative; z-index: 1;
+      padding: 30px; box-sizing: border-box;
+    }
+    .content li .txt p{color: #fff; margin-bottom: 15px; transition: .3s;}
+    .content li .txt p:nth-child(1){font-size: 36px; font-weight: bold;}
+    .content li .txt p:nth-child(2){font-size: 19px;
+      position: absolute; top: 150px; opacity: 0;}
+    .content li .txt p:nth-child(3){
+      position: absolute; top: 200px; opacity: 0; transition-delay: .1s;}
+      .content li a:hover .txt p:nth-child(2){top: 100px; opacity: 1;}
+      .content li a:hover .txt p:nth-child(3){top: 150px; opacity: 1;}
+
+
+
+    @media screen and (max-width:1280px) {
+      ul.content{width: 90%;}
+      .content li .txt p:nth-child(1){font-size: 32px;}
+    }
+    @media screen and (max-width:1024px) {
+      ul.content{height: 250px; flex-wrap: wrap;}
+      .content li{width: 50%;}
+      .content li:nth-child(1) a{background-image: url(images/bg_m1.jpg);}
+      .content li:nth-child(2) a{background-image: url(images/bg_m2.png);}
+      .content li:nth-child(3) a{background-image: url(images/bg_m3.jpg);}
+      .content li:nth-child(4) a{background-image: url(images/bg_m4.jpg);}
+      
+      .content li a:hover:after{
+      content: none;
+    }
+      .content li .txt p:nth-child(2){display: none;}
+      .content li .txt p:nth-child(3){opacity: 1; top: 85px;}
+      .content li a:hover .txt p:nth-child(3){top: 85px;}
+    }
+    @media screen and (max-width:768px) {
+      ul.content{height: 175px; flex-wrap: wrap;}
+      .content li{width: 100%;}
+    }
+  </style>
+</head>
+<body>
+  <ul class="content">
+    <li>
+      <a href="#">
+        <div class="txt">
+          <p>화학</p>
+          <p>언제나 편리하게</p>
+          <p><img src="images/arrow.svg" alt="arrow"></p>
+        </div>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <div class="txt">
+          <p>식품</p>
+          <p>누구나 풍요롭게</p>
+          <p><img src="images/arrow.svg" alt="arrow"></p>
+        </div>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <div class="txt">
+          <p>의약바이오</p>
+          <p>오래도록 건강하게</p>
+          <p><img src="images/arrow.svg" alt="arrow"></p>
+        </div>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <div class="txt">
+          <p>패키징</p>
+          <p>어디서나 즐겁게</p>
+          <p><img src="images/arrow.svg" alt="arrow"></p>
+        </div>
+      </a>
+    </li>
+  </ul>
+</body>
+</html>

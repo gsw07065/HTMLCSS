@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>0730아테라</title>
+  <style>
+    *{margin: 0;padding: 0;}
+    ul{list-style: none;}
+    a{text-decoration: none;}
+
+    .wrap{
+      width: 100%; height: 780px; margin: 50px auto;
+      display: flex;
+    }
+    .wrap>p{
+      width: 50%; height: 100%; position: relative;
+    }
+    .wrap>p img:nth-child(1){width: 100%; height: 100%; object-fit: cover;}
+    .wrap>p img:nth-child(2){
+      position: absolute; left: 50%; top: 50%; width: 30%;
+      transform: translate(-50%, -50%);
+    }
+
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <p>
+      <img src="images/buliding_img.jpg" alt="img">
+      <img src="images/logo.svg" alt="logo">
+    </p>
+    <ul class="right">
+      <li>
+        <a href="#">
+          <p><img src="images/simbol-white.svg" alt="simbol-white"></p>
+          <p>분양대금 납부조회</p>
+          <p>고객님의 분양대금을 빠르게<br> 조회하실 수 있습니다.</p>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <p><img src="images/simbol_navy.svg" alt="simbol-navy"></p>
+          <p>A/S 신청 조회</p>
+          <p>A/S를 직접 신청하고, 진행 및<br>답변을 확인할 수 있습니다.</p>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <p><img src="images/simbol_navy.svg" alt="simbol-navy"></p>
+          <p>입주일 예약</p>
+          <p>고객님의 입주일을<br>예약할 수 있습니다.</p>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <p><img src="images/simbol_navy.svg" alt="simbol-navy"></p>
+          <p>1:1 문의</p>
+          <p>궁금하신 내용을 직접 상담,<br>답변을 확인하실 수 있습니다.</p>
+        </a>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>

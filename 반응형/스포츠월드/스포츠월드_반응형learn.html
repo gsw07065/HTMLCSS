@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>스포츠월드_반응형learn</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    ul{list-style: none;}
+    
+    ul.lesson{
+      width: 90%; max-width: 1200px; height: 360px;
+      margin: 0 auto;
+      display: flex; flex-wrap: wrap; justify-content: space-between;
+    }
+    ul.lesson li{
+      width: 20%; background-size: contain;
+      background-repeat: no-repeat;
+      padding: 20px; box-sizing: border-box;
+    }
+    ul.lesson li:nth-child(1){background-image: url(images/img1.png);}
+    ul.lesson li:nth-child(2){background-image: url(images/img2.png);}
+    ul.lesson li:nth-child(3){background-image: url(images/img3.png);}
+    ul.lesson li:nth-child(4){background-image: url(images/img4.png);}
+
+    ul.lesson li p{color: #fff;}
+    ul.lesson li p:first-child{font-size: 32px; font-weight: bold;}
+    ul.lesson li p:last-child{font-size: 18px;}
+
+    @media screen and (max-width:768px) {
+      ul.lesson{width: 432px; justify-content: center; gap: 30px;}
+      ul.lesson li{width: 150px; height: 225px;}
+      ul.lesson li p:first-child{font-size: 30px;}
+    ul.lesson li p:last-child{font-size: 15px;}
+    }
+    @media screen and (max-width:500px) {
+      ul.lesson li p:last-child{display: none;}
+    }
+  </style>
+</head>
+<body>
+  <ul class="lesson">
+    <li>
+      <p>수영</p>
+      <p>#다이어트 #유산소 #재활</p>
+    </li>
+    <li>
+      <p>볼링</p>
+      <p>#여가활동 #구기종목</p>
+    </li>
+    <li>
+      <p>헬스</p>
+      <p>#다이어트 #체력증진 #근력운동</p>
+    </li>
+    <li>
+      <p>스피닝</p>
+      <p>#단기다이어트 #유산소</p>
+    </li>
+  </ul>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang=ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>03-2반응형 한화비전</title>
+  <style>
+    *{margin: 0;padding: 0;}
+    .wrap{
+      width: 100%;
+      display: flex; justify-content: space-between;
+      align-items: center;
+      background: #000;
+      position: fixed; bottom: 0;
+    }
+    .wrap div{margin: 20px;box-sizing: border-box; }
+    .wrap .txt{
+      width: 90%; 
+      word-break: keep-all;
+      
+    }
+    .wrap .txt p{
+      color: #fff;
+      font-size: 14px;
+      margin-bottom:5px;
+    }
+    .wrap .txt a{
+      color: #f4731f;
+      font-size: 14px;
+    }
+    .wrap .txt a:hover{
+      text-decoration: none;
+      color: #f89b5c;
+    }
+    .wrap .btn{
+      width: 65px; height: 50px;
+      line-height: 50px;
+      background-color: #f4731f;
+      text-align: center;
+    }
+    .wrap .btn:hover{background: #f89b5c;}
+    .wrap .btn a{text-decoration: none;}
+    .wrap .btn p{
+      color: #fff;
+      font-size: 17px;
+    }
+
+
+/*     @media screen and (max-width: 1353px) {
+      .wrap{height: 110px;}
+      .wrap .txt{width: 90%;}
+    }
+    @media screen and (max-width: 734px) {
+      .wrap{height: 132px;}
+      .wrap .txt{width: 85%;}
+    }
+    @media screen and (max-width: 525px) {
+      .wrap{height: 153px;}
+      .wrap .txt{width: 80%;}
+    } */
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="txt">
+      <p>해당 사이트는 쿠키를 사용하며, 이는 귀하에게 유용한 정보를 파악 하고, 최적화된 정보를 제공하는 마케팅에 활용될 수 있습니다. 이 사이트를 계속 사용함으로써 쿠키 활용에 동의하게 됩니다.</p>
+      <a href="#">상세보기</a>
+    </div>
+    <div class="btn">
+      <a href="#">
+        <p>확인</p>
+      </a>
+    </div>
+  </div>
+</body>
+</html>
