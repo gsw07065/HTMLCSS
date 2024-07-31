@@ -21,7 +21,62 @@
       position: absolute; left: 50%; top: 50%; width: 30%;
       transform: translate(-50%, -50%);
     }
+    .wrap .right{
+      width: 50%; height: 100%;
+      display: flex; flex-wrap: wrap;
+      
+    }
+    .wrap .right li{
+      width: 50%; height: 50%;
+      display: flex; justify-content: center;
+    }
+    .wrap .right li:nth-child(1){background-color: #2a2a5c;}
+    .wrap .right li:nth-child(2){background-color: #f47f3f;}
+    .wrap .right li:nth-child(3){background-color: #c1daf2;}
+    .wrap .right li:nth-child(4){background-color: #f0d5b4;}
+    .wrap .right li a{
+      display: block; width: 70%; height: 100%;
+      display: flex; flex-direction: column;
+      justify-content: center; gap: 30px; 
+    }
+    .wrap .right li a p:nth-child(1){width: 20%;}
+    .wrap .right li a p:nth-child(1) img{width: 100%;}
+    .wrap .right li a p:nth-child(2){font-size: 30px; font-weight: bold;}
+    .wrap .right li a p:nth-child(3){font-size: 18px; letter-spacing: -1px; line-height: 30px;}
+    .wrap .right li:nth-child(1) a p:nth-child(2),
+    .wrap .right li:nth-child(1) a p:nth-child(3){color: #fff;}
+    .wrap .right li:nth-child(2) a p:nth-child(2),
+    .wrap .right li:nth-child(2) a p:nth-child(3),
+    .wrap .right li:nth-child(3) a p:nth-child(2),
+    .wrap .right li:nth-child(3) a p:nth-child(3),
+    .wrap .right li:nth-child(4) a p:nth-child(2),
+    .wrap .right li:nth-child(4) a p:nth-child(3){color: #2a2a5c;}
 
+    @media screen and (max-width:1500px) {
+      .wrap .right li a p:nth-child(2){font-size: 25px;}
+      .wrap .right li a p:nth-child(3){font-size: 16px;}
+    }
+    @media screen and (max-width:1280px) {
+      .wrap .right li a p:nth-child(2){font-size: 21px;}
+      .wrap .right li a p:nth-child(3){font-size: 14px;}
+    }
+    @media screen and (max-width:1024px) {
+      .wrap{flex-direction: column;}
+      .wrap>p{width: 100%; height: 50%;}
+      .wrap .right{width: 100%; /* height: 50%; */}
+      .wrap .right li{padding: 30px 0;}
+      .wrap .right li a p:nth-child(1){width: 15%;}
+      .wrap .right li a p:nth-child(2){font-size: 25px;}
+      .wrap .right li a p:nth-child(3){font-size: 16px;}
+    }
+    @media screen and (max-width:768px) {
+      .wrap .right li a p:nth-child(2){font-size: 21px;}
+      .wrap .right li a p:nth-child(3){font-size: 14px;}
+    }
+    @media screen and (max-width:501px) {
+      .wrap .right li a p:nth-child(2){word-break: keep-all;}
+      .wrap .right li a p:nth-child(3){font-size: 13px;}
+    }
   </style>
 </head>
 <body>

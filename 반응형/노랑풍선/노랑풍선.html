@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>노랑풍선_반응형</title>
+  <style>
+    @font-face {
+      font-family:YbFontLight;
+      src: url(webfonts/YbFontLight.woff) format("woff");
+    }
+    @font-face {
+      font-family:NotoSansKR-Regular;
+      src: url(webfonts/NotoSansKR-Regular.woff) format("woff");
+    }
+    *{margin: 0; padding: 0;}
+    ul{list-style: none;}
+
+    .wrap{
+      width: 100%; max-width: 1520px;
+      margin: 0 auto; padding: 0 20px; box-sizing: border-box;
+    }
+    .wrap h1{
+      text-align: center; line-height: 130px;
+       color: #222; font-size: 36px;
+       font-family:YbFontLight;
+    }
+    .wrap ul.content{}
+    .wrap ul.content li{
+      display: flex; align-items: center;
+      gap: 80px; margin: 20px 0;
+    }
+    .wrap ul.content li:nth-child(2),
+    .wrap ul.content li:nth-child(4){
+      justify-content: end;
+    }
+    .wrap ul.content li>p{
+      width: 720px; height: 440px;
+      border-radius: 10px; overflow: hidden;
+    }
+    .wrap ul.content li>p.m_bg{display: none;}
+    .wrap ul.content li>p img{
+      width: 100%; height: 100%; object-fit: cover;
+    }
+    .wrap ul.content li .txt{
+      display: flex; flex-direction: column; gap: 10px;
+      font-family:NotoSansKR-Regular;
+    }
+    .wrap ul.content li:nth-child(2) .txt,
+    .wrap ul.content li:nth-child(4) .txt{text-align: right;}
+    .wrap ul.content li .txt p.t1{
+      font-size: 24px; color: #777;
+      letter-spacing: -2px;
+    }
+    .wrap ul.content li .txt p.t2{
+      font-size: 48px; color: #222; letter-spacing: -5px;
+    }
+    .wrap ul.content li .txt p.t3{
+      font-size: 48px; color: #ffc72c; font-weight: bold;
+    }
+
+    @media screen and (max-width:1300px) {
+      .wrap ul.content li>p{max-width: 720px;
+        flex: 1 1 60%;}
+      .wrap ul.content li .txt{width: 500px; word-break: keep-all;}
+    }
+    @media screen and (max-width:1024px) {
+      .wrap h1{font-size: 24px; text-align: left; line-height: 50px;}
+      .wrap ul.content li>p{height: auto; flex: 1 1 65%;}
+      .wrap ul.content li .txt{width: 45%;}
+      .wrap ul.content li .txt p.t1{font-size: 16px; letter-spacing: -1px;}
+      .wrap ul.content li .txt p.t2{font-size: 22px; letter-spacing: -2px;}
+      .wrap ul.content li .txt p.t3{font-size: 22px;}
+      
+    }
+    @media screen and (max-width:768px) {
+      .wrap ul.content li{flex-wrap: wrap; gap: 0;}
+      .wrap ul.content li>p{width: 100%;}
+      .wrap ul.content li>p.m_bg{display: block;}
+      .wrap ul.content li>p.m_bgNone{display: none;}
+      .wrap ul.content li .txt{gap: 5px; width: 100%;}
+      .wrap ul.content li:nth-child(2),
+      .wrap ul.content li:nth-child(4){justify-content: left;}
+      .wrap ul.content li:nth-child(2) .txt,
+      .wrap ul.content li:nth-child(4) .txt{text-align: left;}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>노랑풍선이 바라는 여행</h1>
+    <ul class="content">
+      <li>
+        <p><img src="images/bg_story_1.jpg" alt="bg_story_1"></p>
+        <div class="txt">
+          <p class="t1">여행의 새로운 가치를 알립니다</p>
+          <p class="t2">가치를 전달하는 여행</p>
+          <p class="t3">Value-Creating</p>
+        </div>
+      </li>
+      <li>
+        <p class="m_bg"><img src="images/bg_story_2.jpg" alt="bg_story_2"></p>
+        <div class="txt">
+          <p class="t1">고객의, 고객에 의한, 고객을 위한</p>
+          <p class="t2">신뢰를 받는 여행</p>
+          <p class="t3">Trustworthy</p>
+        </div>
+          <p class="m_bgNone"><img src="images/bg_story_2.jpg" alt="bg_story_2"></p>
+      </li>
+      <li>
+        <p><img src="images/bg_story_3.jpg" alt="bg_story_3"></p>
+        <div class="txt">
+          <p class="t1">일상의 가장 반짝이는 순간을 만듭니다</p>
+          <p class="t2">즐거움을 선사하는 여행</p>
+          <p class="t3">Joyful</p>
+        </div>
+      </li>
+      <li>
+        <p class="m_bg"><img src="images/bg_story_4.jpg" alt="bg_story_4"></p>
+        <div class="txt">
+          
+          <p class="t1">다양한 여행상품으로 여행 문화를 선도합니다</p>
+          <p class="t2">혁신적인 여행</p>
+          <p class="t3">Innovative</p>
+        </div>
+        <p class="m_bgNone"><img src="images/bg_story_4.jpg" alt="bg_story_4"></p>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>
