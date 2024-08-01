@@ -21,14 +21,14 @@
       margin: 0 auto; padding: 0 20px; box-sizing: border-box;
     }
     .wrap h1{
-      text-align: center; line-height: 130px;
+      text-align: center; line-height: 150px;
        color: #222; font-size: 36px;
        font-family:YbFontLight;
     }
     .wrap ul.content{}
     .wrap ul.content li{
       display: flex; align-items: center;
-      gap: 80px; margin: 20px 0;
+      gap: 80px; margin: 0 0 30px;
     }
     .wrap ul.content li:nth-child(2),
     .wrap ul.content li:nth-child(4){
@@ -38,7 +38,6 @@
       width: 720px; height: 440px;
       border-radius: 10px; overflow: hidden;
     }
-    .wrap ul.content li>p.m_bg{display: none;}
     .wrap ul.content li>p img{
       width: 100%; height: 100%; object-fit: cover;
     }
@@ -65,7 +64,7 @@
       .wrap ul.content li .txt{width: 500px; word-break: keep-all;}
     }
     @media screen and (max-width:1024px) {
-      .wrap h1{font-size: 24px; text-align: left; line-height: 50px;}
+      .wrap h1{font-size: 24px; text-align: left; line-height: 80px;}
       .wrap ul.content li>p{height: auto; flex: 1 1 65%;}
       .wrap ul.content li .txt{width: 45%;}
       .wrap ul.content li .txt p.t1{font-size: 16px; letter-spacing: -1px;}
@@ -76,11 +75,9 @@
     @media screen and (max-width:768px) {
       .wrap ul.content li{flex-wrap: wrap; gap: 0;}
       .wrap ul.content li>p{width: 100%;}
-      .wrap ul.content li>p.m_bg{display: block;}
-      .wrap ul.content li>p.m_bgNone{display: none;}
       .wrap ul.content li .txt{gap: 5px; width: 100%;}
       .wrap ul.content li:nth-child(2),
-      .wrap ul.content li:nth-child(4){justify-content: left;}
+      .wrap ul.content li:nth-child(4){flex-direction: column-reverse;}
       .wrap ul.content li:nth-child(2) .txt,
       .wrap ul.content li:nth-child(4) .txt{text-align: left;}
     }
@@ -99,13 +96,12 @@
         </div>
       </li>
       <li>
-        <p class="m_bg"><img src="images/bg_story_2.jpg" alt="bg_story_2"></p>
         <div class="txt">
           <p class="t1">고객의, 고객에 의한, 고객을 위한</p>
           <p class="t2">신뢰를 받는 여행</p>
           <p class="t3">Trustworthy</p>
         </div>
-          <p class="m_bgNone"><img src="images/bg_story_2.jpg" alt="bg_story_2"></p>
+          <p><img src="images/bg_story_2.jpg" alt="bg_story_2"></p>
       </li>
       <li>
         <p><img src="images/bg_story_3.jpg" alt="bg_story_3"></p>
@@ -116,14 +112,12 @@
         </div>
       </li>
       <li>
-        <p class="m_bg"><img src="images/bg_story_4.jpg" alt="bg_story_4"></p>
         <div class="txt">
-          
           <p class="t1">다양한 여행상품으로 여행 문화를 선도합니다</p>
           <p class="t2">혁신적인 여행</p>
           <p class="t3">Innovative</p>
         </div>
-        <p class="m_bgNone"><img src="images/bg_story_4.jpg" alt="bg_story_4"></p>
+        <p><img src="images/bg_story_4.jpg" alt="bg_story_4"></p>
       </li>
     </ul>
   </div>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>cnb_2어려움</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    ul{list-style: none;}
+    a{text-decoration: none; color: #fff;}
+
+    .wrap{
+      width: 100%; max-width: 1280px; margin: 100px auto;
+      padding: 0 70px; box-sizing: border-box;
+      display: flex; flex-wrap: wrap; justify-content: center;
+      gap: 80px;
+    }
+    .wrap div{
+      border-radius: 20px; background-size: cover;
+      transition: .5s; overflow: hidden;
+    }
+    .wrap div.left{
+      width: 503px; height: 513px;
+      background-image: url(images/energy_1.jpg);
+      margin-top: 150px;
+    }
+    .wrap div.left:hover{
+      background-image: url(images/energy_1_hover.jpg);
+    }
+    .wrap div.right{
+      display: flex; width: 526px; flex-wrap: wrap;
+      gap: 80px;
+    }
+    .wrap div.right .r_top{
+      width: 100%; height: 391px;
+      background-image: url(images/energy_2.jpg);
+    }
+    .wrap div.right .r_top:hover{background-image: url(images/energy_2_hover.jpg);}
+    .wrap div.right .r_bottom{
+      width: 420px; height: 429px;
+      background-image: url(images/energy_3.jpg);
+    }
+    .wrap div.right .r_bottom:hover{background-image: url(images/energy_3_hover.jpg);}
+    .wrap div a{
+      display: block; width: 100%; height: 100%;
+      padding: 50px; box-sizing: border-box;
+      position: relative;
+    }
+    .wrap div:hover >a::before{
+      content: "";
+      position: absolute; left: 0; top: 0;
+      width: 100%; height: 100%;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, .6), transparent, transparent)
+    }
+   
+    .wrap div a p{position: relative; z-index: 1;}
+    .wrap div a p:nth-child(1){
+      font-size: 36px; font-weight: bold;
+      line-height: 70px; margin-bottom: 20px;
+      position: relative;
+    }
+    .wrap div a p:nth-child(1):after{
+      content: "";
+      position: absolute; right: 0; top: 0;
+      background-position: top right;
+      width: 70px; height: 70px;
+      background-image:url(images/arrow_large.svg);
+      background-repeat: no-repeat;
+    }
+    .wrap div:hover>a p:nth-child(1):after{
+      content: "";
+      position: absolute; right: 0; top: 0;
+      background-position: top right;
+      width: 70px; height: 70px;
+      background-image:url(images/arrow_large_hover.svg);
+      background-repeat: no-repeat;
+    }
+    .wrap div a p:nth-child(2){
+      font-size: 22px; line-height: 36px;
+      letter-spacing: -1px; word-spacing: -1px;
+      opacity: 0; transition: .3s;
+    }
+    .wrap div:hover>a p:nth-child(2){
+      opacity: 1;
+    }
+
+
+
+    @media screen and (max-width:1280px) {
+      .wrap{padding: 0 50px;}
+      .wrap, .wrap div.right{gap: 20px;}
+      .wrap div{background-position: center;}
+      .wrap div.left{
+      width: 100%; height: 327px;
+      margin-top: 0;
+      }
+      .wrap div.right{width: 100%;}
+      .wrap div.right .r_top,
+      .wrap div.right .r_bottom{
+      width: 100%; height: 327px;
+      }
+      .wrap div a p{word-break: keep-all;}
+      .wrap div a p:nth-child(1){font-size: 30px;}
+      .wrap div a p:nth-child(2){font-size: 18px;}
+    }
+
+    @media screen and (max-width:768px) {
+      .wrap{padding: 0 24px;}
+      .wrap div a{padding: 30px;}
+      .wrap div a p:nth-child(1){font-size: 22px; line-height: 40px;}
+      .wrap div a p:nth-child(1):after,
+      .wrap div:hover>a p:nth-child(1):after{
+        width: 40px; height:40px; background-size: contain;
+      }
+      .wrap div a p:nth-child(2){font-size: 16px;}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+      <div class="left">
+        <a href="#">
+          <p>천연가스</p>
+          <p>GS EPS는 국내 최초의 LNG발전사업자로서 청정연료를 이용한 LNG발전을 통해 친환경 전력 생산에 앞장서고 있습니다.</p>
+        </a>
+      </div>
+    <div class="right">
+      <div class="r_top">
+        <a href="#">
+          <p>바이오매스</p>
+          <p>GS EPS는 아시아 최초의 100MW급 바이오매스 발전소를 건설하여, 현재 총 210MW 규모의 바이오매스 발전소를 운영하고 있습니다.</p>
+        </a>
+      </div>
+      <div class="r_bottom">
+        <a href="#">
+          <p>태양광</p>
+          <p>GS EPS는 건물 옥상 및 유휴부지를 활용한 태양광 발전소를 당진 발전소 내에서
+            운영하고 있습니다.</p>
+        </a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
