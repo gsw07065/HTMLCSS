@@ -1,0 +1,35 @@
+mdm 사이트 리디자인 (클론 및 보완, 반응형으로 변경)
+http://www.mdmworld.co.kr/
+
+
+참고용 사이트
+
+휴비스
+https://www.huvis.com/kor/
+
+대상그룹
+https://www.daesangholdings.com/
+
+화승그룹
+https://www.hwaseunggroup.com/kor/main/
+
+삼양그룹
+https://www.samyang.com/kr/
+
+삼양사
+https://www.samyangcorp.com/kr/index
+
+KCH
+https://www.kchglobal.com/
+
+TP그룹
+https://tp-inc.com/
+
+SM그룹
+https://www.smgroup.co.kr/
+
+대림?
+https://www.daelim.co.kr/ko/pc/index.do
+
+한국카본?
+https://www.hcarbon.com/ko/main.do

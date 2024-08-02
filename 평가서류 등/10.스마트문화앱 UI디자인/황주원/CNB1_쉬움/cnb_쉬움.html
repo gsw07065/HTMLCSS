@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>cnb_쉬움</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    ul{list-style: none;}
+
+    .wrap{
+      width: 100%; max-width: 1330px; margin: 0 auto;
+      padding: 0 15px; box-sizing: border-box;
+      }
+    .wrap h1{
+      text-align: center; font-size: 40px; padding: 50px 0;
+      position: relative; letter-spacing: -1px;
+    }
+    .wrap h1::after{
+      content: "";
+      width: 120px; height: 4px; background-color: #000;
+      position: absolute; left: 50%; top: 208px;
+      transform: translateX(-50%);
+    }
+    .wrap p{
+      text-align: center; padding: 50px 0;
+      color: #444; font-size: 22px; line-height: 40px;
+      letter-spacing: -1.5px;
+    }
+    .wrap ul{display: flex; flex-wrap: wrap; gap: 40px; width: 1280px;}
+    .wrap ul li{border-radius: 40px; overflow: hidden;}
+
+    @media screen and (max-width:990px) {
+      .wrap h1{font-size: 20px;padding: 40px 0;}
+      .wrap h1::after{display: none;}
+      .wrap p{font-size: 15px; padding-top: 0; padding-bottom: 40px; line-height: 30px;}
+      .wrap ul{width: 100%; gap: 10px;}
+      .wrap ul li{width: 48%;}
+      .wrap ul li a img{width: 100%; height: 100%; object-fit: cover;}
+      br{display: none;}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>생활 속에서 함께하는 <br>식품 제조 선도 기업</h1>
+    <p>신세계푸드는 글로벌 수준의 R&D센터와 식품 제조 인프라를 갖추고 있습니다. <br>
+      프리미엄 가정 간편식, 베이커리, Fresh Food, 대안식품 등을 <br>
+      직접 연구개발 및 생산하며 식품시장을 선도해 가고 있습니다.</p>
+      <ul>
+        <li>
+          <a href="#"><img src="images/business_item1_hotelCollection.jpg" alt="img1"></a>
+        </li>
+        <li>
+          <a href="#"><img src="images/business_item2_vecchiaEnuovo.jpg" alt="img2"></a>
+        </li>
+        <li>
+          <a href="#"><img src="images/business_item3_olbaan.jpg" alt="img3"></a>
+        </li>
+        <li>
+          <a href="#"><img src="images/business_item4_ywe.jpg" alt="img4"></a>
+        </li>
+        <li>
+          <a href="#"><img src="images/business_item5_betterMeat.jpg" alt="img5"></a>
+        </li>
+        <li>
+          <a href="#"><img src="images/business_item6_brand.jpg" alt="img6"></a>
+        </li>
+        <li>
+          <a href="#"><img src="images/business_item7_recette.jpg" alt="img7"></a>
+        </li>
+      </ul>
+  </div>
+</body>
+</html>

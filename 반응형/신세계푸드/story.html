@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>신세계푸드story</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    ul{list-style: none;}
+
+    body{background-color: #f0f0f0;}
+    .story{
+      width: 98%; max-width: 940px; margin: 0 auto; text-align: center;
+    }
+    .story h1{
+      font-size: 50px; font-weight: bold; text-align: center;
+      border-bottom: 4px solid #000;
+      position: relative; letter-spacing: -2px;
+      display: inline-block; padding-bottom: 5px;
+      margin: 50px 0;
+    }
+    .story h1::after{
+      content: "";
+      width: 43px; height: 38px;
+      position: absolute; right: -30px; bottom: -12px;
+      background-image: url(images/icon_vs_ttl.png);
+    }
+    .story ul{
+      width: 100%; /* height: 1000px; */
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between; align-items: space-between;
+      gap: 40px;
+    }
+    .story ul li{
+      /* width: calc(50% - 20px);*/ height: 480px;   flex: 1 0 40%; background-repeat: no-repeat;
+      /* background-size: cover; */
+      border-radius: 70px 0;
+      display: flex; justify-content: center; align-items: center;
+      position: relative; z-index: 1;
+    }
+    .story ul li:nth-child(1){background-image: url(images/bg_vs_value_1.jpg);}
+    .story ul li:nth-child(2){
+      background-image: url(images/bg_vs_value_2.jpg);
+      margin-top: 100px;
+    }
+    .story ul li:nth-child(2)::before{
+      content: "";
+      width: 100%; height: 100%;
+      position: absolute; left: 100px; top: -100px;
+      background-image: url(images/bg_vs_value_2_bg.png);
+      border-radius: 70px 0;
+    }
+    .story ul li:nth-child(3){
+      background-image: url(images/bg_vs_value_3.jpg);
+      margin-top: -100px;
+    }
+    .story ul li:nth-child(3)::before{
+      content: "";
+      width: 100%; height: 100%;
+      position: absolute; left: -100px; top: 100px;
+      background-image: url(images/bg_vs_value_2_bg.png);
+      border-radius: 70px 0;
+    }
+    .story ul li:nth-child(4){background-image: url(images/bg_vs_value_4.jpg);}
+
+    .story ul li div.txt_Bg{
+      background-color: rgba(0, 0, 0, .3);
+      width: 100%; padding: 20px 0;
+    }
+    .story ul li div.txt_Bg p{color: #fff;}
+    .story ul li div.txt_Bg p:nth-child(1){
+      font-size: 32px; font-weight: bold;
+    }
+    .story ul li div.txt_Bg p:nth-child(2){
+      font-size: 20px; word-break: keep-all;
+      padding: 20px 10px; box-sizing: border-box;
+    }
+    
+    @media screen and (max-width:960px) {
+      .story ul{gap: 10px;}
+      .story ul li{flex: 1 0 40%; /* height:100%; */}
+      /* 반응형 height 안됨*/
+      br{display: none;}
+    }
+     
+  </style>
+</head>
+<body>
+  <div class="story">
+    <h1>Core Value</h1>
+    <ul>
+      <li>
+        <div class="txt_Bg">
+          <p>Taste & Quality</p>
+          <p>
+            최선의 '품질'을통해 <br>최상의 '맛'을 구현합니다
+          </p>
+        </div>
+      </li>
+      <li>
+        <div class="txt_Bg">
+          <p>Health & Wellness</p>
+          <p>
+            고객의 건강과 라이프스타일을 지원하는 <br>맞춤형 푸드 옵션을 제공합니다.
+          </p>
+        </div>
+      </li>
+      <li>
+        <div class="txt_Bg">
+          <p>Convenience</p>
+          <p>
+            보관/조리/폐기 전반에 걸친 고객 중심 마인드로 <br>최적화된 편의를 제공합니다.
+          </p>
+        </div>
+      </li>
+      <li>
+        <div class="txt_Bg">
+          <p>Value</p>
+          <p>
+            지구와 사회에 긍정적인 영향을 주는 <br>지속 가능하고 책임감 있는 사업을 이어갑니다.
+          </p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>
+
+
+
+
+
+<!-- https://www.shinsegaefood.com/company/story/vision.sf -->
