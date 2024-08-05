@@ -19,43 +19,70 @@ a{text-decoration: none;}
 .s1 header{
   width: 100%; height: 100px;
   background-image: linear-gradient(rgba(0, 0, 0, .4),transparent);
-  position: fixed;
+  position: fixed; z-index: 30;
   display: flex;
-  position: relative;
+}
+.s1 header:hover{
+  /* background-color: rgba(0, 0, 0, .5); */
+  background-color: #fff;
+  background-image: none;
+  border-bottom: 1px solid #ddd;
 
 }
 .s1 header .logo{
   width: 100px; height: 100%;
   text-align: center;
-  position: relative;
+  position: relative; z-index: 1;
   margin-left: 25px;
 }
 .s1 header .logo a{
   display: block;
-  width: 67px; height: 50px;
-  background-image: url(../images/logo-header_white.png);
+  width: 100px; height: 55px;
+  background-image: url(../images/mdm_ci_redesign_white3.svg);
   position: absolute; left: 50%; top: 50%;
   transform: translate(-50%,-50%);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.s1 header:hover .logo a{
+  background-image: url(../images/mdm_ci_redesign_blue3.svg);
 }
 .s1 header .nav{
   width: 100%; max-width: 1000px; height: 100%;
   display: flex; align-items: center;
   text-align: center;
-  margin: 0 auto;
-  
+  margin: 0 auto; 
 }
 .s1 header .nav>li{
   width: 20%; line-height: 100px;
-  position: relative;
+  position: relative; z-index: 1;
 }
 .s1 header .nav>li>a{
-  color: #eee;
+  display: block;
+  width: 100%; height: 100%;
+  color: #fff; 
+  font-weight: 600;
+}
+.s1 header:hover .nav>li>a{
+  color: #222; 
+}
+.s1 header .nav>li:hover>a{
+  background-color: #eee;
+  transition: .3s
 }
 .s1 header .nav>li .sub{
-  width: 100%; height: 340px;
-  position: absolute; top: 100px; left: 0;
+  width: 100%; height: 0;
+  position: absolute; top: 101px; left: 0;
   padding-top: 30px; box-sizing: border-box;
   z-index: 1;
+  overflow: hidden;
+  
+}
+.s1 header:hover .nav>li .sub{
+height: 340px;transition: .2s .1s;
+}
+.s1 header .nav>li:hover .sub{
+  background-color: #eee;
 }
 .s1 header .nav>li .sub li{
 width: 100%; line-height: 40px;
@@ -63,10 +90,97 @@ width: 100%; line-height: 40px;
 .s1 header .nav>li .sub li a{
   display: block;
   width: 100%;
-  color: #eee;
+  color: #444;
+  font-size: 14px;
+}
+.s1 header .nav>li .sub li:hover a{
+  color: #095dba;
+}
+.s1 header .nav>li .sub li a span{
+  display: inline-block; height: 32px;
+  transition: border .3s;
+  border-bottom: 1px solid transparent;
+}
+.s1 header .nav>li .sub li:hover a span{
+  border-bottom: 1px solid;
 }
 .s1 header .nav_Bg{
-  width: 100%; height: 340px;
-  background-color: rgba(0, 0, 0, .5);
-  position: absolute; top: 100px; left: 0;
+  width: 100%; height: 0;
+  /* background-color: rgba(0, 0, 0, .5); */
+  background-color: #fff;
+  position: absolute; top: 101px; left: 0;
+  transition: .3s;
+
+}
+.s1 header:hover .nav_Bg{
+  height: 340px;
+}
+
+
+/* section2 시작 */
+.s2{
+  background-image: url(../images/MP_section2_bg_img.jpg);
+  background-size: cover;
+  position: relative;
+}
+.s2 .title{
+  width: 100%; text-align: center;
+  color: #fff;
+  position: absolute; z-index: 1;
+  top: 200px; left: 0;
+}
+.s2 .title p:nth-child(1){
+  font-size: 22px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+.s2 .title p:nth-child(2){
+  font-size: 80px; font-weight: bold;
+}
+.s2 .since_Box{
+  width: 90%; height: 100%;
+  display: flex; justify-content: center;
+  margin: 0 auto;
+}
+.s2 .since_Box li{
+  width: 25%; height: 100%; text-align: center;
+  border-left: 1px solid rgba(255, 255, 255, .1);
+  display: flex; flex-direction: column;
+  justify-content: flex-end;
+  color: #fff;
+}
+.s2 .since_Box li:last-child{
+  border-right: 1px solid rgba(255, 255, 255, .1);
+}
+.s2 .since_Box li .show p:nth-child(1){
+  font-size: 15px;
+}
+.s2 .since_Box li .show p.since{
+  font-size: 45px; font-weight: bold;
+  display: inline-block;
+  display: flex; flex-direction: column;
+  width: 50%; margin: 0 auto;
+  line-height: 45px;
+}
+.s2 .since_Box li .show p.since1{
+  align-items: flex-start;
+  margin-top: 10px;
+}
+.s2 .since_Box li .show p.since2{
+  align-items: flex-end;
+  margin-bottom: 30px;
+}
+.s2 .since_Box li .hide{
+  margin-bottom: 100px;
+}
+.s2 .since_Box li .hide p{
+font-size: 14px;
+}
+.s2 .since_Box li .hide a{
+color: #fff;
+font-size: 14px; font-weight: 600;
+line-height: 150px;
+}
+.s2 .since_Box li .hide a span{
+  padding-left: 5px;
 }
