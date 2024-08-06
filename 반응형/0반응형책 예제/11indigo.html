@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>11 indigo</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    ul{list-style: none;}
+    a{text-decoration: none;}
+
+
+     /* section1 시작 */
+    .section1{
+      width: 90%; max-width: 1130px;
+      margin: 50px auto;
+    }
+    .section1 .title{
+      width: 100%;
+      display: flex; justify-content: space-between;
+      margin-bottom: 100px;
+    }
+    .section1 .title p{}
+    .section1 .title p:first-child{
+      font-size: 42px; color: #3f51b5; 
+      flex: 0 1 40%;
+    }
+    .section1 .title p:nth-child(2){
+      color: #616161; position: relative; line-height: 25px;
+      flex-shrink: 0; letter-spacing: -.1px;
+    }
+    .section1 .title p:nth-child(2)::before{
+      content: "";
+      position: absolute; left: -20px; top: 4px;
+      width: 2px; height: 44px; background-color: #e0e0e0;
+    }
+    .section1 ul.icon{
+      width: 100%; display: flex; justify-content: space-between;
+      text-align: center;
+    }
+    .section1 ul.icon li{
+      flex: 0 1 23%; 
+    }
+    .section1 ul.icon li a{
+      display: flex; flex-direction: column; align-items: center;
+    }
+    .section1 ul.icon li:nth-child(1) a p:first-child{width: 57px;}
+    .section1 ul.icon li:nth-child(2) a p:first-child{width: 78px;}
+    .section1 ul.icon li:nth-child(3) a p:first-child{width: 52px;}
+    .section1 ul.icon li:nth-child(4) a p:first-child{width: 52px;}
+    .section1 ul.icon li a p:first-child img{
+      width: 100%; object-fit: contain;
+    }
+    .section1 ul.icon li a p:nth-child(2){
+      margin: 20px 0; color: #3f51b5;
+    }
+    .section1 ul.icon li a p:nth-child(3){
+      color: #616161; font-size: 14px;
+    }
+
+
+    /* section2 시작 */
+    .section2{
+      width: 100%;
+      margin: 150px auto;
+    }
+    .section2>p{
+      font-size: 42px; color: #3f51b5;
+      width: 90%; max-width: 1130px; margin: 0 auto;
+      margin-bottom: 50px;
+      border-top: 2px solid #eee; padding-top: 100px;
+    }
+    .section2 ul{
+      display: flex; flex-wrap: wrap;
+    }
+    .section2 ul li{width: 25%;
+    }
+    .section2 ul li a{color: #fff; width: 100%; height: 100%;
+      display: block; position: relative;}
+      .section2 ul li:hover a:before{
+      content: "";
+      position: absolute; left: 0; top: 0; width: 100%; height: 100%;
+      background-color: #3f51b5; opacity: .8;
+    }
+    .section2 ul li a>p:first-child{width: 100%; height: 100%;}
+    .section2 ul li a>p:first-child img{width: 100%; height: 100%; object-fit: cover;}
+    .section2 ul li a .hov{
+      position: absolute; left: 0; top: -50px; width: 100%; height: 100%;
+      padding: 30px; box-sizing: border-box; opacity: 0; transition: .3s;
+    }
+    .section2 ul li a .hov p:first-child{
+      font-size: 23px; margin-bottom: 8px;
+    }
+    .section2 ul li a .hov p:nth-child(2){
+      font-size: 11px;
+    }
+    .section2 ul li:hover a .hov{opacity: 1; top: 0;}
+    
+    @media screen and (max-width:1130px) {
+      .section1 .title{flex-direction: column; text-align: center; gap: 30px;}
+      .section1 .title p{width: 100%;}
+      .section1 .title p:nth-child(2)::before{content: none}
+
+      .section2>p{text-align: center;}
+      .section2 ul li{width: 50%;}
+    }
+    @media screen and (max-width:768px){
+      .section1 ul.icon{flex-direction: column; gap: 50px;}
+      .section1 .title{margin-bottom:70px;}
+
+      .section2{margin: 70px auto;}
+      .section2>p{padding-top: 50px;}
+      .section2 ul li{width: 100%;}
+    }
+  </style>
+</head>
+<body>
+  <section class="section1">
+    <div class="title">
+      <p>WE ARE</p>
+      <p>
+        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a<br>
+        piece of classical Latin literature from 45 BC, making it over 2000 years old.
+      </p>
+    </div>
+    <ul class="icon">
+      <li>
+        <a href="#">
+          <p><img src="images/promo01.png" alt="icon1"></p>
+          <p>HOME</p>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          </p>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <p><img src="images/promo02.png" alt="icon2"></p>
+          <p>WE ARE</p>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          </p>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <p><img src="images/promo03.png" alt="icon3"></p>
+          <p>WORK</p>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          </p>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <p><img src="images/promo04.png" alt="icon4"></p>
+          <p>BLOG</p>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          </p>
+        </a>
+      </li>
+    </ul>
+  </section>
+  <section class="section2">
+    <p>WORK</p>
+    <ul>
+      <li>
+        <a href="#">
+          <p><img src="images/work01.jpg" alt="work01"></p>
+          <div class="hov">
+            <p>Running</p>
+            <p>WEB/PRINT</p>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <p><img src="images/work02.jpg" alt="work02"></p>
+          <div class="hov">
+            <p>Rugby</p>
+            <p>WEB/PRINT</p>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <p><img src="images/work03.jpg" alt="work03"></p>
+          <div class="hov">
+            <p>Weight</p>
+            <p>WEB/PRINT</p>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <p><img src="images/work04.jpg" alt="work04"></p>
+          <div class="hov">
+            <p>Marathon</p>
+            <p>WEB/PRINT</p>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <p><img src="images/work05.jpg" alt="work05"></p>
+          <div class="hov">
+            <p>Boxing</p>
+            <p>WEB/PRINT</p>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <p><img src="images/work06.jpg" alt="work06"></p>
+          <div class="hov">
+            <p>Ice Hockey</p>
+            <p>WEB/PRINT</p>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <p><img src="images/work07.jpg" alt="work07"></p>
+          <div class="hov">
+            <p>Skate Board</p>
+            <p>WEB/PRINT</p>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <p><img src="images/work08.jpg" alt="work08"></p>
+          <div class="hov">
+            <p>Basketball</p>
+            <p>WEB/PRINT</p>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </section>
+</body>
+</html>
