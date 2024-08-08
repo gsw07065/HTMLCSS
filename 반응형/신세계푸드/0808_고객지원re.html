@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>0808고객지원re</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    ul{list-style: none;}
+    
+    .wrap{
+      width: 90%; max-width: 940px; margin: 0 auto;
+      text-align: center;
+    }
+    .wrap>p{
+      font-size: 25px; color: #444; font-weight: bold;
+      margin: 30px 0;
+    }
+    .wrap ul{
+      display: flex; justify-content: center; gap: 20px;
+      counter-reset: number; /* 위치 번호가 들어가는 부모요소에! */
+    }
+    .wrap ul li{
+      flex: 1 1 20%;
+      background-color: #d2492c;
+      border-radius: 20px;
+      padding: 20px 15px; box-sizing: border-box;
+    }
+    .wrap ul li>p{
+      background-image: url(images/icon_voc.png);
+      width: 108px; height: 100px; margin: 0 auto;
+      background-size: cover;
+    }
+    .wrap ul li:nth-child(2)>p{background-position: -108px;}
+    .wrap ul li:nth-child(3)>p{background-position: calc(-108px * 2);}
+    .wrap ul li:nth-child(4)>p{background-position: calc(-108px * 3);}
+    .wrap ul li:nth-child(5)>p{background-position: right;}
+    .wrap ul li div.txt{margin-top: 20px;}
+    .wrap ul li div.txt h3{
+      color: #ecff96; font-size: 23px;
+    }
+    .wrap ul li div.txt h3::before{
+      content: counter(number);
+      counter-increment: number;
+      display: inline-block;
+      width: 18px; height: 18px; background-color: #ecff96;
+      border-radius: 50%; text-align: center; line-height: 18px;
+      font-size: 18px; font-weight: normal; color: #d2492c;
+      margin-right: 5px;
+    }
+    .wrap ul li div.txt h3 span{
+      display: inline-block;
+      background-image: url(images/btn_arr_upwards_y.png);
+      width: 14px; height: 14px; margin-left: 2px;
+      background-size: cover;
+    }
+    .wrap ul li div.txt h3 a{
+      color: #ecff96; text-decoration: none;
+    }
+    .wrap ul li div.txt div{
+      color: #fff; font-size: 17px; line-height: 30px;
+      margin-top: 5px; letter-spacing: -2px;
+    }
+    .wrap ul li div.txt div p::before{
+      content: "";
+      width: 2px; height: 2px;
+      display: inline-block;
+      margin: 0 5px 5px 0;
+      background-color: #fff;
+    }
+    .wrap ul li div.txt div a{
+      color: #fff; text-underline-offset: 5px;
+    }
+    .wrap ul li div.txt div a span{
+      display: inline-block;
+      background-image: url(images/btn_arr_upwards_w.png);
+      width: 14px; height: 14px; margin-left: 2px;
+      background-size: cover;
+    }
+
+
+    @media screen and (max-width:960px) {
+      .wrap{width: 95%;}
+      .wrap ul li{padding: 20px 10px;}
+      .wrap ul li>p{width: 54px; height: 50px;}
+      .wrap ul li:nth-child(2)>p{background-position: -54px;}
+      .wrap ul li:nth-child(3)>p{background-position: calc(-54px * 2);}
+      .wrap ul li:nth-child(4)>p{background-position: calc(-54px * 3);}
+      .wrap ul li:nth-child(5)>p{background-position: right;}
+      .wrap ul li div.txt h3{font-size: 14px;}
+      .wrap ul li div.txt h3::before{
+        width: 16px; height: 16px; line-height: 14px;
+        font-size: 14px;
+       }
+      .wrap ul li div.txt h3 span,
+      .wrap ul li div.txt div a span{width: 10px; height: 10px;}
+      .wrap ul li div.txt div{font-size: 14px; line-height: 25px;}
+    }
+
+
+    @media screen and (max-width:640px) {
+      .wrap{text-align: left;}
+      .wrap ul{flex-direction: column; gap: 10px;}
+      .wrap ul li{display: flex;}
+      .wrap ul li>p{margin: auto 5px;}
+      .wrap ul li div.txt{margin: auto 0; padding: 10px 0;}
+      .wrap ul li div.txt div{display: flex;}
+      .wrap ul li div.txt div p::before{
+        width: 1px; height: 10px; margin: 0 5px 0 10px;
+      }
+      .wrap ul li div.txt div p:first-child:before{content: none;}
+      br{display: none;}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <p>고객불만 처리절차</p>
+    <ul>
+      <li>
+        <p></p>
+        <div class="txt">
+          <h3><a href="#">접수<span></span></a></h3>
+          <div>
+            <p>홈페이지</p>
+            <p>유선</p>
+            <p>우편</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <p></p>
+        <div class="txt">
+          <h3>현장방문</h3>
+          <div>
+            <p>매장 관리자</p>
+            <p>CS 담당자</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <p></p>
+        <div class="txt">
+          <h3>원인분석</h3>
+          <div>
+            <p>매장 및 제조사</p>
+            <p>품질혁신팀</p>
+            <p>연구분석팀</p>
+            <p>식품안전센터</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <p></p>
+        <div class="txt">
+          <h3>대책수립</h3>
+          <div>
+            <p>원인분석<br>
+              및 대책수립</p>
+            <p>재발방지 교육<br>
+              및 개선</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <p></p>
+        <div class="txt">
+          <h3>고객보고</h3>
+          <div>
+            <p>결과보고</p>
+            <p><a href="#">소비자분쟁해결기준에 의한 보상<span></span></a></p>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>
