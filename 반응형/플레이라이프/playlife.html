@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>플레이라이프</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    ul{list-style: none;}
+    a{text-decoration: none; color: #000;}
+    .wrap{width: 100%; margin: 0 auto; position: relative;}
+    .wrap>p{
+      text-align: center; line-height: 40px; width: 100%;
+      background-color: #222; color: #fff; font-size: 15px;
+      position: fixed; z-index: 1;
+      /* position: fixed 준 경우 크기값 재지정 해줘야함 */
+    }
+    .wrap>p::after{
+      content: url(images/icon_banner_close.svg);
+      position: absolute; right:20px; top: 50%;
+      transform: translateY(-50%);
+    }
+    .wrap .content{width: 100%; display: flex;}
+    .wrap .content .left{
+      flex: 0 1 40%; height: 100vh;
+      background-image: url(images/main.jpg);
+      background-size: cover; background-repeat: no-repeat;
+      background-position: center;
+      position: sticky; top: 40px;
+      /* position: sticky 준 경우 좌표 지정 해줘야함 (top: 0;) */
+    }
+    .wrap .content .left::after{
+      content: "";
+      position: absolute; left: 0; top: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, .4);
+    }
+    .wrap .content .left .txt{
+      color: #fff; position: relative; z-index: 1;
+    }
+    .wrap .content .left .txt a{color: #fff;}
+    .wrap .content .right{
+      flex: 0 1 60%; display: flex; justify-content: center; gap: 50px;
+      margin-top: 100px;
+    }
+    .wrap .content .right .right1,
+    .wrap .content .right .right2{
+      flex: 0 1 40%;
+    }
+    .wrap .content .right .right2{margin-top: 50px;}
+    .wrap .content .right ul li{margin-bottom: 100px;}
+    .wrap .content .right ul li>a {width: 100%; aspect-ratio: 1 / 1.3; display: block;}
+    .wrap .content .right ul li>a img{width: 100%; height: 100%; object-fit: cover;}
+
+
+    @media screen and (max-width:1200px) {
+      .wrap .content{flex-direction: column;}
+      .wrap .content .left{
+      flex: 1 1 100%;
+      position: relative; top: 40px;
+      }
+      .wrap .content .left .txt{width: 100%; height: 800px;}
+      .wrap .content .right{
+        width: 97%; display: flex; justify-content: center; gap: 20px;
+        margin: 70px auto; flex-direction: column;
+      }
+      .wrap .content .right .right1,
+      .wrap .content .right .right2{
+        width: 100%; display: flex; flex-wrap: wrap; justify-content: space-between;
+      }
+      .wrap .content .right .right2{margin-top: 0;}
+      .wrap .content .right ul li{
+        margin-bottom: 20px; display: flex;
+        flex: 0 0 48%;
+      }
+      .wrap .content .right ul li>a{flex: 0 1 48%;}
+      .wrap .content .right ul li .txt{flex: 0 1 52%;}
+    }
+
+
+    @media screen and (max-width:720px) {
+       .wrap .content .right{
+        width: 97%; display: flex; justify-content: center; gap: 20px;
+        margin: 70px auto; flex-direction: column;
+      }
+      .wrap .content .right .right1,
+      .wrap .content .right .right2{
+        width: 100%; display: flex; /* flex-wrap: wrap; */ /* justify-content: space-between; */
+      }
+      .wrap .content .right ul li{
+        flex: 0 0 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <p>마음 성장 플랫폼, 플레이라이프</p>
+    <div class="content">
+      <div class="left">
+        <div class="txt">
+          <p>PEOPLE</p>
+          <a href="#">기록은 미래의 나에게 보내는 다정한 안부</a>
+          <p>“기록이 진해질수록 허무함은 희미해져요”</p>
+          <p>김신지 <span>에세이 작가</span></p>
+        </div>
+      </div>
+      <div class="right">
+        <ul class="right1">
+          <li>
+            <a href="#"><img src="images/m01.jpg" alt="m01"></a>
+            <div class="txt">
+              <p>PEOPLE</p>
+              <a href="#">이어지는 삶 속에서 새로 발견한 것</a>
+              <p>“나만의 목표를 갖고 작은 시도를 계속 해보는 게 중요해요”</p>
+              <p>박찬종 <span>크리에이터, 패러사이클링 선수</span></p>
+            </div>
+          </li>
+          <li>
+            <a href="#"><img src="images/m03.jpg" alt="m03"></a>
+            <div class="txt">
+              <p>PEOPLE</p>
+              <a href="#">잘하고 싶은 마음보다 일단 ‘시작’하는 마음으로</a>
+              <p>“작은 목표를 향해 한 걸음, 한 걸음 내딛다 보면 ‘끝’도 있더라고요”</p>
+              <p>서귤 <span>작가</span></p>
+            </div>
+          </li>
+        </ul>
+        <ul class="right2">
+          <li>
+            <a href="#"><img src="images/m02.jpg" alt="m02"></a>
+            <div class="txt">
+              <p>PEOPLE</p>
+              <a href="#">행복은 아주 작은 것에서부터</a>
+              <p>“살아가는 모든 순간, 아이와 같은 마음이 필요해요”</p>
+              <p>누아 <span>일러스트레이터</span></p>
+            </div>
+          </li>
+          <li>
+            <a href="#"><img src="images/m04.jpg" alt="m04"></a>
+            <div class="txt">
+              <p>PEOPLE</p>
+              <a href="#">기사를 쓰는데 이렇게까지</a>
+              <p>“휠체어를 타고 바퀴를 굴리자마자 ‘내가 알던 세상이 아니구나.’ 느꼈어요.”</p>
+              <p>남형도 <span>기자</span></p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
