@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>0813 아트닷컴</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    ul{list-style: none;}
+    a{text-decoration: none; color: #000;}
+
+    .wrap{
+      width: 100%; display: flex;
+    }
+    .wrap .main{
+      flex: 0 1 40%; height: 100vh; position: sticky; top: 0;
+    }
+    .wrap .main a{
+      display: block; width: 100%; height: 100%;
+      position: relative;
+    }
+    .wrap .main a>p{width: 100%; height: 100%;}
+    .wrap .main a>p img{width: 100%; height: 100%; object-fit: cover;}
+    .wrap .main a .txt{
+      width: 100%; height: 100%;
+      position: absolute; left: 0; bottom: 0;
+      color: #fff; display: flex; flex-direction: column;
+      justify-content: flex-end;
+      padding: 50px; box-sizing: border-box;
+    }
+    .wrap .main a .txt p:nth-child(1){font-size: 50px; font-weight: bold;}
+    .wrap .main a .txt p:nth-child(2){font-size: 19px; margin-top: 20px;}
+    .wrap ul.right{
+      flex: 0 1 60%; display: flex; 
+    }
+    .wrap ul.right>li{
+      width: 50%;
+    }
+    .wrap ul.right>li:nth-child(2){border-left: 1px solid #b5b5b5;}
+    .wrap ul.right>li>ul>li{
+      padding: 50px; box-sizing: border-box; position: relative;
+      border-bottom: 1px solid #b5b5b5;
+    }
+    .wrap ul.right>li>ul>li>a>p>img{
+      width: 100%; aspect-ratio: 1 / 1; object-fit: cover;
+    }
+    .wrap ul.right>li>ul>li>a>p:nth-child(2){
+      font-size: 24px; font-weight: bold; padding: 20px 0;
+    }
+    .wrap ul.right>li>ul.r_left>li:last-child{
+      height: 598px; letter-spacing: -2px;
+      position: relative;
+    }
+    .wrap ul.right>li>ul.r_left>li:last-child p{
+      font-size: 36px; font-weight: bold;
+    }
+    .wrap ul.right>li>ul.r_left>li:last-child p span{
+      color: #3d9716;
+    }
+    .wrap ul.right>li>ul.r_left>li:last-child a{
+      color: #666; text-decoration: underline; text-underline-offset: 3px;
+      position: absolute; left: 50px; bottom: 150px;
+    }
+    .wrap ul.right>li>ul>li ul.sub li{margin-top: 10px;}
+    .wrap ul.right>li>ul>li ul.sub li a{display: flex; align-items: center;}
+    .wrap ul.right>li>ul>li ul.sub li a>p{width: 100px; height: 100px;}
+    .wrap ul.right>li>ul>li ul.sub li a>p img{width: 100%; height: 100%; object-fit: cover;}
+    .wrap ul.right>li>ul>li ul.sub li a .txt{
+      margin-left: 20px; font-size: 13px; font-weight: bold;
+    }
+    .wrap ul.right>li>ul>li ul.sub li a .txt p:nth-child(2){
+      font-weight: normal; margin: 10px 0 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="main">
+      <a href="#">
+        <p><img src="https://image.a-rt.com//art/display/gs/contents/202408/20240806103534832.jpg" alt="main"></p>
+        <div class="txt">
+          <p>PUMA<br>CLUB II ERA</p>
+          <p>트렌디하게 재탄생한 아카이브 스니커즈 런칭</p>
+        </div>
+      </a>
+    </div>
+    <ul class="right">
+      <li>
+        <ul class="r_left">
+          <li>
+            <a href="#">
+              <p><img src="https://image.a-rt.com//art/display/template/202407/1722417002874.jpg?shrink=600:*" alt="i1"></p>
+              <p>SPECIAL EVENT<br>
+                마음을 편안하게 하는 여름휴가</p>
+            </a>
+              <ul class="sub">
+                <li>
+                  <a href="#">
+                    <p><img src="https://image.a-rt.com/art/product/2024/06/58094_1719203861629.jpg?shrink=224:224" alt="i1-1"></p>
+                    <div class="txt">
+                      <p>크록스</p>
+                      <p>클래식 올 터레인 클로그</p>
+                      <p>47,000원</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <p><img src="https://image.a-rt.com/art/product/2024/07/47668_1719806964132.jpg?shrink=224:224" alt="i1-2"></p>
+                    <div class="txt">
+                      <p>크록스</p>
+                      <p>클래식 번지 코드 클로그</p>
+                      <p>65,000원</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#">
+              <p><img src="https://image.a-rt.com//art/display/template/202408/1723076030034.jpg?shrink=600:*" alt="i1"></p>
+              <p>SPECIAL EVENT<br>
+                마음을 편안하게 하는 여름휴가</p>
+            </a>
+              <ul class="sub">
+                <li>
+                  <a href="#">
+                    <p><img src="https://image.a-rt.com/art/product/2024/07/40765_1720406993817.jpg?shrink=224:224" alt="i1-1"></p>
+                    <div class="txt">
+                      <p>크록스</p>
+                      <p>클래식 올 터레인 클로그</p>
+                      <p>47,000원</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <p><img src="https://image.a-rt.com/art/product/2024/07/89143_1719802454059.jpg?shrink=224:224" alt="i1-2"></p>
+                    <div class="txt">
+                      <p>크록스</p>
+                      <p>클래식 번지 코드 클로그</p>
+                      <p>65,000원</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#">
+              <p><img src="https://image.a-rt.com//art/display/template/202408/1722994303572.jpg?shrink=600:*" alt="i1"></p>
+              <p>SPECIAL EVENT<br>
+                마음을 편안하게 하는 여름휴가</p>
+            </a>
+              <ul class="sub">
+                <li>
+                  <a href="#">
+                    <p><img src="https://image.a-rt.com/art/product/2024/08/75507_1722906900307.jpg?shrink=224:224" alt="i1-1"></p>
+                    <div class="txt">
+                      <p>크록스</p>
+                      <p>클래식 올 터레인 클로그</p>
+                      <p>47,000원</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <p><img src="https://image.a-rt.com/art/product/2024/04/50529_1713417886607.jpg?shrink=224:224" alt="i1-2"></p>
+                    <div class="txt">
+                      <p>크록스</p>
+                      <p>클래식 번지 코드 클로그</p>
+                      <p>65,000원</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#">
+              <p><img src="https://image.a-rt.com//art/display/template/202408/1723000972028.png?shrink=600:*" alt="i1"></p>
+              <p>SPECIAL EVENT<br>
+                마음을 편안하게 하는 여름휴가</p>
+            </a>
+              <ul class="sub">
+                <li>
+                  <a href="#">
+                    <p><img src="https://image.a-rt.com/art/product/2022/06/59120_1654852957144.jpg?shrink=224:224" alt="i1-1"></p>
+                    <div class="txt">
+                      <p>크록스</p>
+                      <p>클래식 올 터레인 클로그</p>
+                      <p>47,000원</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <p><img src="https://image.a-rt.com/art/product/2024/07/88440_1721725415478.jpg?shrink=224:224" alt="i1-2"></p>
+                    <div class="txt">
+                      <p>크록스</p>
+                      <p>클래식 번지 코드 클로그</p>
+                      <p>65,000원</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+          </li>
+          <li>
+            <p><span>A-RT SERVICE</span><br>
+              아트닷컴의<br>
+              다양한 서비스를<br>
+              안내해 드려요.</p>
+              <a href="#">서비스 보러가기 ></a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <ul class="r_right">
+          <li>
+            <a href="#">
+              <p><img src="https://image.a-rt.com//art/display/template/202408/1722587825598.jpg?shrink=600:*" alt="i1"></p>
+              <p>SPECIAL EVENT<br>
+                마음을 편안하게 하는 여름휴가</p>
+            </a>
+              <ul class="sub">
+                <li>
+                  <a href="#">
+                    <p><img src="https://image.a-rt.com/art/product/2024/06/50909_1718092719059.jpg?shrink=224:224" alt="i1-1"></p>
+                    <div class="txt">
+                      <p>크록스</p>
+                      <p>클래식 올 터레인 클로그</p>
+                      <p>47,000원</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <p><img src="https://image.a-rt.com/art/product/2023/05/50442_1683189406143.jpg?shrink=224:224" alt="i1-2"></p>
+                    <div class="txt">
+                      <p>크록스</p>
+                      <p>클래식 번지 코드 클로그</p>
+                      <p>65,000원</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#">
+              <p><img src="https://image.a-rt.com//art/display/template/202408/1723428204905.jpg?shrink=600:*" alt="i1"></p>
+              <p>SPECIAL EVENT<br>
+                마음을 편안하게 하는 여름휴가</p>
+            </a>
+              <ul class="sub">
+                <li>
+                  <a href="#">
+                    <p><img src="https://image.a-rt.com/art/product/2024/07/25313_1721354540944.jpg?shrink=224:224" alt="i1-1"></p>
+                    <div class="txt">
+                      <p>크록스</p>
+                      <p>클래식 올 터레인 클로그</p>
+                      <p>47,000원</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <p><img src="https://image.a-rt.com/art/product/2024/07/51720_1721364613426.jpg?shrink=224:224" alt="i1-2"></p>
+                    <div class="txt">
+                      <p>크록스</p>
+                      <p>클래식 번지 코드 클로그</p>
+                      <p>65,000원</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#">
+              <p><img src="https://image.a-rt.com//art/display/template/202408/1723105584572.jpg?shrink=600:*" alt="i1"></p>
+              <p>SPECIAL EVENT<br>
+                마음을 편안하게 하는 여름휴가</p>
+            </a>
+              <ul class="sub">
+                <li>
+                  <a href="#">
+                    <p><img src="https://image.a-rt.com/art/product/2024/08/27518_1723104592542.jpg?shrink=224:224" alt="i1-1"></p>
+                    <div class="txt">
+                      <p>크록스</p>
+                      <p>클래식 올 터레인 클로그</p>
+                      <p>47,000원</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <p><img src="https://image.a-rt.com/art/product/2024/07/28903_1720486385035.jpg?shrink=224:224" alt="i1-2"></p>
+                    <div class="txt">
+                      <p>크록스</p>
+                      <p>클래식 번지 코드 클로그</p>
+                      <p>65,000원</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#">
+              <p><img src="https://image.a-rt.com//art/display/template/202407/1720067939762.jpg?shrink=600:*" alt="i1"></p>
+              <p>SPECIAL EVENT<br>
+                마음을 편안하게 하는 여름휴가</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <p><img src="https://image.a-rt.com//art/display/template/202408/1722560749542.png?shrink=600:*" alt="i1"></p>
+              <p>SPECIAL EVENT<br>
+                마음을 편안하게 하는 여름휴가</p>
+            </a>
+              <ul class="sub">
+                <li>
+                  <a href="#">
+                    <p><img src="https://image.a-rt.com/art/product/2021/03/19981_1614907955532.jpg?shrink=224:224" alt="i1-1"></p>
+                    <div class="txt">
+                      <p>크록스</p>
+                      <p>클래식 올 터레인 클로그</p>
+                      <p>47,000원</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <p><img src="https://image.a-rt.com/art/product/2024/04/82566_1713321575449.jpeg?shrink=224:224" alt="i1-2"></p>
+                    <div class="txt">
+                      <p>크록스</p>
+                      <p>클래식 번지 코드 클로그</p>
+                      <p>65,000원</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>
