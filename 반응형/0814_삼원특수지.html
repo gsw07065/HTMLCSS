@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>0814 삼원특수지</title>
+   <style>
+    *{margin: 0; padding: 0;}
+    ul{list-style: none;}
+    a{text-decoration: none;}
+
+    .wrap{
+      width: 90%; margin: 0 auto;
+      display: flex;
+    }
+    .wrap .left{
+      width: 50%; position: sticky; top: 20px; height: 100%;
+    }
+    .wrap .left>.txt{margin-bottom: 150px; letter-spacing: -2px;}
+    .wrap .left>.txt p:nth-child(1){color: #00000080; font-size: 22px;}
+    .wrap .left>.txt h1{font-size: 96px; margin-bottom: 30px;}
+    .wrap .left>.txt p a{
+      font-size: 20px; color: #000; font-weight: bold;
+      display: inline-block; padding: 10px 30px;
+      border: 2px solid; border-radius: 50px;
+    }
+    .wrap .left>.txt p a span{
+      /* line-height: 20px; */ vertical-align: middle;
+      padding-left: 5px;
+    }
+    .wrap .left .l_img{ width: 70%; position: relative;}
+    .wrap .left .l_img p img{width: 100%; object-fit: cover;}
+    .wrap .left .l_img .txt{
+      position: absolute; left: 0; top: 0;
+      padding: 70px 40px; color: #3f3f46;
+    }
+    .wrap .left .l_img .txt h1{
+      font-size: 40px; letter-spacing: -4px;
+      word-break: keep-all;
+    }
+    .wrap .left .l_img .txt p{
+      margin-top: 20px; font-weight: bold;
+    }
+
+    .wrap .right{flex: 1;}
+    .wrap .right>ul{
+      display: flex; /* gap: 50px; */
+    }
+    .wrap .right>ul>li{
+      width: 50%; margin-top: 300px;
+    }
+    .wrap .right>ul>li:nth-child(1){margin-top: 500px;}
+    .wrap .right>ul>li ul li{
+      margin: 0 20px 40px 20px; box-sizing: border-box;
+      position: relative; overflow: hidden;
+    }
+    .wrap .right>ul>li ul li p img{
+      width: 100%; height: 100%; object-fit: cover;
+    }
+    .wrap .right>ul>li ul li .txt{
+      position: absolute; bottom: 0; left: 0; width: 100%; /* height: 130px; */
+      background-color: #000; color: #fff;
+      padding: 30px 20px 50px; box-sizing: border-box;
+    }
+    .wrap .right>ul>li ul li .txt p{color: #ffffff66;}
+    .wrap .right>ul>li ul li .txt h3{font-size: 24px;}
+   </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="left">
+      <div class="txt">
+        <p>Samwon Gray Paper : 다채로운 매력의 그레이 페이퍼</p>
+        <h1>Monthly Paper</h1>
+        <p><a href="#">제품보기 <span><img src="https://www.samwonpaper.com/resources/_asset/pc/common/images/icon/icon-more-long-arrow-black.png" alt="arrow"></span></a></p>
+      </div>
+      <div class="l_img">
+        <p><img src="https://www.samwonpaper.com/storage/cms/PRODUCTMONTH/202407/d524e42f-a2bd-4a8b-a1ec-3ec4b6da1058.jpg" alt="l_img"></p>
+        <div class="txt">
+          <h1>다채로운 매력의 소유자,<br>그레이 페이퍼를 소개합니다.</h1>
+          <p>July 2024</p>
+        </div>
+      </div>
+    </div>
+    <div class="right">
+      <ul>
+        <li>
+          <ul>
+            <li>
+              <a href="#">
+                <p><img src="https://www.samwonpaper.com/storage/cms/PACKAGEBOOK/task/SIR-99_MA.png" alt="r_i1"></p>
+                <div class="txt">
+                  <p>시리오러프</p>
+                  <h3>시리오러프</h3>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <p><img src="https://www.samwonpaper.com/storage/cms/PACKAGEBOOK/task/MTRC-99_MA.png" alt="r_i2"></p>
+                <div class="txt">
+                  <p>마테리카</p>
+                  <h3>마테리카</h3>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <p><img src="https://www.samwonpaper.com/storage/cms/PACKAGEBOOK/task/SKIN-99_MA.png" alt="r_i3"></p>
+                <div class="txt">
+                  <p>큐리어스 스킨</p>
+                  <h3>큐리어스 스킨</h3>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <ul>
+            <li>
+              <a href="#">
+                <p><img src="https://www.samwonpaper.com/storage/cms/PACKAGEBOOK/task/MOON-99_MA.png" alt="r_i4"></p>
+                <div class="txt">
+                  <p>문보드</p>
+                  <h3>문보드</h3>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <p><img src="https://www.samwonpaper.com/storage/cms/PACKAGEBOOK/task/RMK-99_MA.png" alt="r_i5"></p>
+                <div class="txt">
+                  <p>리메이크</p>
+                  <h3>리메이크</h3>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <p><img src="https://www.samwonpaper.com/storage/cms/PACKAGEBOOK/task/CMT-99_MA.png" alt="r_i6"></p>
+                <div class="txt">
+                  <p>큐리어스 매터</p>
+                  <h3>큐리어스 매터</h3>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
