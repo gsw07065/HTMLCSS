@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>솔루션별_sub</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    ul{list-style: none;}
+    a{text-decoration: none; color: #000;}
+
+    .solution{margin: 50px auto;}
+    .solution .title{max-width: 1200px; width: 100%; margin: 0 auto;}
+    .solution .title p{
+      color: #666; font-size: 20px;
+      letter-spacing: -2px; margin-bottom: 20px;
+    }
+    .solution .title h1{
+      font-size: 40px; font-weight: normal; margin-bottom: 150px;
+      letter-spacing: -6px; line-height: 60px;
+    }
+
+    .solution .contents{width: 100%;}
+    .solution .contents li a>p{
+      display: flex; flex-direction: column;
+      align-items:flex-end;
+      overflow: hidden;
+    }
+    .solution .contents li a>p:nth-child(2){display: none;}
+    .solution .contents li:nth-child(even) a>p{
+      align-items:flex-start;
+    }
+    .solution .contents li a >p img{
+      transform: scale(1); transition: .3s;
+    }
+    .solution .contents li a:hover >p img{
+      transform: scale(1.05);
+    }
+    .solution .contents li a .txt{
+      width: 100%; max-width: 1200px; margin: 30px auto 150px; letter-spacing: -2px;
+    }
+    .solution .contents li a .txt h1{
+      font-size: 70px; margin-bottom: 20px; position: relative;
+    }
+    .solution .contents li a .txt h1 span{
+      background-image: url(https://www.bgfecomaterials.com/resources/kr/images/product/materials/arrow_green.svg); background-repeat: no-repeat;
+      display: inline-block; opacity: 0;
+      width: 40px; height: 40px; padding-bottom: 15px;
+      transition: .3s;
+    }
+    .solution .contents li a .txt:hover h1 span{
+      width: 40px; height: 40px;  transform: translateX(20px);
+      opacity: 1;
+    }
+    .solution .contents li a .txt p{
+      font-size: 20px;
+    }
+
+
+    @media screen and (max-width:1200px){
+      .solution .title{width: 95%;}
+      .solution .contents li a .txt{width: 95%;}
+    }
+    @media screen and (max-width:1023px){
+      .solution .title p{font-size: 14px; margin-bottom: 10px;
+      }
+      .solution .title h1{
+        font-size: 22px; margin-bottom: 50px;
+        letter-spacing: -3px; line-height: 35px;
+        word-break: keep-all;
+      }
+      br{display: none;}
+      .solution .contents li:nth-child(odd) a>p{
+      padding-left: 20px; box-sizing: border-box;
+      }
+      .solution .contents li:nth-child(even) a>p{
+      padding-right: 20px; box-sizing: border-box;
+      }
+      .solution .contents li a>p:nth-child(1){display: none;}
+      .solution .contents li a>p:nth-child(2){display: block;}
+      .solution .contents li a >p img{
+        transition: none; width: 100%; aspect-ratio: 2 / 1; object-fit: cover;
+      }
+      .solution .contents li a:hover >p img{
+        transform: scale(1);
+      }
+      .solution .contents li a .txt{
+        margin: 20px auto 80px; letter-spacing: -1px;
+      }
+      .solution .contents li a .txt h1{
+        font-size: 32px; margin-bottom: 20px; position: relative;
+      }
+      .solution .contents li a .txt h1 span{
+        background-image: url(https://www.bgfecomaterials.com/resources/kr/images/button/button_arrow_l_bk.svg); opacity: 1;
+        width: 40px; height: 40px;
+        position: absolute; right: 0; top: 0;
+      }
+      .solution .contents li a .txt:hover h1 span{
+        width: 40px; height: 40px; transform: translateX(0);
+        opacity: 1;
+      }
+      .solution .contents li a .txt p{
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="solution">
+    <div class="title">
+      <p>솔루션별</p>
+      <h1>
+        자동차, 전기전자, 산업재까지 다양한 분야에서 적용되고 있는<br>
+        BGF에코머티리얼즈의 솔루션을 소개합니다.
+      </h1>
+    </div>
+    <ul class="contents">
+      <li>
+        <a href="#">
+          <p><img src="https://www.bgfecomaterials.com/resources/kr/images/product/solution/contents_01.jpg" alt="i1"></p>
+          <p><img src="https://www.bgfecomaterials.com/resources/kr/images/product/solution/m_contents_01.jpg" alt="i1_m"></p>
+          <div class="txt">
+            <h1>Automotive<span></span></h1>
+            <p>탄소저감과 지속 가능성을 고려하여 혁신적인 자동차 제품을 실현하는데 주력하고 있습니다.</p>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <p><img src="https://www.bgfecomaterials.com/resources/kr/images/product/solution/contents_02.jpg" alt="i2"></p>
+          <p><img src="https://www.bgfecomaterials.com/resources/kr/images/product/solution/m_contents_02.jpg" alt="i2_m"></p>
+          <div class="txt">
+            <h1>Electric & Electronic<span></span></h1>
+            <p>플라스틱 소재의 내충격성과 전기절연, 단열성, 화학적 기능을 강화하여 제품의 신뢰성과 안전성을 향상시키는 것을 목표로 합니다.</p>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <p><img src="https://www.bgfecomaterials.com/resources/kr/images/product/solution/contents_03.jpg" alt="i3"></p>
+          <p><img src="https://www.bgfecomaterials.com/resources/kr/images/product/solution/m_contents_03.jpg" alt="i3_m"></p>
+          <div class="txt">
+            <h1>Industrial<span></span></h1>
+            <p>전자기기의 내부 및 외부 재료, 부품, 설비, 도구 등 다양한 산업 재료로 널리 활용됩니다.</p>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>

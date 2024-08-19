@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>사업영역_sub</title>
+  <style>
+    *{margin: 0; padding: 0;}
+
+    .wrap{
+      width: 100%; max-width: 1440px; margin: 50px auto;
+    }
+    .wrap .title p{
+      color: #666; font-size: 20px;
+      letter-spacing: -2px; margin-bottom: 20px;
+    }
+    .wrap .title h1{
+      font-size: 40px; font-weight: normal; margin-bottom: 150px;
+      letter-spacing: -6px; line-height: 60px;
+    }
+    br.t2{display: none;}
+
+    .wrap .content{position: relative; height: 600px;}
+    .wrap .content p{width: 100%; height: 100%;}
+    .wrap .content>p:nth-child(2){display: none;}
+    .wrap .content p img{width: 100%; height: 100%; object-fit: cover;}
+    .wrap .content .txt{
+      position: absolute; left: 0; top: 50%;
+      transform: translateY(-50%);
+      margin: 0 100px;
+      color: #fff; 
+    }
+    .wrap .content .txt h3{
+      font-size: 30px; margin-bottom: 30px;
+      line-height: 50px; letter-spacing: -2px;
+    }
+    .wrap .content .txt p{letter-spacing: -1px; line-height: 25px;}
+
+
+    @media screen and (max-width:1440px) {
+      .wrap{width: 95%;}
+    }
+    @media screen and (max-width:1366px) {
+      br.t1{display: none;}
+      br.t2{display: block;}
+    }
+    @media screen and (max-width:1158px) {
+      br.t2{display: none;}
+      .wrap .title h1{word-break: keep-all;}
+    }
+    @media screen and (max-width:1023px) {
+      .wrap .title p{font-size: 14px;}
+    .wrap .title h1{
+      font-size: 22px;margin-bottom: 50px;
+      letter-spacing: -3px; line-height: 40px;
+    }
+    .wrap .content{height: 100%;}
+    .wrap .content .txt{
+      word-break: keep-all;
+      margin: 0 20px;
+    }
+    .wrap .content .txt h3{
+      font-size: 18px; margin-bottom: 30px;
+      line-height: 30px; letter-spacing: -2px;
+    }
+    .wrap .content .txt p{letter-spacing: -1px; line-height: 25px; font-size: 14px;}
+    br{display: none;}
+    }
+    @media screen and (max-width:766px){
+      .wrap .content>p:nth-child(1){display: none;}
+      .wrap .content>p:nth-child(2){display: block;}
+      .wrap .content .txt{top: 150px;}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="title">
+      <p>사업소개</p>
+      <h1>
+        다양한 소재 솔루션으로 고객의 생활을 더 안전하고 풍요롭게 하며<br class="t1">
+        환경에<br class="t2"> 이로운 신소재 개발로 지속 가능한 미래를 만듭니다.
+      </h1>
+    </div>
+    <div class="content">
+      <p><img src="https://www.bgfecomaterials.com/resources/kr/images/company/business/advanced-materials_bg_pc_img.jpg" alt="bg_img"></p>
+      <p><img src="https://www.bgfecomaterials.com/resources/kr/images/company/business/advanced-materials_bg_m_img.jpg" alt="bg_img_m"></p>
+      <div class="txt">
+        <h3>
+          고객의 니즈에 따라 맞춤형 엔지니어링 소재를 개발하여<br>
+          다양한 용도별 요구 성능을 충족 시킵니다.
+        </h3>
+          <p>
+            환경규제 강화로 인한 금속부품의 경량화, 에너지효율 증대, e-Mobility와 ESS 등 신규 Application의<br>
+            확대로 고기능성 엔지니어링 소재의 적용처가 확대되고 있으며, 이에 따라 고객들은 보다 더 다양하고<br>
+            정밀한 기능성을 요구하고 있습니다.
+          </p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
