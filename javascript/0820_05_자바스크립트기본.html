@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>0820 05 자바스크립트 기본</title>
+</head>
+<body>
+ <p class="txt">하나</p>
+ <p class="txt">둘</p>
+ <p class="txt">셋</p>
+ <p class="txt">넷</p>
+ <p class="txt">다섯</p>
+ <div>
+  <p class="txt">하나</p>
+  <p class="txt">둘</p>
+  <p class="txt">셋</p>
+  <p class="txt">넷</p>
+  <p class="txt">다섯</p>
+ </div>
+ <h4>제목태그</h4>
+ <h3>제목태그</h3>
+<script>
+  //document.querySelector(".txt").style.color="red";
+  //document.querySelectorAll(".txt")[5].style.color="red";
+  //document.querySelector("div>p").style.color="red";
+  document.querySelectorAll("div>p")[2].style.color="red";
+  //document.querySelector("h3,h4").style.color="red"; /* 제일 처음 위치한 개체만 선택됨 */
+  document.querySelectorAll("h3,h4")[1].style.color="red";
+</script>
+</body>
+</html>

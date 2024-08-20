@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>0820 자바스크립트 기본</title>
+  <script>
+  function myFunction() {
+   document.getElementById("demo").innerHTML = "Paragraph changed.";
+   /* 따옴표, 작은따옴표 문자열에 앞뒤로 꼭 넣기
+    헤드, 바디 어디든 위치시킬 수 있음*/
+  }
+  </script>
+</head>
+<body>
+  <h2>Demo JavaScript in Head</h2>
+ <p id="demo">A Paragraph</p>
+ <button type="button" onclick="myFunction()">Try it</button>
+  <script>
+    document.title  =  '자바스크립트';
+    /* 공백 무시함 */
+    console.log('123'+(123+123)); /* 문자의 경우는 따옴표 */
+    /* 개발자 도구 콘솔에서 확인 가능 */
+    console.log('123'+123+123); /* 문자 먼저 계산돼서 뒤에 숫자도 문자로 취급 */
+    console.log('123'+(123+123)+"\n"+"결합연산자");
+    //+연산자--산술연산자(덧셈),결합연산자
+    /* 여러줄 주석 */
+    document.body.style.background="#f00";
+    /* 객체 위치 중요, head에 위치시키면 적용안됨 */
+    /* '='는 대입의 역할, 같다 아님! */
+  </script>
+</body>
+</html>

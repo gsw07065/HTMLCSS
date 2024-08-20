@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>0820 11 cj바이오사이언스</title>
+  <style>
+    p{color: #777;}
+    .on{display: block; color: #000;}
+    section{
+      display: none;
+      position: absolute; left: 200px; top:15px;
+    }
+  </style>
+</head>
+<body>
+  <p class="txt">보도자료</p>
+  <p class="txt">언론보도</p>
+  <p class="txt">CJBS NOW</p>
+  <p class="txt">미디어</p>
+  <p class="txt">뉴스구독(E-MAIL)</p>
+  <div>
+    <section>보도자료</section>
+    <section>언론보도</section>
+    <section>CJBS NOW</section>
+    <section>미디어</section>
+    <section>뉴스구독(E-MAIL)</section>
+  </div>
+  <script>
+    document.querySelectorAll(".txt")[0].classList.add("on");
+    document.querySelectorAll("div>section")[0].classList.add("on");
+    function myfnc(){
+      document.querySelectorAll(".txt").forEach(function(keys,item){
+        keys.classList.remove("on");
+      });
+      document.querySelectorAll("div>section").forEach(function(keys,item){
+        keys.classList.remove("on");
+      });
+    }
+     document.querySelectorAll(".txt").forEach(function(keys,item){
+      console.log(keys);
+      keys.onclick=function(){
+        myfnc();
+        keys.classList.add("on");
+        console.log(item);
+        document.querySelectorAll("div>section")[item].classList.add("on");
+      }
+    });
+  </script>
+</body>
+</html>
