@@ -69,9 +69,11 @@
 	</ul>
 	<script>
 		let btn=document.querySelectorAll(".btn li");
+		//querySelectorAll(".btn li")는 [n]이 순서 안적어주면 다 포함 안되는 것 아닌지?
 		let con=document.querySelectorAll(".content li");
 		btn[0].querySelector("a").classList.add("on");
 		con[0].classList.add("on");
+		//위부분  div 선택 안하는 이유는?
 		con[0].querySelector("div h2").classList.add("on");
 		con[0].querySelector("div p").classList.add("on");
 		con.forEach(function(value,key){
