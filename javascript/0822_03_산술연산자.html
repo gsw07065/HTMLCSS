@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>0822 03 산술연산자</title>
+  
+</head>
+<body>
+  
+
+  <script>
+    let a = 10;
+    let b = 20;
+    a=30; //기존 10 없어지고 재할당
+    document.write("a : " + a + "<br>");
+    document.write("a + b : " + (a + b) + "<br>");
+    //document.write("a + b : " , a + b, "<br>");
+    // , 좌우의 식을 연결
+    document.write("a - b : " + (a - b) + "<br>");
+    document.write("a * b : " + (a * b) + "<br>");
+    document.write("a / b : " + (a / b) + "<br>");
+    document.write("a % b : " + (a % b) + "<br>"); //나눈 나머지
+    document.write("a ** b : " + (a ** b) + "<br>"+ "<br>"); //30의 20승? 지수
+    
+    document.write("++a : " + (++a) + "<br>");
+    // 30 + 1  a=a+1 a+=1 전위연산  1씩 증가
+    document.write("a++ : " + (a++) + "<br>");
+    //후위연산  1씩 증가(현재상태에서는 증가X, 그 다음부터 증가됨)
+    document.write("a : " + a + "<br>"+ "<br>");
+    
+    document.write("--a : " + (--a) + "<br>");
+    // 30 + 1  a=a+1 a+=1 전위연산  1씩 감소
+    document.write("a-- : " + (a--) + "<br>");
+    //후위연산  1씩 감소(현재상태에서는 증가X, 그 다음부터 감소됨)
+    document.write("a : " + a + "<br>");
+
+
+    let c = "하나";
+    let d = "둘";
+    let e = "셋";
+    let txt;
+    txt = "";
+    //txt = txt + c; //txt = 하나
+    txt += c;
+    txt = txt + d; //txt = 하나 둘
+    txt = txt + e; //txt = 하나 둘 셋
+    document.write(txt);
+  </script>
+</body>
+</html>

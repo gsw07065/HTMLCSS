@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>0822 01 기본메소드</title>
+</head>
+<body>
+  
+
+  <script>
+    document.write('<h1 class="title">제목태그</h1>');
+    //따옴표 중복X
+    /* window.alert("경고창입니다");
+    window생략가능 */
+    //alert("경고창입니다");
+
+    //let test = window.confirm("자바스크립트가 재미있습니까?");
+    //사용자의 응답을 저장하기 위해 변수 선언
+    //삼항연산 조건?참인값:거짓인값
+    //document.write((test ? "좋아한다":"안좋아한다")+"<br>");
+
+    let gender = window.prompt("당신의 성별은?"); //입력창 제공
+    document.write("당신이 입력한 성별은 "+gender+"입니다.<br>");
+    
+    let sum = prompt("당신의 총점은?");
+    document.write("당신이 입력한 총점은 "+sum+"입니다.<br>");
+
+/*     let kor = prompt("점수입력");
+    let eng = prompt("점수입력");
+    document.write(kor + eng); */
+    /* 데이터 숫자도 문자로 받아서 점수 합산 안되고 일렬로 정렬 */
+
+    let kor = Number(prompt("점수입력"));
+    let eng = Number(prompt("점수입력"));
+    document.write(kor + eng);
+    /*  Number(prompt("")) 숫자로 바꿔주는 코드 */
+  </script>
+</body>
+</html>
