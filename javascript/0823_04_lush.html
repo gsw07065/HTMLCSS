@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>0823 04 lush</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    ul{list-style: none;}
+    a{text-decoration: none;}
+
+    #wrap{
+      margin: 0 auto; background-color: #fafafa;
+      padding: 100px 0;
+
+    }
+    #wrap ul{
+      width: 900px; margin: 0 auto;
+      display: flex; flex-wrap: wrap;
+      gap: 94px 177px;
+    }
+    #wrap ul li{
+      width: 180px; height: 180px; background-color: #222;
+      border-radius: 50%; text-align: center; line-height: 180px;
+    }
+    #wrap ul li.on{background-color: transparent;}
+/*     #wrap ul li:nth-child(1):hover ~li:nth-child(even),
+    #wrap ul li:nth-child(1):hover ~li:nth-child(3),
+    #wrap ul li:nth-child(1):hover ~li:nth-child(5){
+      background-color: transparent;
+    }  */
+    #wrap ul li img{vertical-align: middle;}
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <ul>
+      <li>
+        <a href="#">
+          <img src="https://weare.lush.co.kr/images/ico_main_value01.svg" alt="i1">
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="https://weare.lush.co.kr/images/ico_main_value02.svg" alt="i2">
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="https://weare.lush.co.kr/images/ico_main_value03.svg" alt="i3">
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="https://weare.lush.co.kr/images/ico_main_value04.svg" alt="i4">
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="https://weare.lush.co.kr/images/ico_main_value05.svg" alt="i5">
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="https://weare.lush.co.kr/images/ico_main_value06.svg" alt="i6">
+        </a>
+      </li>
+    </ul>
+  </div>
+  <script>
+    //let bg = document.querySelector("#wrap");
+    let con = document.querySelectorAll("#wrap ul li");
+
+    function myfnc(){
+      con.forEach(function(value,key){
+        value.classList.add("on");
+      });
+    }
+
+    con.forEach(function(value,key){
+      value.onmouseenter=function(){
+        document.querySelector("#wrap").style.backgroundImage = "url(https://weare.lush.co.kr/images/main_value0"+(key+1)+".jpg)";
+      }
+
+      value.onmouseleave=function(){
+        //myfnc()
+        document.querySelector("#wrap").style.backgroundImage = "none";
+          
+        
+      }
+      
+    })
+  </script>
+  
+</body>
+</html>
