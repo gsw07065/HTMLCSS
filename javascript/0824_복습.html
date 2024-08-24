@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>복습!</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    ul{list-style: none;}
+
+    .bg{
+      display: flex;
+      width: 100%; height: 720px; background-color: #fafafa;
+      background-repeat: no-repeat;
+      background-position: center; background-size: cover;
+    }
+    ul{
+      display: grid; width: 894px;
+      grid-template-columns: repeat(3,1fr);
+      gap: 94px 177px; margin: auto;
+    }
+    ul li{
+      width: 180px; height: 180px; background-color: #222; border-radius: 50%;
+      cursor: pointer;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="bg">
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+  <script>
+    function myfnc(){
+      con.forEach(function(v,k){
+        v.style.backgroundColor="transparent";
+      });
+    }
+    let con = document.querySelectorAll("ul li");
+
+    con.forEach(function(v,k){
+      v.style.backgroundImage="url(images/ico_main_value0"+(k+1)+".svg)";
+
+      v.onmouseenter=function(){
+        document.querySelector(".bg").style.backgroundImage="url(images/main_value0"+(k+1)+".jpg)"
+        myfnc();
+        con[k].style.backgroundColor="#222";
+      };
+      v.onmouseleave=function(){
+        con.forEach(function(v,k){
+          v.style.backgroundColor="#222";
+        });
+      };
+    });
+    document.querySelector(".bg").onmouseleave=function(){
+      this.style.backgroundImage="none";
+    };
+  </script>
+</body>
+</html>
