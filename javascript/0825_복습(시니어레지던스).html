@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>시니어레지던스</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    ul{list-style: none;}
+    a{text-decoration: none;}
+
+    .con{
+      width: 680px; height: 600px; margin: 35px auto; position: relative;
+    }
+    .con li{
+      width: 100%; height: 100%;
+      background-size: cover; background-repeat: no-repeat;
+      background-position: center;
+      background-color: #aaa;
+      position: absolute;
+      opacity: 0; transition: 1s;
+    }
+    .con li.on{opacity: 1;}
+    .con li div{
+      width: 100%; height: 100%;
+      display: flex; justify-content: center; align-items: center;
+      flex-direction: column;
+      color: #fff; line-height: 30px; text-align: center;
+      
+    }
+    .con li div h2{line-height: 60px;}
+    .btn{
+      width: 100%;
+      margin: 0 auto;
+      display: flex; gap: 20px; justify-content: center;
+    }
+    .btn li{
+
+    }
+    .btn li a{
+      display: block;
+      width: 8px; height: 8px; border-radius: 50%;
+      background-color: #aaa;
+    }
+    .btn li a.on{
+      background-color: #333;
+    }
+  </style>
+</head>
+<body>
+  <ul class="con">
+    <li>
+      <div>
+        <h2>Plush</h2>
+        <p>어떠한 번거로움과 불편함도 없이<br>
+        완벽한 자유를 선사하는 안락한 주거공간</p>
+      </div>
+    </li>
+    <li>
+      <div>
+        <h2>Sophisticated</h2>
+        <p>세련된 안목과 취향에 부합하는<br>
+        품위 있고 수준 높은 인테리어와 분위기</p>
+      </div>
+    </li>
+    <li>
+      <div>
+        <h2>Hearty</h2>
+        <p>한 분 한 분을 배려하는<br>
+        섬세하고 진심 어린 서비스</p>
+      </div>
+    </li>
+    <li>
+      <div>
+        <h2>Vivacious</h2>
+        <p>자유롭고 창조적인 공간에서<br>
+        더욱 생생해지는 삶의 활력</p>
+      </div>
+    </li>
+  </ul>
+  <ul class="btn">
+    <li><a href="#"></a></li>
+    <li><a href="#"></a></li>
+    <li><a href="#"></a></li>
+    <li><a href="#"></a></li>
+  </ul>
+
+  <script>
+    let con = document.querySelectorAll(".con li");
+    let btn = document.querySelectorAll(".btn li a");
+
+    con[0].classList.add("on");
+    btn[0].classList.add("on");
+
+    con.forEach(function(v,k){
+      v.style.backgroundImage="url(https://www.lottesrc.com/static/images/main/second_life_img0"+(k+1)+".jpg)";
+    });
+
+    function my(){
+      btn.forEach(function(v,k){
+        v.classList.remove("on");
+      });
+/*       con.forEach(function(v,k){
+        v.classList.remove("on");
+      }); */
+    }
+
+    btn.forEach(function(v,k){
+      v.onclick=function(e){
+        e.preventDefault();
+        my();
+        con.forEach(function(v,k){
+        v.classList.remove("on");
+      });
+
+        btn[k].classList.add("on");
+        con[k].classList.add("on");
+      };
+    });
+  </script>
+</body>
+</html>
