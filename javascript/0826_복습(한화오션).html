@@ -4,8 +4,137 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>0826 한화오션</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    ul{
+      width: 100%; height: 100vh;
+      display: flex;
+    }
+    ul li{
+      flex: 1 1 10%;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      background-color: #ddd;
+      display: flex; align-items: end;
+      transition: .5s;
+    }
+    ul li.on{
+       flex: 0 1 60%;
+    }
+    ul li div{
+      width: 100%; height: 100%;
+      margin: 50px 20px; box-sizing: border-box;
+      color: #fff; letter-spacing: -1px;
+      position: relative; overflow: hidden;
+    }
+    ul li div h2{
+      position: absolute; bottom: 0;
+      transition: .5s;
+    }
+    ul li div h2.on{
+      bottom: 70px; font-size: 30px;
+    }
+    ul li div p{
+      font-size: 14px;
+      transition: bottom .5s; opacity: 0;
+      position: absolute; bottom: -150px;
+    }
+    ul li div p.on{
+      opacity: 1; bottom: 0;
+    }
+  </style>
 </head>
 <body>
-  
+  <ul>
+    <li>
+      <div>
+        <h2>초격차<br>방산 기술</h2>
+        <p>
+          해양무인시스템은 군집제어, 자율항해, 장애물 회피 기능 등<br>
+          첨단 4차 산업혁명 기술을 적용해 연안/수중감시 및 탐색, 해양 환경 조사 등<br>
+          군/민수용 복합임무 수행이 가능합니다.
+        </p>
+      </div>
+    </li>
+    <li>
+      <div>
+        <h2>친환경·디지털<br>선박 개발</h2>
+        <p>
+          해양무인시스템은 군집제어, 자율항해, 장애물 회피 기능 등<br>
+          첨단 4차 산업혁명 기술을 적용해 연안/수중감시 및 탐색, 해양 환경 조사 등<br>
+          군/민수용 복합임무 수행이 가능합니다.
+        </p>
+      </div>
+    </li>
+    <li>
+      <div>
+        <h2>글로벌 FPSO<br>시장 선도</h2>
+        <p>
+          해양무인시스템은 군집제어, 자율항해, 장애물 회피 기능 등<br>
+          첨단 4차 산업혁명 기술을 적용해 연안/수중감시 및 탐색, 해양 환경 조사 등<br>
+          군/민수용 복합임무 수행이 가능합니다.
+        </p>
+      </div>
+    </li>
+    <li>
+      <div>
+        <h2>해상풍력<br>토탈서비스 제공</h2>
+        <p>
+          해양무인시스템은 군집제어, 자율항해, 장애물 회피 기능 등<br>
+          첨단 4차 산업혁명 기술을 적용해 연안/수중감시 및 탐색, 해양 환경 조사 등<br>
+          군/민수용 복합임무 수행이 가능합니다.
+        </p>
+      </div>
+    </li>
+    <li>
+      <div>
+        <h2>지속가능한<br>스마트 야드 구축</h2>
+        <p>
+          해양무인시스템은 군집제어, 자율항해, 장애물 회피 기능 등<br>
+          첨단 4차 산업혁명 기술을 적용해 연안/수중감시 및 탐색, 해양 환경 조사 등<br>
+          군/민수용 복합임무 수행이 가능합니다.
+        </p>
+      </div>
+    </li>
+  </ul>
+
+  <script>
+    let con = document.querySelectorAll("ul li");
+    let title = document.querySelectorAll("ul li div h2");
+    let hideTxt = document.querySelectorAll("ul li div p");
+
+    let conBg = "url(images/hanhwa_img_01.jpg)"
+    con.forEach(function(v,k){
+      v.style.backgroundImage=conBg.replace(conBg.slice(-6,-5),k+1);
+
+      /* function my(){
+        con.forEach(function(v,k){
+          v.classList.remove("on");
+        });
+        title.forEach(function(v,k){
+          v.classList.remove("on");
+        });
+        hideTxt.forEach(function(v,k){
+          v.classList.remove("on");
+        });
+      } */
+
+      v.onmouseenter=function(){
+        /* my(); */
+        con[k].classList.add("on");
+        title[k].classList.add("on");
+        hideTxt[k].classList.add("on");
+      };
+      v.onmouseleave=function(){
+        con[k].classList.remove("on");
+        title[k].classList.remove("on");
+        hideTxt[k].classList.remove("on");
+      };
+    });
+  </script>
 </body>
 </html>
+
+<!-- 포스코경영연구원 메인페이지 주요연구분야 -->
+<!-- 화승 메인페이지 사업분야 -->
