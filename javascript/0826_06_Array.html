@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>0826 06 Array</title>
+</head>
+<body>
+  <p>red</p>
+  <p>green</p>
+  <p>blue</p>
+  <p>gray</p>
+  <div>photo1</div>
+  <div>photo2</div>
+  <div>photo3</div>
+  <div>photo4</div>
+  <script>
+    //const color = ["red","green","blue","gray"];
+    let p = document.querySelectorAll("p");
+    p.forEach(function(v,k){
+      let txt = v.innerText; //innerText=구조 내 속성태그까지 가져옴?
+      console.log(txt);
+      //v.style.backgroundColor=color[k];
+      v.style.backgroundColor=txt;
+    });
+
+    let bg = document.querySelectorAll("div");
+    let bgImg = "url(images/photo1.jpg)"
+    
+    bg.forEach(function(v,k){
+      //v.style.backgroundImage="url(images/photo"+(k+1)+".jpg)";
+      //v.style.backgroundImage=divBg.replace(divBg.substr(-6,1),k+1);
+      v.style.backgroundImage=bgImg.replace(bgImg.slice(-6,-5),k+1);
+    });
+  </script>
+</body>
+</html>

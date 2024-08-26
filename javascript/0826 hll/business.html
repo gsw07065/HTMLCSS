@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>0826 business</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    ul{list-style: none;}
+    a{text-decoration: none; color: #111;}
+
+    .btn{
+      width: 1200px; height: 44px; margin: 100px auto;
+      display: flex; gap: 15px; justify-content: center;
+    }
+    .btn li{}
+    .btn li a{
+      display: block;
+      line-height: 44px; padding: 0 16px;
+      border: 1px solid #ccc;
+    }
+    .btn li a.on{
+      color: #fff; background-color: #211955;
+      border: none;
+    }
+
+    .con{
+      width: 100%; margin: 0 auto; position: relative;
+    }
+    .con li{
+      width: 100%;
+      position: absolute; left: 0;top: 0;
+    }
+    .con li p{
+      width: 1200px; margin: 0 auto;
+      height: 80px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      margin-bottom: 70px; opacity: 0;
+    }
+    .con li p.on{
+      opacity: 1;
+    }
+    .con li div{
+      width: 100%; height: 624px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover; opacity: 0;
+      display: flex; justify-content: center; align-items: center;
+      text-align: center;
+      font-size: 30px; color: #fff;
+      margin-bottom: 70px;
+    }
+    .con li div.on{
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <ul class="btn">
+    <li><a href="#">ELLE</a></li>
+    <li><a href="#">COSMOPOLITAN</a></li>
+    <li><a href="#">Harper's BAZAAR</a></li>
+    <li><a href="#">ESQUIRE</a></li>
+    <li><a href="#">STUDIO DOT</a></li>
+    <li><a href="#">YEET</a></li>
+  </ul>
+  <ul class="con">
+    <li>
+      <p></p>
+      <div>
+        <h2>
+          NO.1<br>
+          FASHION & LIFESTYLE<br>
+          MEDIA
+        </h2>
+      </div>
+    </li>
+    <li>
+      <p></p>
+      <div>
+        <h2>
+          Fun, Fearless, Female
+        </h2>
+      </div>
+    </li>
+    <li>
+      <p></p>
+      <div>
+        <h2>
+          Realistic<br>
+          Inspiration from<br>
+          Artistic Creation
+        </h2>
+      </div>
+    </li>
+    <li>
+      <p></p>
+      <div>
+        <h2>
+          MAN<br>
+          AT<br>
+          HIS BEST
+        </h2>
+      </div>
+    </li>
+    <li>
+      <p></p>
+      <div>
+        <h2>
+          콘텐츠로 증명하는 '스튜디오닷'<br>
+          브랜드와 고객의 니즈를 넘나드는<br>
+          A to Z 콘텐츠 솔루션 실행
+        </h2>
+      </div>
+    </li>
+    <li>
+      <p></p>
+      <div>
+        <h2>
+          Little<br>
+          Pleasures<br>
+          of Life
+        </h2>
+      </div>
+    </li>
+  </ul>
+
+  <script>
+    let btn = document.querySelectorAll(".btn li a")
+    let con1 = document.querySelectorAll(".con li p")
+    let con2 = document.querySelectorAll(".con li div")
+
+    let con1Bg = "url(images/title1.svg)"
+    let con2Bg = "url(images/img_visual1.png)"
+
+    btn[0].classList.add("on");
+    con1[0].classList.add("on");
+    con2[0].classList.add("on");
+
+    con1.forEach(function(v,k){
+      v.style.backgroundImage=con1Bg.replace(con1Bg.slice(-6,-5),k+1);
+    });
+    con2.forEach(function(v,k){
+      v.style.backgroundImage=con2Bg.replace(con2Bg.slice(-6,-5),k+1);
+    });
+
+    function my(){
+      btn.forEach(function(v,k){
+        v.classList.remove("on");
+      });
+    }
+
+    btn.forEach(function(v,k){
+      v.onclick=function(e){
+        e.preventDefault();
+        my();
+        con1.forEach(function(v,k){
+          v.classList.remove("on");
+        });
+        con2.forEach(function(v,k){
+          v.classList.remove("on");
+        });
+        btn[k].classList.add("on");
+        con1[k].classList.add("on");
+        con2[k].classList.add("on");
+      };
+    });
+  </script>
+</body>
+</html>
