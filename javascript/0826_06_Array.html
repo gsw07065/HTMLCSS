@@ -18,7 +18,7 @@
     //const color = ["red","green","blue","gray"];
     let p = document.querySelectorAll("p");
     p.forEach(function(v,k){
-      let txt = v.innerText; //innerText=구조 내 속성태그까지 가져옴?
+      let txt = v.innerText; //innerText=구조 내 속성태그도 텍스트로 인식
       console.log(txt);
       //v.style.backgroundColor=color[k];
       v.style.backgroundColor=txt;

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>0827 화승</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    ul{list-style: none;}
+    a{text-decoration: none;}
+
+    ul{
+      width: 90%; margin: 50px auto;
+      display: flex; justify-content: center;
+    }
+    ul li{
+      flex: 1 1 15%; height: 370px; background-color: #ddd;
+      transition: .5s;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    ul li.on{
+      flex: 1 0 30%;
+    }
+    ul li a{
+      display: block; width: 100%; height: 100%;
+    }
+    ul li a div{
+      position: relative; width: 100%; height: 100%;
+      padding: 20px 0; box-sizing: border-box;
+      text-align: center; color: #fff; overflow: hidden;
+      letter-spacing: -1px;
+    }
+    ul li a div h3{
+      width: 80%;
+      position: absolute; left: 50%; bottom: 20px;
+      transform: translateX(-50%);
+      transition: .1s;
+    }
+    ul li a div h3.on{
+      bottom: 130px;
+    }
+    ul li:nth-child(5) a div h3.on{
+      bottom: 150px;
+    }
+    ul li a div p{
+      width: 80%;
+      position: absolute; left: 50%; bottom: -240px;
+      transform: translateX(-50%);
+      transition: opacity .5s; opacity: 0;
+      word-break: keep-all;
+    }
+    ul li a div p.on{
+      bottom: 20px; opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li>
+      <a href="#">
+        <div>
+          <h3>소재</h3>
+          <p>
+            화승 고유의 컴파운드 배합기술은 우리 생활 곳곳은 물론 다양한 산업 현장에서도 만날 수 있습니다. 화승은 지속적인 변화와 혁신을 통해 우리의 일상을 더 특별하게 만들고 있습니다.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <div>
+          <h3>자동차 부품</h3>
+          <p>
+            화승의 자동차부품 사업군은 국내 점유율 1위를 지켜감과 동시에 전세계 곳곳의 해외 법인에서도 압도적인 기술력을 통한 NO.1 테크기업으로서 세계 유수의 완성차 브랜드와 함께하고 있습니다.                 
+          </p>
+        </div>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <div>
+          <h3>종합무역</h3>
+          <p>
+            화승은 전략적인 구매 및 조달 분석으로 공급망 밸류 체인을 형성해 글로벌 SCM부터 화학원자재, MRO, 국내외 철강 및 식육의 유통까지 경쟁력있는 무역회사로 성장하고 있습니다.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <div>
+          <h3>화학</h3>
+          <p>
+            화승은 독자적인 연구 플랫폼을 통해 R&D를 넘어 C&D로 나아가는 미래 첨단 기술 인프라를 끊임없이 넓혀가고 있습니다. 세계 최고의 화학 기술로 고객과 함께하고 있습니다.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <div>
+          <h3>스포츠패션ODM</h3>
+          <p>
+            화승은 신발을 넘어 모자, 의류 등 다양한 스포츠패션 아이템들을 생산하는 세계 최고의 스마트 팩토리 파트너로 고객 지향적 ODM 기술력을 통해 글로벌 브랜드들과 함께 새로운 미래를 열어가고 있습니다.
+          </p>
+        </div>
+      </a>
+    </li>
+  </ul>
+
+  <script>
+    let con = document.querySelectorAll("ul li");
+    let conTitle = document.querySelectorAll("ul li a div h3");
+    let hideTxt = document.querySelectorAll("ul li a div p");
+
+    let conBg = "url(https://www.hwaseunggroup.com/kor/assets/img/main/busi_con01.png)";
+
+    con.forEach(function(v,k){
+      v.style.backgroundImage=conBg.replace(conBg.slice(-6,-5),k+1);
+
+      v.onmouseenter=function(){
+        con[k].classList.add("on");
+        conTitle[k].classList.add("on");
+        hideTxt[k].classList.add("on");
+      }
+      v.onmouseleave=function(){
+        con[k].classList.remove("on");
+        conTitle[k].classList.remove("on");
+        hideTxt[k].classList.remove("on");
+      }
+    });
+  </script>
+</body>
+</html>

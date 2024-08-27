@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>0827 gs에너지business</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    ul{list-style: none;}
+    a{text-decoration: none; color: #000;}
+
+    ul{
+      width: 95%; max-width: 1520px; margin: 50px auto;
+      border-top: 1px solid;
+      
+    }
+    ul li{
+      width: 100%; line-height: 120px;
+      border-bottom: 1px solid #ddd;
+    }
+    ul li a{display: block; height: 100%;}
+    ul li a h1{position: relative;}
+    ul li a h1 span{}
+    ul li a h1 span::before{
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 0;
+      background: #000;
+      border-radius: 2px;
+      transition: .2s linear;
+      width: 23px;
+      height: 3px;
+      margin: -1px 0 0 -11px;
+    }
+    ul li a h1 span::after{
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      background: #000;
+      border-radius: 2px;
+      transition: .2s linear;
+      width: 3px;
+      height: 23px;
+      margin: -11px 0 0 -1px;
+    }
+    ul li a p{
+      width: 100%; height: 0;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      transition: .5s;
+    }
+    ul li a p.on{
+      height: 307px;
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li>
+      <a href="#">
+        <h1>GS파워<span></span></h1>
+        <p></p>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <h1>인천종합에너지<span></span></h1>
+        <p></p>
+      </a>
+    </li>
+  </ul>
+  
+  <script>
+    let content = document.querySelectorAll("ul li");
+    let Img = document.querySelectorAll("ul li a p");
+    let pBg = "url(images/img_collective_a01.jpg)";
+    
+    function myfnc(){
+
+    }
+
+    content.forEach(function(v,k){
+      v.querySelector("a p").style.backgroundImage=pBg.replace(pBg.slice(-6,-5),k+1);
+
+      v.onclick=function(e){
+        e.preventDefault();
+        Img.forEach(function(v,k){
+          v.classList.remove("on");
+        });
+        Img[k].classList.add("on");
+      };
+    });
+  </script>
+</body>
+</html>
