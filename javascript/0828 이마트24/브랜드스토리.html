@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>0828 이마트24 브랜드스토리</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    ul{list-style: none;}
+
+    ul{
+      width: 930px; margin: 50px auto;
+    }
+    ul li{
+      width: 100%; padding: 50px 0;
+      border-bottom: 1px solid;
+      cursor: pointer;
+    }
+    ul li:first-child{
+      border-top: 1px solid;
+    }
+    ul li .title{
+      width: 100%; display: flex; justify-content: space-between;
+    }
+    ul li .title p{
+      width: 15%; height: 30px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
+    ul li span{
+      display: block;
+      position: relative;
+    }
+    ul li span::before,ul li span::after{
+      position: absolute;
+    content: "";
+    display: inline-block;
+    top: 0;
+    left: 0;
+    width: calc(3 / 1920* 100vw);
+    height: calc(14 / 1920* 100vw);
+    max-width: 3px;
+    max-height: 14px;
+    background-color: transparent;
+    border-bottom: min(0.885vw, 17px) solid #231f20;
+    }
+    ul li span::before{
+      transform: rotate(-135deg);
+    }
+    ul li span::after{
+      transform: rotate(135deg);
+    }
+    ul li span.on:before{
+      transform: rotate(-90deg);
+    }
+    ul li span.on:after{
+      transform: rotate(90deg);
+    }
+
+    ul li .hide{
+      width: 100%; height: 0; opacity: 0;
+    }
+    ul li .hide.on{
+      height: 100%; opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li>
+      <div class="title">
+        <p></p>
+        <span></span>
+      </div>
+      <div class="hide">
+        <div class="month">
+          <p>3월</p>
+          <div class="sub">
+            <p>- 상품전시회 “딜리셔스 페스티벌” 개최</p>
+            <p>*3/8(수) ~ 10(금), 서울 양재 AT센터</p>
+          </div>
+        </div>
+        <div class="month">
+          <p>3월</p>
+          <div class="sub">
+            <p>- 상품전시회 “딜리셔스 페스티벌” 개최</p>
+            <p>*3/8(수) ~ 10(금), 서울 양재 AT센터</p>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="title">
+        <p></p>
+        <span></span>
+      </div>
+      <div class="hide">
+        <div class="month">
+          <p>3월</p>
+          <div class="sub">
+            <p>- 상품전시회 “딜리셔스 페스티벌” 개최</p>
+            <p>*3/8(수) ~ 10(금), 서울 양재 AT센터</p>
+          </div>
+        </div>
+        <div class="month">
+          <p>3월</p>
+          <div class="sub">
+            <p>- 상품전시회 “딜리셔스 페스티벌” 개최</p>
+            <p>*3/8(수) ~ 10(금), 서울 양재 AT센터</p>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="title">
+        <p></p>
+        <span></span>
+      </div>
+      <div class="hide">
+        <div class="month">
+          <p>3월</p>
+          <div class="sub">
+            <p>- 상품전시회 “딜리셔스 페스티벌” 개최</p>
+            <p>*3/8(수) ~ 10(금), 서울 양재 AT센터</p>
+          </div>
+        </div>
+        <div class="month">
+          <p>3월</p>
+          <div class="sub">
+            <p>- 상품전시회 “딜리셔스 페스티벌” 개최</p>
+            <p>*3/8(수) ~ 10(금), 서울 양재 AT센터</p>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="title">
+        <p></p>
+        <span></span>
+      </div>
+      <div class="hide">
+        <div class="month">
+          <p>3월</p>
+          <div class="sub">
+            <p>- 상품전시회 “딜리셔스 페스티벌” 개최</p>
+            <p>*3/8(수) ~ 10(금), 서울 양재 AT센터</p>
+          </div>
+        </div>
+        <div class="month">
+          <p>3월</p>
+          <div class="sub">
+            <p>- 상품전시회 “딜리셔스 페스티벌” 개최</p>
+            <p>*3/8(수) ~ 10(금), 서울 양재 AT센터</p>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="title">
+        <p></p>
+        <span></span>
+      </div>
+      <div class="hide">
+        <div class="month">
+          <p>3월</p>
+          <div class="sub">
+            <p>- 상품전시회 “딜리셔스 페스티벌” 개최</p>
+            <p>*3/8(수) ~ 10(금), 서울 양재 AT센터</p>
+          </div>
+        </div>
+        <div class="month">
+          <p>3월</p>
+          <div class="sub">
+            <p>- 상품전시회 “딜리셔스 페스티벌” 개최</p>
+            <p>*3/8(수) ~ 10(금), 서울 양재 AT센터</p>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="title">
+        <p></p>
+        <span></span>
+      </div>
+      <div class="hide">
+        <div class="month">
+          <p>3월</p>
+          <div class="sub">
+            <p>- 상품전시회 “딜리셔스 페스티벌” 개최</p>
+            <p>*3/8(수) ~ 10(금), 서울 양재 AT센터</p>
+          </div>
+        </div>
+        <div class="month">
+          <p>3월</p>
+          <div class="sub">
+            <p>- 상품전시회 “딜리셔스 페스티벌” 개최</p>
+            <p>*3/8(수) ~ 10(금), 서울 양재 AT센터</p>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="title">
+        <p></p>
+        <span></span>
+      </div>
+      <div class="hide">
+        <div class="month">
+          <p>3월</p>
+          <div class="sub">
+            <p>- 상품전시회 “딜리셔스 페스티벌” 개최</p>
+            <p>*3/8(수) ~ 10(금), 서울 양재 AT센터</p>
+          </div>
+        </div>
+        <div class="month">
+          <p>3월</p>
+          <div class="sub">
+            <p>- 상품전시회 “딜리셔스 페스티벌” 개최</p>
+            <p>*3/8(수) ~ 10(금), 서울 양재 AT센터</p>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="title">
+        <p></p>
+        <span></span>
+      </div>
+      <div class="hide">
+        <div class="month">
+          <p>3월</p>
+          <div class="sub">
+            <p>- 상품전시회 “딜리셔스 페스티벌” 개최</p>
+            <p>*3/8(수) ~ 10(금), 서울 양재 AT센터</p>
+          </div>
+        </div>
+        <div class="month">
+          <p>3월</p>
+          <div class="sub">
+            <p>- 상품전시회 “딜리셔스 페스티벌” 개최</p>
+            <p>*3/8(수) ~ 10(금), 서울 양재 AT센터</p>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="title">
+        <p></p>
+        <span></span>
+      </div>
+      <div class="hide">
+        <div class="month">
+          <p>3월</p>
+          <div class="sub">
+            <p>- 상품전시회 “딜리셔스 페스티벌” 개최</p>
+            <p>*3/8(수) ~ 10(금), 서울 양재 AT센터</p>
+          </div>
+        </div>
+        <div class="month">
+          <p>3월</p>
+          <div class="sub">
+            <p>- 상품전시회 “딜리셔스 페스티벌” 개최</p>
+            <p>*3/8(수) ~ 10(금), 서울 양재 AT센터</p>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="title">
+        <p></p>
+        <span></span>
+      </div>
+      <div class="hide">
+        <div class="month">
+          <p>3월</p>
+          <div class="sub">
+            <p>- 상품전시회 “딜리셔스 페스티벌” 개최</p>
+            <p>*3/8(수) ~ 10(금), 서울 양재 AT센터</p>
+          </div>
+        </div>
+        <div class="month">
+          <p>3월</p>
+          <div class="sub">
+            <p>- 상품전시회 “딜리셔스 페스티벌” 개최</p>
+            <p>*3/8(수) ~ 10(금), 서울 양재 AT센터</p>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="title">
+        <p></p>
+        <span></span>
+      </div>
+      <div class="hide">
+        <div class="month">
+          <p>3월</p>
+          <div class="sub">
+            <p>- 상품전시회 “딜리셔스 페스티벌” 개최</p>
+            <p>*3/8(수) ~ 10(금), 서울 양재 AT센터</p>
+          </div>
+        </div>
+        <div class="month">
+          <p>3월</p>
+          <div class="sub">
+            <p>- 상품전시회 “딜리셔스 페스티벌” 개최</p>
+            <p>*3/8(수) ~ 10(금), 서울 양재 AT센터</p>
+          </div>
+        </div>
+      </div>
+    </li>
+    
+    
+  </ul>
+
+  <script>
+    let con = document.querySelectorAll("ul li");
+    let history = "url(images/history1.png)";
+
+    function myfnc(){
+      let bool = this.querySelector("span").classList.contains("on");
+      console.log(bool);
+      con.forEach(function(v,k){
+        v.querySelector("span").classList.remove("on");
+        v.querySelector(".hide").classList.remove("on");
+      });
+      if(!bool){
+        this.querySelector("span").classList.add("on");
+        this.querySelector(".hide").classList.add("on");
+      };
+    }
+    
+    con.forEach(function(v,k){
+      v.querySelector(".title p").style.backgroundImage=history.replace(history.slice(-6,-5),k+1); 
+
+      v.onclick=myfnc;
+        
+    });
+  </script>
+</body>
+</html>
