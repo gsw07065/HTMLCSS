@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>0829 kano</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    ul{list-style: none;}
+    a{text-decoration: none; color: #000;}
+
+    .wrap{
+      width: 100%; height: 987px; margin: 0 auto; display: flex;
+      justify-content: right; align-items: center;
+      position: relative;
+    }
+    .wrap .left{
+      width: 50%; max-width: 750px;
+      display: flex; flex-direction: column;
+      justify-content: right; align-items: left;
+      gap: 50px;
+      position: absolute; left: 2%;
+    }
+
+    .wrap .left h1{
+      font-weight: lighter; font-size: 54px; line-height: 65px;
+      margin-left: 80px;
+    }
+    .wrap .left .lBtn li{
+      padding: 30px 150px 30px 60px; background-color: transparent;
+      margin: 20px 0; box-sizing: border-box;
+      border-radius: 20px;
+    }
+    .wrap .left .lBtn li.on{
+      background-color: #bf1e2e;
+      transform: translateX(20px);
+    }
+    .wrap .left .lBtn a{
+      display: flex; justify-content: space-between;
+      align-items: center;
+    }
+    .wrap .left .lBtn a>p{
+      width: 20%;
+    }
+    .wrap .left .lBtn a .txt{
+      width: 80%;
+      font-size: 18px;
+      letter-spacing: -1px;
+      position: relative;
+    }
+    .wrap .left .lBtn a .txt.on{color: #fff;}
+    .wrap .left .lBtn a .txt h4{
+      font-size: 28px; font-weight: normal; margin-bottom: 10px;
+    }
+    .wrap .left .lBtn a .txt p{
+      
+    }
+    .wrap .left .lBtn a .txt span{
+      position: absolute;
+    }
+    .wrap .right{
+      width: 50%; height: 100%; background-color: #ccc;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="left">
+      <h1>카노와 함께하는<br>
+        브랜드를 소개합니다.</h1>
+      <ul class="lBtn">
+        <li>
+          <a href="#">
+            <p><img src="iamges/logo1.png" alt="logo"></p>
+            <div class="txt">
+              <h4>이지스토리</h4>
+              <p>산뜻한 일상의 이야기를 전하는 정직한 브랜드입니다.</p>
+              <span></span>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p><img src="iamges/logo2.png" alt="logo"></p>
+            <div class="txt">
+              <h4>이지스토리</h4>
+              <p>산뜻한 일상의 이야기를 전하는 정직한 브랜드입니다.</p>
+              <span></span>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p><img src="iamges/logo3.png" alt="logo"></p>
+            <div class="txt">
+              <h4>이지스토리</h4>
+              <p>산뜻한 일상의 이야기를 전하는 정직한 브랜드입니다.</p>
+              <span></span>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="right">
+    </div>
+  </div>
+
+  <script>
+    let btn = document.querySelectorAll(".lBtn li");
+    let rBg = "url(images/right01.jpg)";
+
+    function myfnc(){
+      /* this.classList.remove("on");
+      this.querySelector(".txt").classList.remove("on"); */
+      /* this[0].classList.add("on");
+      this[0].querySelector(".txt").classList.add("on"); */
+    }
+    btn[0].classList.add("on");
+    btn[0].querySelector(".txt").classList.add("on");
+
+    btn.forEach(function(v,k){
+      v.onmouseenter=function(){
+        this.classList.add("on");
+        this.querySelector(".txt").classList.add("on");
+        /* this.querySelector("a>p").innerHTML = '<img src="iamges/logo_on"+(k+1)+".png" alt="logo">'; */
+        document.querySelector(".right").style.backgroundImage = rBg.replace(rBg.slice(-6,-5),k+1);
+      }
+      v.onmouseleave=function(){
+        /* myfnc; */
+        this.classList.remove("on");
+        this.querySelector(".txt").classList.remove("on");
+/*         this[0].classList.add("on");
+        this[0].querySelector(".txt").classList.add("on"); */
+      }
+    });
+  </script>
+</body>
+</html>

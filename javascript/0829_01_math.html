@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>0829 01 math</title>
+</head>
+<body>
+  <script>
+    document.write(""+"<br>");
+    document.write(Math.E+"<br>");        // 오일러 수를 반환합니다.
+    document.write(Math.PI+"<br>");       // PI 반환
+    document.write(Math.SQRT2+"<br>");    // 2의 제곱근을 반환합니다
+    document.write(Math.SQRT1_2+"<br>");  // 1/2의 제곱근을 반환합니다.
+    document.write(Math.LN2+"<br>");      // 2의 자연 로그를 반환합니다.
+    document.write(Math.LN10+"<br>");     // 10의 자연 로그를 반환합니다.
+    document.write(Math.LOG2E+"<br>");    // E의 밑이 2인 로그를 반환합니다.
+    document.write(Math.LOG10E+"<br>");   // E의 밑이 10인 로그를 반환합니다.
+
+    document.write(`${Math.round(1.233)}<br>`); //가장 가까운 정수로 반올림
+    document.write(`${Math.round(1.533)}<br><br>`);
+
+    document.write(`${Math.ceil(1.233)}<br>`);  //크거나 같은값 중에 작은값 (올림)
+    document.write(`${Math.ceil(1.533)}<br>`);
+    document.write(`${Math.ceil(1)}<br><br>`);
+
+    document.write(`${Math.floor(1.233)}<br>`); //작거나 같은값 중에 큰값 (내림)
+    document.write(`${Math.floor(1.533)}<br>`);
+    document.write(`${Math.floor(1)}<br><br>`);
+
+    document.write(`${Math.trunc(1.233)}<br>`); //x의 정수 부분 반환
+    document.write(`${Math.trunc(1.533)}<br>`);
+    document.write(`${Math.trunc(1)}<br><br>`);
+
+    document.write(`${Math.sign(-4)}<br>`);     //음수는 -1로 반환
+    document.write(`${Math.sign(null)}<br>`);   //0으로 반환
+    document.write(`${Math.sign(0)}<br>`);      //0으로 반환
+    document.write(`${Math.sign(4)}<br><br>`);  //양수는 1로 반환
+
+    document.write(`${Math.pow(8, 2)}<br>`);    //8의 2승
+    document.write(`${Math.sqrt(64)}<br><br>`); //루트 64
+
+    document.write(`${Math.abs(-64)}<br>`);     //양수값 absolute
+    document.write(`${Math.abs(0)}<br>`);       //0 반환
+    document.write(`${Math.abs(64)}<br>`);      //양수값
+    document.write(`${Math.abs(-4.7)}<br><br>`);//양수값
+
+    document.write(`${Math.min(0, 150, 30, 20, -8, -200)}<br>`); //가장작은값
+    document.write(`${Math.max(0, 150, 30, 20, -8, -200)}<br><br>`); //가장큰값
+    
+    document.write(`${Math.random()}<br>`); //난수 (0-1 사이 랜덤 반환)
+  </script>
+</body>
+</html>
