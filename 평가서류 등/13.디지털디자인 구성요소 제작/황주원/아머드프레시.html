@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>아머드프레시</title>
+  <link rel="stylesheet" href="xeicon.css">
+  <style>
+    *{margin: 0; padding: 0; color: #d1a050;}
+    ul{list-style: none;}
+
+    .wrap{
+      width: 97%; max-width: 1210px; margin: 50px auto;
+    }
+    .wrap h1, .wrap h2{font-size: 42px;}
+    .wrap h2{font-weight: normal; line-height: 90px; margin-bottom: 10px;}
+    .wrap ul li{
+      border-top: 1px solid;
+       overflow: hidden;
+    }
+    .wrap ul li .btn{
+      display: flex; align-items: center; gap: 5px;
+      font-size: 24px; cursor: pointer; padding: 20px 0;
+    }
+    .wrap ul li .btn i{
+      font-size: 20px; transition: .5s;
+    }
+    .wrap ul li .btn i.on{
+      transform: rotate(45deg);
+    }
+    .wrap ul li .btn h3{
+      font-weight: normal;
+    }
+    .wrap ul li .btn h3.on{font-weight: bold;}
+    .wrap ul li p{text-align: center;  height: 0; transition: .5s;}
+    .wrap ul li p.on{height: 450px;}
+    .wrap ul li p img{
+      width: 95%; object-fit: contain; padding: 70px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>RETAIL</h1>
+    <h2>Slices - Almond Base</h2>
+    <ul>
+      <li>
+        <div class="btn">
+          <i class="xi-plus"></i>
+          <h3>AMERICAN</h3>
+        </div>
+        <p><img src="https://d29wx3mrk1ysd0.cloudfront.net/_img/sub231114/SLICES-ALMONDBASE-AMERICAN-pc.jpg" alt="image1"></p>
+      </li>
+      <li>
+        <div class="btn">
+          <i class="xi-plus"></i>
+          <h3>CHEDDAR</h3>
+        </div>
+        <p><img src="https://d29wx3mrk1ysd0.cloudfront.net/_img/sub231114/SLICES-ALMONDBASE-CHEDDAR-pc.jpg" alt="image2"></p>
+      </li>
+      <li>
+        <div class="btn">
+          <i class="xi-plus"></i>
+          <h3>PROVOLONE</h3>
+        </div>
+        <p><img src="https://d29wx3mrk1ysd0.cloudfront.net/_img/sub231114/SLICES-ALMONDBASE-PROVOLONE-pc.jpg" alt="image3"></p>
+      </li>
+      <li>
+        <div class="btn">
+          <i class="xi-plus"></i>
+          <h3>PEPPER JACK</h3>
+        </div>
+        <p><img src="https://d29wx3mrk1ysd0.cloudfront.net/_img/sub231114/SLICES-ALMONDBASE-PEPPERJACK-pc.jpg" alt="image4"></p>
+      </li>
+    </ul>
+  </div>
+
+  <script>
+    let btn = document.querySelectorAll("ul li .btn");
+    let hide = document.querySelectorAll("ul li");
+
+    btn.forEach(function(v,k){
+      v.onclick = function(){
+        let bool = this.querySelector("h3").classList.contains("on");
+        console.log(bool);
+        hide[k].querySelector("p").classList.remove("on");
+        v.querySelector("i").classList.remove("on");
+        v.querySelector("h3").classList.remove("on");
+        if(!bool){
+            hide[k].querySelector("p").classList.add("on");
+            v.querySelector("i").classList.add("on");
+            v.querySelector("h3").classList.add("on");
+        };
+      };
+    });
+  </script>
+</body>
+</html>

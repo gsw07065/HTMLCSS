@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>매드포갈릭</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    ul{list-style: none;}
+    a{text-decoration: none;}
+
+    ul{
+      width: 1184px; margin: 50px auto;
+      display: flex;
+    }
+    ul li{
+      width: 50%; height: 610px;
+      overflow: hidden;
+    }
+    ul li a{
+      display: block;
+      width: 100%; height: 100%;
+      color: #fff;  position: relative;
+    }
+    ul li a p img{
+      width: 100%; height: 100%; object-fit: cover;
+      transition: .3s;
+    }
+    ul li a:hover p img{
+      transform: scale(1.1);
+    }
+    ul li a div{
+      width: 100%; height: 100%;
+      display: flex; flex-direction: column;
+      justify-content: center; align-items: center; gap: 5px;
+      position: absolute; left: 0; top: 0;
+    }
+    ul li a div h1{font-size: 45px;}
+    ul li a div p{font-size: 15px;}
+  </style>
+</head>
+<body>
+  <ul>
+    <li>
+        <a href="#">
+          <p><img src="https://cdnt.madforgarlic.com/madforgarlic/media/web/event/201610/18/47111ab2f40f77d358f4a6c63e85836d.png" alt="image1"></p>
+          <div>
+            <h1>SEARCH</h1>
+            <p>매드포갈릭 매장 찾기</p>
+          </div>
+        </a>
+    </li>
+    <li>
+        <a href="#">
+          <p><img src="https://cdnt.madforgarlic.com/madforgarlic/media/web/event/201610/18/2c32239dae448f6e3dfed815151b731b.png" alt="image2"></p>
+          <div>
+            <h1>CONCEPT</h1>
+            <p>매드포갈릭 컨셉 이미지</p>
+          </div>
+        </a>
+    </li>
+  </ul>
+</body>
+</html>
