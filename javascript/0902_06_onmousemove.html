@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>0902 06 onmousemove</title>
+  <style>
+    body{margin-top: 1000px; padding-bottom: 1000px;}
+  </style>
+</head>
+
+<body>
+ <form action="" id="form1">
+  <p>clientX : <input type="text" name="clientX"></p>
+  <p>clientY : <input type="text" name="clientY"></p>
+  <p>pageX : <input type="text" name="pX"></p>
+  <p>pageY : <input type="text" name="pY"></p>
+  <p>screenX : <input type="text" name="screenX"></p>
+  <p>screenY : <input type="text" name="screenY"></p>
+ </form>
+
+ <script>
+  document.onmousemove = function(e){
+    let form = document.getElementById("form1");
+    form.clientX.value = e.clientX;  //스크롤 위치 상관X, 브라우저창 기준
+    form.clientY.value = e.clientY;
+    form.pX.value = e.pageX; //스크롤 위치 상관O, 문서 기준
+    form.pY.value = e.pageY;
+    form.screenX.value = e.screenX; //스크롤 위치 상관X, 사용자 화면 디바이스 기준
+    form.screenY.value = e.screenY;
+  }
+ </script>
+</body>
+
+</html>

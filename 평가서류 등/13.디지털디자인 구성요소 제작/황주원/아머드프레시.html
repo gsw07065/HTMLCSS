@@ -79,8 +79,19 @@
     let btn = document.querySelectorAll("ul li .btn");
     let hide = document.querySelectorAll("ul li");
 
+   /*  function my(){
+      btn.forEach(function(v,k){
+        v.querySelector("i").classList.remove("on");
+        v.querySelector("h3").classList.remove("on");
+      });
+      hide.forEach(function(v,k){
+        v.querySelector("p").classList.remove("on");
+      });
+    } 함숫값 적용시 선택한 하나씩만 보이게 적용 가능 */
+
     btn.forEach(function(v,k){
       v.onclick = function(){
+        /* my(); */
         let bool = this.querySelector("h3").classList.contains("on");
         console.log(bool);
         hide[k].querySelector("p").classList.remove("on");

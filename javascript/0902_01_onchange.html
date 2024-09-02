@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>0902 01 onchange</title>
+</head>
+<body>
+  <input type="text" id="fname">
+  <script>
+  let x = document.getElementById("fname")
+   /* x.onchange = function(){
+      this.value = this.value.toUpperCase();
+      //입력란 내용 변경될 시 대문자로 변경
+    }; */
+
+
+
+    //키보드의 키를 눌렀을 때 발생하는 이벤트
+    //onkeydown & onkeypress  키를 누르고 있을 때도 이벤트 발생
+    //onkeyup  키보드 키를 누르고 뗐을 때 이벤트 발생
+    //onkeypress  alt,ctrl,방향키 keyCode값 반환X
+    //onkeydown   alt,ctrl,방향키 keyCode값 반환O
+
+/*     x.onkeydown = function(e){
+      console.log(e.keyCode);
+    } */
+
+/*     x.onkeypress = function(e){
+      console.log(e.keyCode); 
+    } */
+
+    x.onkeyup = function(e){
+      console.log(e.keyCode); 
+    }
+  </script>
+</body>
+</html>

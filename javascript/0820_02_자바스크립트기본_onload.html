@@ -3,21 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>0820 02 자바스크립트 기본</title>
+  <title>0820 02 자바스크립트 기본 onload</title>
   <style>
     p{display: none;}
   </style>
   <script>
-    //1. 웹페이지가 모두 로드된 후 실행되는 코드
+    //1. 웹페이지가 모두 로드된 후 실행되는 코드 (속도 두번째)
       window.onload=function(){
         console.log("onload");
         document.getElementById("demo1").style.display="block";
       }
-    //2. 문서가 로드된 후 실행되는 코드
+    //2. 문서가 로드된 후 실행되는 코드 (속도 가장 느림)
       window.addEventListener("load",function(){
         console.log("load");
       });
-    //3. DOM구성이 완료된 후 실행되는 코드
+    //3. DOM구성이 완료된 후 실행되는 코드 (속도제일빠름)
+    //이미지,스타일 로딩이 완료되지 않아도 발생
       document.addEventListener("DOMContentLoaded",function(){
         console.log("DOMContentLoaded");
       });
