@@ -1,3 +1,0 @@
-lg생활건강 리프레싱페이지
-(로고&목업 이미지로 추후 랜더링페이지에 활용)
-https://www.lghnh.com/brand/list.jsp?type=REFRESHING

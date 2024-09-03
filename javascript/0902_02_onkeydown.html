@@ -75,6 +75,7 @@
   };
 
   document.onkeydown = function(e){
+    clearInterval(interval);
     console.log(e.keyCode)
     if(e.keyCode == 37){//왼쪽화살표
       document.querySelector(".box").style.transform = "rotateY("+(y-=90)+"deg)";
@@ -90,12 +91,29 @@
     }
   };
 
-  setInterval(function(){
+/*   setInterval(function(){
     document.querySelector(".box").style.transform = "rotateY("+(y+=90)+"deg)";
-  },1000); 
+  },1000); */ 
   /*   setInterval(function(){
       실행문;
     },시간(ms)) */
+
+   let interval = setInterval(function(){
+    document.querySelector(".box").style.transform = "rotateY("+(y+=90)+"deg)";
+  },1000); 
+
+  let btn = document.querySelectorAll("button");
+  btn.forEach(function(v,k){
+    v.onmouseenter = function(){
+      clearInterval(interval);
+    };
+    v.onmouseleave = function(){
+      interval = setInterval(function(){
+      document.querySelector(".box").style.transform = "rotateY("+(y+=90)+"deg)";
+      },1000);
+    };
+  });
+  
  </script>
 </body>
 
