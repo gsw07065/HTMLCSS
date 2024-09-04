@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>0903 04 코웨이지속가능보고서</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <style>
+    *{margin: 0; padding: 0;}
+    ul{list-style: none;}
+    a{text-decoration: none;}
+
+    .wrap{
+      width: 90%; max-width: 1120px; margin: 100px auto;
+    }
+    .wrap>h1{
+      font-size: 31px; color: #111;
+    }
+    .wrap .flexWrap{
+      width: 100%; height: 405px;
+      display: flex; justify-content: space-between;
+      gap: 50px;
+    }
+    .flexWrap .left{
+      width: 50%;
+      display: flex; flex-direction: column;
+      justify-content: space-between;
+    }
+    .flexWrap .left .btn li a{
+      line-height: 55px; width: 70%; display: block;
+      color: #999; 
+      position: relative;
+    }
+    .flexWrap .left .btn li a h2{
+      font-size: 22px; font-weight: normal;
+      border-bottom: 1px solid #eee;
+    }
+    .flexWrap .left .btn li a h2.on{
+      color: #04a6e1; 
+      border-bottom: 3px solid #04a6e1;
+    }
+    .flexWrap .left .btn li a h2 .num{
+      font-weight: bold; margin-right: 10px;
+    }
+    .flexWrap .left .btn li a h2 .num.on
+    .flexWrap .left .btn li a h2.on{color: #04a6e1;}
+    .flexWrap .left .btn li a h2 span.plus.on{
+      display: inline-block;
+      width: 13px; height: 13px;
+      background-image: url(images/coway_highlight-icon-more.png);
+      position: absolute; right: 0; top: 50%;
+      transform: translateY(-50%);
+    }
+    .flexWrap .right.mySwiper{
+      width: 50%;
+    }
+    .flexWrap .right ul.swiper-wrapper{
+      
+    }
+    .flexWrap .swiper-wrapper li.swiper-slide{
+      color: #fff;
+      display: flex; align-items: flex-end;
+      position: relative;
+    }
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .swiper-slide .txt{
+      position: absolute; left: 0; bottom: 0;
+      padding: 40px; box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>ESG Highlights</h1>
+    <div class="flexWrap">
+      <div class="left">
+          <p>
+            환경(Environment), 사회(Social), 지배구조(Governance) 각 영역의 중요 주제를 선정하고 주제 내 코웨이 ESG 활동 성과를 모든 이해관계자에게 공개합니다.
+          </p>
+        <ul class="btn">
+          <li>
+            <a href="#">
+              <h2>
+                <span class="num">01</span>지속가능경영 체계<span class="plus"></span>
+              </h2>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <h2>
+                <span class="num">02</span>이해관계자<span class="plus"></span>
+              </h2>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <h2>
+                <span class="num">03</span>중대성 평가<span class="plus"></span>
+              </h2>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <h2>
+                <span class="num">04</span>중대 이슈 관리 및 보고<span class="plus"></span>
+              </h2>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="swiper mySwiper right">
+        <ul class="swiper-wrapper">
+          <li class="swiper-slide">
+            <img src="https://sustainability.coway.co.kr/images/main/highlight-img-1.jpg" alt="1">
+            <div class="txt">
+              <h3><span>01</span>지속가능경영 체계</h3>
+              <p>코웨이는 환경, 사회, 경제적 지속 가능성을 위해 수립한 목표와
+                추진전략을 이행하여 지속가능경영을 선도할 것입니다.
+              </p>
+            </div>
+          </li>
+          <li class="swiper-slide">
+            <img src="https://sustainability.coway.co.kr/images/main/highlight-img-2.jpg" alt="2">
+            <div class="txt">
+              <h3><span>02</span>이해관계자</h3>
+              <p>코웨이는 환경, 사회, 경제적 지속 가능성을 위해 수립한 목표와
+                추진전략을 이행하여 지속가능경영을 선도할 것입니다.
+              </p>
+            </div>
+          </li>
+          <li class="swiper-slide">
+            <img src="https://sustainability.coway.co.kr/images/main/highlight-img-3.jpg" alt="3">
+            <div class="txt">
+              <h3><span>03</span>중대성 평가</h3>
+              <p>코웨이는 환경, 사회, 경제적 지속 가능성을 위해 수립한 목표와
+                추진전략을 이행하여 지속가능경영을 선도할 것입니다.
+              </p>
+            </div>
+          </li>
+          <li class="swiper-slide">
+            <img src="https://sustainability.coway.co.kr/images/main/highlight-img-4.jpg" alt="4">
+            <div class="txt">
+              <h3><span>04</span>중대 이슈 관리 및 보고</h3>
+              <p>코웨이는 환경, 사회, 경제적 지속 가능성을 위해 수립한 목표와
+                추진전략을 이행하여 지속가능경영을 선도할 것입니다.
+              </p>
+            </div>
+          </li>
+        </ul>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script>
+    let btn = document.querySelectorAll(".left .btn li");
+    btn[0].querySelector("a h2").classList.add("on");
+    btn[0].querySelector(".plus").classList.add("on");
+
+    function my(){
+      btn.forEach(function(v,k){
+        v.querySelector("a h2").classList.remove("on");
+        v.querySelector(".plus").classList.remove("on");
+      });
+    }
+
+    btn.forEach(function(v,k){
+      v.onmouseenter = function(){
+        my();
+        v.querySelector("a h2").classList.add("on");
+        v.querySelector(".plus").classList.add("on");
+        swiper.slideTo(k);
+        swiper.autoplay.stop();
+      };
+      v.onmouseleave = function(){
+        swiper.autoplay.start();
+      };
+      
+    });
+
+    var swiper = new Swiper(".mySwiper", {
+      //loop: true,
+      speed: 1000,
+      autoplay: {
+        delay: 4000,
+        //pauseOnMouseEnter: true,
+      },
+      on: {
+        slideChange: function(){
+          console.log(this.realIndex);
+          for(let i=0; i<4; i++){
+            btn[i].querySelector("a h2").classList.remove("on");
+            btn[i].querySelector(".plus").classList.remove("on");
+          }
+          btn[this.realIndex].querySelector("a h2").classList.add("on");
+          btn[this.realIndex].querySelector(".plus").classList.add("on");
+        }
+      }
+    });
+  </script>
+</body>
+</html>
