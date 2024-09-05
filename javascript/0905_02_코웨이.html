@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>0905 02 코웨이</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <style>
+    *{margin: 0; padding: 0;}
+    ul{list-style: none;}
+    .mySwiper {
+      width: 100%; height: 100vh; overflow: hidden;
+    }
+    .mySwiper .swiper-wrapper .swiper-slide img{
+      width: 100%; height: 100%; object-fit: cover;
+      transform: scale(1.1); transition: 3s;
+    }
+    .mySwiper .swiper-wrapper .swiper-slide img.on{
+      transform: scale(1);
+    }
+    .mySwiper .swiper-wrapper  .swiper-slide .txt{
+      color: #fff; 
+    }
+    .mySwiper .swiper-wrapper  .swiper-slide .txt h1{
+      font-size: 65px; margin-bottom: 20px; transition: 1s .5s;
+      position: absolute; left: 5%; top: 30%; opacity: 0;
+    }
+    .mySwiper .swiper-wrapper  .swiper-slide .txt h1.on{
+      top: 25%; opacity: 1;
+    }
+    .mySwiper .swiper-wrapper  .swiper-slide .txt h3{
+      font-size: 28px; font-weight: normal; transition: 1s 1s;
+      position: absolute; left: 5%; top: 55%; opacity: 0;
+    }
+    .mySwiper .swiper-wrapper  .swiper-slide .txt h3.on{
+      top: 50%; opacity: 1;
+    }
+    .autoplay-progress {
+      position: absolute;
+      left: 5%;
+      bottom: 30%;
+      z-index: 10;
+      width: 80px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: #fff;
+    }
+    .autoplay-progress svg {
+      --progress: 0;
+      position: absolute;
+      left: 0;
+      top: 0px;
+      z-index: 10;
+      width: 100%;
+      height: 100%;
+      stroke-width: 3px;
+      stroke: #fff;
+      fill: none;
+      stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
+      stroke-dasharray: 125.6;
+      transform: rotate(-90deg);
+    }
+  </style>
+</head>
+<body>
+  <div class="swiper mySwiper">
+    <!-- Additional required wrapper -->
+    <ul class="swiper-wrapper">
+      <!-- Slides -->
+      <li class="swiper-slide">
+        <img src="https://sustainability.coway.co.kr/images/main/visual-slide-1.jpg" alt="1">
+        <div class="txt">
+          <h1>Company caring<br>for better Earth</h1>
+          <h3>코웨이가 더 나은 지구를 만들어 나가겠습니다.</h3>
+        </div>
+      </li>
+      <li class="swiper-slide">
+        <img src="https://sustainability.coway.co.kr/images/main/visual-slide-2.jpg" alt="2">
+        <div class="txt">
+          <h1>Company caring<br>for better Earth</h1>
+          <h3>코웨이가 더 나은 지구를 만들어 나가겠습니다.</h3>
+        </div>
+      </li>
+      <li class="swiper-slide">
+        <img src="https://sustainability.coway.co.kr/images/main/visual-slide-3.jpg" alt="3">
+        <div class="txt">
+          <h1>Company caring<br>for better Earth</h1>
+          <h3>코웨이가 더 나은 지구를 만들어 나가겠습니다.</h3>
+        </div>
+      </li>
+      <li class="swiper-slide">
+        <img src="https://sustainability.coway.co.kr/images/main/visual-slide-4.jpg" alt="4">
+        <div class="txt">
+          <h1>Company caring<br>for better Earth</h1>
+          <h3>코웨이가 더 나은 지구를 만들어 나가겠습니다.</h3>
+        </div>
+      </li>
+      <li class="swiper-slide">
+        <img src="https://sustainability.coway.co.kr/images/main/visual-slide-5.jpg" alt="5">
+        <div class="txt">
+          <h1>Company caring<br>for better Earth</h1>
+          <h3>코웨이가 더 나은 지구를 만들어 나가겠습니다.</h3>
+        </div>
+      </li>
+    </ul>
+  
+    <div class="autoplay-progress">
+      <svg viewBox="0 0 48 48">
+        <circle cx="24" cy="24" r="20">
+          <img src="https://sustainability.coway.co.kr/images/main/visual-icon-pause.png" alt="">
+        </circle>
+      </svg>
+      <span></span>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script>
+    const progressCircle = document.querySelector(".autoplay-progress svg");
+    const progressContent = document.querySelector(".autoplay-progress span");
+
+    let swiperLi = document.querySelectorAll(".mySwiper .swiper-wrapper .swiper-slide");
+
+
+    const swiper = new Swiper('.mySwiper', {
+      // Optional parameters
+      loop: true,
+      effect: "fade",
+      speed: 1000,
+
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination',
+      },
+
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+
+      // And if we need scrollbar
+      scrollbar: {
+        el: '.swiper-scrollbar',
+      },
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false
+      },
+      on: {
+        autoplayTimeLeft(s, time, progress) {
+          progressCircle.style.setProperty("--progress", 1 - progress);
+        },
+          /* progressContent.textContent = `${Math.ceil(time / 1000)s`; */
+        slideChange: function(){
+          console.log(this.realIndex);
+          for(let i=0; i<5; i++){
+            swiperLi[i].querySelector("img").classList.remove("on");
+            swiperLi[i].querySelector(".txt h1").classList.remove("on");
+            swiperLi[i].querySelector(".txt h3").classList.remove("on");
+          }
+          swiperLi[this.realIndex].querySelector("img").classList.add("on");
+          swiperLi[this.realIndex].querySelector(".txt h1").classList.add("on");
+          swiperLi[this.realIndex].querySelector(".txt h3").classList.add("on");
+        }
+      },
+    });
+  </script>
+</body>
+</html>
