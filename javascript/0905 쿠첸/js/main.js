@@ -11,18 +11,19 @@ function myfnc(){
   });
   head_bg.style.height = 80 + "px";
   head_bg.style.background = "none";
+  //backgroundColor = transparent;
   document.querySelector(".logo img").src = "images/logo.svg";
 }
 myfnc();
 gnb.forEach(function(v,k){
   v.onmouseenter = function(){
-    //console.log(head_bg.offsetHeight);
+    console.log(head_bg.offsetHeight);
     head_bg.style.background = "#fff";
     document.querySelector(".logo img").src = "images/logo-d.svg";
     try{
       subUl.forEach(function(){
         let ht = subUl[k].offsetHeight + 120;
-        console.log(ht);
+        //console.log(ht);
         gnb[k].querySelector(".sub").style.height = ht + "px";
         gnb[k].querySelector(".sub").classList.add("on");
         head_bg.style.height = ht + "px";
