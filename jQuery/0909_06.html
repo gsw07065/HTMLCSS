@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>0909 06</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <script>
+    $(function(){
+      //$("a[target='_blank'] + a").css("color","red"); // + 선택한 개체 바로 다음 형제
+      //$("a[target='_blank'] ~ a").css("color","red"); // ~ 선택한 개체 다음 형제들
+      //$("a:eq(1)").css("color","red"); //인덱스번호 1인 개체 (0부터)
+      //$("a:gt(1)").css("color","red"); //인덱스 1 이후 형제 개체
+      //$("a:lt(1)").css("color","red"); //인덱스 1 이전 형제 개체
+      //$("a:not(:eq(1))").css("color","red"); //인덱스번호 1이 아닌 모든 형제 개체
+
+      $("a:contains('링크')").css("color","red"); //a 중 '링크'라는 문자가 포함된 개체
+      //$("div:has(p)").css("border","1px solid"); //자식 요소 p를 가지고 있는 div 개체
+      $("p:parent").css("border","1px solid"); //자식 요소를 가진 p 개체
+    });
+  </script>
+</head>
+<body>
+  <a href="#" target="_blank">링크태그</a> <!-- blank 새창 -->
+  <a href="#" target="_new">링크태그</a>
+  <a href="#">링크태그</a>
+  <a href="#">링크태그</a>
+  <a href="#">링크태그</a>
+  <input type="button" value="01">
+  <input type="button" value="02">
+  <input type="button" value="03">
+  <input type="button" value="04">
+  <input type="button" value="05">
+
+  <div><p>문단태그</p></div>
+  <div>
+    <p>문단태그</p>
+    <a href="#">링크태그</a>
+  </div>
+</body>
+</html>

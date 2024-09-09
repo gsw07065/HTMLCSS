@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>0909 01 </title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <!-- 제이쿼리 활용시 코드표 필수 -->
+  <script>
+/*     document.addEventListener("DOMContentLoaded",function(){
+      //document.getElementById("demo").innerText = "제이쿼리";
+      //addEventListener없이 단독으로 쓰면 위치 때문에 적용 안됨 (body 끝에 위치해야 적용됨)
+      document.getElementById("demo").textContent = "제이쿼리";
+    }) */
+    //script는 body 아래 위치시킬것
+    
+/*     $(document).ready(function(){ //document,window등은 선택시 ""필요X
+      $("#demo").text("제이쿼리");
+    }); */
+  </script>
+</head>
+<body>
+  <p id="demo">jQuery</p>
+
+  <script>
+    $("#demo").text("제이쿼리");
+  </script>
+  
+</body>
+</html>

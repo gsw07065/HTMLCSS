@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>0909 02 </title>
+  <style>
+    p{
+      color: blue;
+      font-size: 100px;
+    } /* style 서식보다 script 서식이 더 우선시 적용됨 */
+  </style>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <!-- 제이쿼리 활용시 코드표 필수 -->
+  <script>
+    //$(document).ready(function(){}); 아래로 축약 가능!!
+      $(function(){
+        //$("#demo").html('<h1>제이쿼리</h1>');
+        //html=태그 적용 가능(=innerHtml), text=태그 문자로 인식(=innerText)
+
+
+        //$("p").css("color","red").css("font-size","32px");
+        //(fontSize로도 적용 가능) 한 단어, 2개의 단어 모두 속성이름은 꼭 "" 필요
+        //속성값은 무조건 "" 필요
+
+        $("p").css({color:"red", "font-size":"32px"});
+        //{} 안에서 한 단어의 속성 이름은 "" 없어도 됨, 2개의 단어인 속성만 "" 필요
+      });
+    
+  </script>
+</head>
+<body>
+  <p id="demo">jQuery</p>
+  <p>하나</p>
+  <p>둘</p>
+  <p>셋</p>
+  <p>넷</p>
+</body>
+</html>

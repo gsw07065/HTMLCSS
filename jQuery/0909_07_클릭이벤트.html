@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>0909 07 클릭이벤트</title>
+  <style>
+    img{width: 300px;}
+  </style>
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <script>
+    $(function(){
+      $("img").hide();
+      let bool = true;
+      $("p:first").click(function(){
+        if(bool){
+          $("img").show();
+          $(this).text("이미지숨기기");
+        }else{
+          $("img").hide();
+          $(this).text("이미지보이기");
+        }
+        bool= !bool;
+      });
+    });
+  </script>
+</head>
+<body>
+  <p>이미지보이기</p>
+  <p><img src="../images/photo1.jpg" alt="photo1"></p>
+
+<!--   <script>
+    let bool = true;
+    document.querySelector("img").style.display="none";
+    document.querySelector("p").onclick=function(){
+      //document.querySelectorAll("p")[0].onclick=function(){
+      if(bool){
+        this.innerHTML = "이미지숨기기"
+        //this.innerText = "이미지숨기기"
+        document.querySelector("img").style.display="block";
+      }else{
+        this.innerHTML = "이미지보이기"
+        //this.innerText = "이미지보이기"
+        document.querySelector("img").style.display="none";
+      }
+      bool = !bool;
+    };
+  </script> -->
+</body>
+</html>

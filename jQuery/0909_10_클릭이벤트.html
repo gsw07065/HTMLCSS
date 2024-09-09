@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>0909 10 클릭이벤트</title>
+  <style>
+    img{width: 300px;}
+    p{position: absolute;}
+  </style>
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <script>
+    $(function(){
+      $("a").click(function(e){ //dblclick = 더블클릭하면 이벤트 발생
+        e.preventDefault();
+        let imgsrc = $("p img").attr("src"); //src 속성 전체를 가져옴
+        let imgalt = $("p img").attr("alt");
+
+        let i = $(this).index();
+        console.log(i);
+
+        //imgsrc.slice(-5,-4);
+        //imgsrc.replace(imgsrc.slice(-5,-4),i+1)
+        $("p img").attr("src",imgsrc.replace(imgsrc.slice(-5,-4),i+1)).attr("alt",imgalt.replace(imgalt.slice(-1),i+1));
+      });
+    });
+  </script>
+</head>
+<body>
+  <a href="#">photo1</a>
+  <a href="#">photo2</a>
+  <a href="#">photo3</a>
+  <a href="#">photo4</a>
+  <a href="#">photo5</a>
+  <a href="#">photo6</a>
+  <p><img src="../images/photo1.jpg" alt="photo1"></p>
+</body>
+</html>
