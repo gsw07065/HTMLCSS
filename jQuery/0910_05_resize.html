@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>0910 05 resize</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <script>
+  $(function(){
+    let i = 0;
+    $(window).resize(function(){  //resize 창 크기 조정될 때 이벤트 발생
+      $("p").text(i++); 
+    });
+  });
+  </script>
+</head>
+<body>
+  <p>0</p>
+</body>
+</html>
