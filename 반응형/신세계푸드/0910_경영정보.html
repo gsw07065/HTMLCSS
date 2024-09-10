@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>0910 비지니스</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    ul{list-style: none;}
+    .info{width: 95%; max-width: 940px; margin: 50px auto;}
+    .info ul{display: flex; justify-content: space-between;}
+    .info ul li{
+      width: 311px; height: 400px; background-size: cover;
+      position: relative;
+      text-align: center;
+      display: flex; flex-direction: column;
+      justify-content: center; color: #fff;
+    }
+    .info ul li:nth-child(1){
+      background-image: url(https://www.shinsegaefood.com/images/management/bg_info_1.jpg);
+    }
+    .info ul li:nth-child(2){
+      background-image: url(https://www.shinsegaefood.com/images/management/bg_info_2.jpg);
+    }
+    .info ul li:nth-child(3){
+      background-image: url(https://www.shinsegaefood.com/images/management/bg_info_3.jpg);
+    }
+    .info ul li::after{
+      content: "";
+      position: absolute; left: 0; top: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, .5);
+    }
+    .info ul li h1{position: relative; z-index: 1;}
+    .info ul li p{position: relative; z-index: 1;}
+    .info ul li:hover h1{color: #f29276;}
+    .info ul li:hover::after{
+      background-color: rgba(0, 0, 0, .8);
+    }
+    .info .bottom{
+      padding: 50px 0; background-color: #c76f53;
+      display: flex; justify-content: center; margin: 10px 0;
+      color: #fff; text-align: center; align-items: center;
+    }
+    .info .bottom p:first-child{
+      width: 78px; height: 43px;
+      background-image: url(https://www.shinsegaefood.com/images/management/ico_management_sprits.png);
+    }
+    .info .bottom>p:last-child{
+      width: 32px; height: 32px;
+      background-image: url(https://www.shinsegaefood.com/images/management/ico_management_sprits.png);
+      /* background-position: right top; */
+      background-position: -158px 0;
+    }
+    .info .bottom .text{margin: 0 40px 0 25px;}
+
+    @media screen and (max-width:960px) {
+      .info ul{flex-wrap: wrap;}
+      .info ul li{width: 100%; height: 120px; margin: 2px 0;}
+      .info .bottom{justify-content: space-between; padding: 20px;}
+    }
+  </style>
+</head>
+<body>
+  <div class="info">
+    <ul>
+      <li>
+        <h1>경영정보</h1>
+        <p>주주 및 이사회 구성을<br>안내해 드립니다.</p>
+      </li>
+      <li>
+        <h1>재무정보</h1>
+        <p>영업현황 및 재무제표를<br>안내해 드립니다.</p>
+      </li>
+      <li>
+        <h1>주식정보</h1>
+        <p>주가정보를<br>안내해 드립니다.</p>
+      </li>
+    </ul>
+    <div class="bottom">
+      <p></p>
+      <div class="text">
+        <h1>공시 및 공고</h1>
+        <p>결산 공고 및 주주총회 결과를<br>안내해 드립니다.</p>
+      </div>
+      <p></p>
+    </div>
+  </div>
+</body>
+</html>
