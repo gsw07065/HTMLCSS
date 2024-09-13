@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>0913 05 stop</title>
+  <style>
+    .ball{width: 50px; height: 50px; border-radius: 50%; background: #ccc; position: relative;}
+  </style>
+  <script src="js/jquery-3.7.1.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script>
+    $(function(){
+      $("#btn").click(function(){
+        $(".ball").animate({left:"500px"},2000)
+                  .animate({top:"500px"},2000);
+      });
+      $("#stop1").click(function(){
+        $(".ball").stop(true,true);
+        //버튼 누른 시점 진행중인 이벤트 끝나는 지점에 위치
+      })
+      $("#stop2").click(function(){
+        $(".ball").stop(true,false);
+        //버튼 누를 때 현재 위치에서 멈춤
+      })
+      $("#stop3").click(function(){
+        $(".ball").stop(false,true);
+        //버튼 누른 시점 다음 이벤트 진행 (안멈춤)
+      })
+      $("#stop4").click(function(){
+        $(".ball").stop(false,false); //기본값
+        //현재 누른 위치에서 남은 이벤트 실행 (안멈춤)
+
+        //stop(멈추는지 여부(true,false) , 현재이벤트끝위치로이동하는지 여부(true,false))
+      })
+    });
+  </script>
+</head>
+<body>
+  <div class="ball"></div>
+  <button id="btn">클릭</button>
+  <button id="stop1">truetrue</button>
+  <button id="stop2">truefalse</button>
+  <button id="stop3">falsetrue</button>
+  <button id="stop4">falsefalse</button>
+</body>
+</html>
