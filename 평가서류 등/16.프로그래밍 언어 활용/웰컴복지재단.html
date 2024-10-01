@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>웰컴복지재단</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    ul{list-style: none;}
+
+    #wrap{
+      margin: 100px auto;
+      text-align: center;
+    }
+    .btn{
+      display: flex;
+      justify-content: center;
+      border-bottom: 1px solid #e5e5e5;
+    }
+    .btn li{
+      line-height: 80px; font-size: 18px; font-weight: 500;
+      padding: 0 100px;
+      position: relative; cursor: pointer;
+    }
+    .btn li.on p{color: #ea002c;}
+    .content{position: relative;}
+    .content>li{
+      padding-top: 140px;
+      position: absolute;
+      left: 50%; transform: translateX(-50%);
+      display: none;
+    }
+    .content>li h2{
+      font-size: 50px; color: #111;
+      margin-bottom: 30px;
+    }
+    .content>li .sub{
+      display: flex; justify-content: center;
+    }
+    .content>li .sub li{
+      font-size: 20px; color: #666;
+      padding: 0 20px; font-weight: 500;
+      position: relative; cursor: pointer;
+    }
+    .content>li .sub li.on{color: #ea002c;}
+    .content>li .sub li::after{
+      content: "";
+      position: absolute; right: -2px; top: 50%;
+      transform: translateY(-50%);
+      width: 4px; height: 4px; border-radius: 50%;
+      background-color: #ccc;
+    }
+    .content>li .sub li:last-child::after{
+      content: none;
+    }
+
+    .line{
+      position: absolute;background-color: #ea002c;
+      transition: all 0.4s ease-in-out;
+    }
+    .line-bottom{
+      width: 100%;height: 3px;left: 0; bottom: 0;
+      transform: scaleX(0);
+      }
+      .btn li.on .line-bottom{transform: scaleX(1);
+      transition: all 0.4s ease-in-out;}
+  </style>
+
+   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+   <script>
+      $(function(){
+      function my(){
+        $(".content>li").each(function(){
+          $(this).find(".sub li").removeClass("on");
+        })
+      }
+      $(".content>li").each(function(){
+        $(this).find(".sub li").eq(0).addClass("on");
+
+        $(this).find(".sub li").click(function(){
+          let i = $(this).index();
+          my();
+          $(".content>li").each(function(){
+            $(this).find(".sub li").eq(i).addClass("on");
+          })
+        });
+      });
+
+
+      $(".content>li").find(".sub li").click(function(){
+        let i = $(this).index();
+        my();
+        $(".sub li").eq(i).addClass("on");
+      });
+
+    });
+   </script>
+</head>
+<body>
+  <div id="wrap">
+    <ul class="btn">
+      <li><p>아동복지사업</p><span class="line line-bottom"></span></li>
+      <li><p>청소년복지사업</p><span class="line line-bottom"></span></li>
+      <li><p>노인복지사업</p><span class="line line-bottom"></span></li>
+      <li><p>장애인복지사업</p><span class="line line-bottom"></span></li>
+      <li><p>사회봉사사업</p><span class="line line-bottom"></span></li>
+    </ul>
+    <ul class="content">
+      <li>
+        <h2>아동복지사업</h2>
+        <ul class="sub">
+          <li>지역아동센터사업</li>
+          <li>우리동네키움센터사업</li>
+          <li>어린이집사업</li>
+        </ul>
+      </li>
+      <li>
+        <h2>청소년복지사업</h2>
+        <ul class="sub">
+          <li>청소년복지시설사업</li>
+          <li>웰컴투모로우사업</li>
+        </ul>
+      </li>
+      <li>
+        <h2>노인복지사업</h2>
+        <ul class="sub">
+          <li>행복빨래방사업</li>
+          <li>주거환경개선사업</li>
+        </ul>
+      </li>
+      <li>
+        <h2>장애인복지사업</h2>
+      </li>
+      <li>
+        <h2>사회봉사사업</h2>
+      </li>
+    </ul>
+  </div>
+
+  <script>
+    let btn = document.querySelectorAll(".btn li");
+    let con = document.querySelectorAll(".content>li");
+    let sub = document.querySelectorAll(".sub");
+    let subBtn = document.querySelectorAll(".sub li");
+
+    function my(){
+      btn.forEach(function(v){
+        v.classList.remove("on");
+      });
+      con.forEach(function(v){
+        v.style.display="none";
+      });
+    }
+
+    btn[0].classList.add("on");
+    con[0].style.display="block";
+
+    btn.forEach(function(v,k){
+      v.onclick = function(){
+        my();
+        this.classList.add("on");
+        con[k].style.display="block";
+      };
+    });
+  </script>
+</body>
+</html>
