@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글자 밑에서부터 보이기</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    div{overflow: hidden;}
+    p{
+      font-size: 70px;
+      transform: translateY(70px);
+      opacity: 0; transition: .5s;
+      line-height: 70px;
+    }
+    div:hover p{
+      transform: translateY(0);
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <p>trans</p>
+  </div>
+  <div>
+    <p>prom</p>
+  </div>
+  <div>
+    <p>heras</p>
+  </div>
+</body>
+</html>
