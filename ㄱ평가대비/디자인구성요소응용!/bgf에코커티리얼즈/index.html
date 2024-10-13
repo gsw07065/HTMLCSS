@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>bgf</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <style>
+    *{margin: 0; padding: 0;}
+    ul{list-style: none;}
+    a{text-decoration: none; color: #fff;}
+    body{overflow-x: hidden;}
+    .wrap{
+      margin: 0 auto; max-width: 1440px;
+    }
+    .wrap h1{color: blue; font-size: 100px;}
+    .swiper {
+      width: 100%;
+      height: 100%;
+      overflow: visible;
+      position: static;
+    }
+
+    #wrap .swiper-slide {
+/*       text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center; */
+      width: 1200px; height: 557px;
+      position: relative;
+    }
+
+    .swiper-slide a>p img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .swiper-slide {
+      width: 80%;
+    }
+
+
+    .swiper-slide .txt{
+      position: absolute; left: 0;bottom: 0;
+      padding: 50px 30px;
+    }
+    .swiper-slide .txt h3{
+      font-size: 80px;
+      line-height: 80px;
+    }
+    .swiper-slide .txt h3 span {
+      position: relative; left: -20px; opacity: 0; transition: .3s;
+    }
+    .swiper-slide a:hover .txt h3 span{
+      left: 10px; opacity: 1;
+    }
+    .swiper-slide .txt h3 span img{
+      position: absolute; top: 50%; transform: translateY(-50%);
+    }
+    #btnwrap{
+      position: absolute; bottom: 150px;
+      width: 150px; height: 100px; right: 200px;
+    }
+    #btn{
+      
+    }
+    #btn .swiper-button-prev, .swiper-button-next{
+      z-index: 999;
+    }
+    #btn .swiper-button-next:after, .swiper-button-prev:after{
+      color: #000;
+      font-size: 1em; font-weight: bold;
+    }
+    #btnwrap .swiper-pagination{
+      line-height: 100px; bottom: 0;
+      font-weight: bold;
+    }
+    #btnwrap .swiper-pagination-total{
+      opacity: .3;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap" id="wrap">
+    <h1>Solution</h1>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <a href="#">
+            <p><img src="images/sec03_img01.jpg" alt=""></p>
+            <div class="txt">
+              <h3>자동차<span><img src="images/arrow_green.svg" alt=""></span></h3>
+              <p>탄소저감과 지속가능성을 고려하여 혁신적인 자동차 소재를 개발하는데 주력하고 있습니다</p>
+            </div>
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="#">
+            <p><img src="images/sec03_img02.jpg" alt=""></p>
+            <div class="txt">
+              <h3>전기전자<span><img src="images/arrow_green.svg" alt=""></span></h3>
+              <p>탄소저감과 지속가능성을 고려하여 혁신적인 자동차 소재를 개발하는데 주력하고 있습니다</p>
+            </div>
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="#">
+            <p><img src="images/sec03_img03.jpg" alt=""></p>
+            <div class="txt">
+              <h3>산업재<span><img src="images/arrow_green.svg" alt=""></span></h3>
+              <p>탄소저감과 지속가능성을 고려하여 혁신적인 자동차 소재를 개발하는데 주력하고 있습니다</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div id="btnwrap">
+        <div id="btn">
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: "auto",
+      spaceBetween: 30,
+      speed: 700,
+      pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      /* slidesOffsetAfter:-240, */
+      autoplay: {
+        delay:700,
+      },
+    });
+  </script>
+</body>
+</html>

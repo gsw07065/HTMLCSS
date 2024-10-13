@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>롯데중앙연구소</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    ul{list-style: none;}
+    a{text-decoration: none;}
+
+    body{
+      background: #f1f1f1;
+      
+    }
+    .wrap{
+      max-width: 1500px; margin: 0 auto;
+      padding: 100px 0; box-sizing: border-box;
+      height: 100vh;
+      text-align: center;
+      position: relative;
+    }
+    .wrap h2{
+      font-size: 50px; text-transform: uppercase;
+    }
+    .wrap>p{
+      margin: 20px 0;
+    }
+    .wrap .btn{
+      display: flex; justify-content: center;
+      gap: 10px; margin: 50px 0;
+    }
+    .wrap .btn li a{
+      padding: 10px 40px;
+      background-color: #555;
+      color: #999; font-weight: bold;
+      border-radius: 100px;
+    }
+    .wrap .btn li a.on{
+      color: #fff;
+      background-color: red;
+    }
+    .wrap .con{
+      width: 100%;
+      position: absolute; opacity: 0;
+    }
+
+    .wrap .con1 ul{
+      display: flex;
+      justify-content: center; align-items: center;
+      gap: 70px;
+    }
+    .wrap .con1 ul li{
+      flex: 1; aspect-ratio: 1 / .8;
+      background-color: #fff;
+      border-radius: 30px;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, .1);
+      position: relative; overflow: hidden;
+      transition: .3s;
+    }
+    .wrap .con1 ul li:hover{
+      transform: translateY(-20px);
+    }
+    .wrap .con1 ul li:nth-child(1){
+      background: url(images/img01.jpg) center/cover no-repeat;
+    }
+    .wrap .con1 ul li:nth-child(2){
+      background: url(images/img02.jpg) center/cover no-repeat;
+    }
+    .wrap .con1 ul li:nth-child(3){
+      background: url(images/img03.jpg) center/cover no-repeat;
+    }
+    .wrap .con1 ul li a{
+      display: block; width: 100%; height: 100%;
+      display: flex; flex-direction: column;
+      z-index: 10;
+      justify-content: center; gap: 50px;
+      align-items: center;
+    }
+    .wrap .con1 ul li a::before{
+      content: "";
+      position: absolute; left: 0;top: 0;
+      width: 100%; height: 100%;
+      background-color: red; opacity: 0;
+      transition: .3s;
+    }
+    .wrap .con1 ul li a:hover::before{
+      content: "";
+      position: absolute; left: 0;top: 0;
+      width: 100%; height: 100%;
+      background-color: red; opacity: .7;
+    }
+    .wrap .con1 ul li a p:nth-child(1){
+      font-size: 25px; font-weight: bold; color: #fff; opacity: 0;
+      position: relative;
+    }
+    .wrap .con1 ul li a:hover p:nth-child(1){
+      opacity: 1;
+    }
+    .wrap .con1 ul li a p:nth-child(2){
+      position: relative;
+      width: 50px; height: 50px;
+      border-radius: 50%;
+      background-color: #fff; opacity: 0;
+    }
+    .wrap .con1 ul li a:hover p:nth-child(2){
+      opacity: 1;
+    }
+    .wrap .con1 ul li a p:nth-child(2)::after{
+      content: "";
+      position: absolute; left: 0; top: 0;
+      width: 50px; height: 50px;
+      border-radius: 50%;
+      background-image: url(images/link-arrow.png);
+      background-repeat: no-repeat;
+      background-position: center center;
+      opacity: 0;
+    }
+    .wrap .con1 ul li a:hover p:nth-child(2)::after{
+      opacity: 1;
+    }
+    .wrap .con2{color: aquamarine;}
+
+  </style>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script>
+    $(function(){
+      $(".con").eq(0).css("opacity","1");
+      $(".btn li").eq(0).find("a").addClass("on");
+
+      $(".btn li").click(function(e){
+        e.preventDefault();
+        let i = $(this).index();
+
+        $(".con").css("opacity","0");
+        $(".btn li a").removeClass("on");
+        $(".con").eq(i).css("opacity","1");
+        $(this).find("a").addClass("on");
+
+        if($(".btn li").eq(1).find("a").hasClass("on")/* ===true */){
+          $("body").css("background","url(images/img04.jpg)");
+        }else{
+          $("body").css("background","#f1f1f1");
+        };
+      });
+
+
+    });
+  </script>
+</head>
+<body>
+  <div class="wrap">
+    <h2>achivements</h2>
+    <p>
+      제품 개발을 비롯해 전 연구분야에 걸쳐 창의적 솔루션을 제시하고 있습니다. 끊임없는 노력으로 일궈낸 고도화된 연구 성과를 소개합니다.
+    </p>
+    <ul class="btn">
+      <li><a href="#">Better Food</a></li>
+      <li><a href="#">Better Life</a></li>
+    </ul>
+    <div class="con con1">
+      <ul>
+        <li><a href="#">
+          <p>클라우드 크러시(KRUSH)</p>
+          <p></p>
+        </a></li>
+        <li><a href="#">
+          <p>Chefood 요리킥</p>
+          <p></p>
+        </a></li>
+        <li><a href="#">
+          <p>오잉 노가리칩 청양마요맛</p>
+          <p></p>
+        </a></li>
+      </ul>
+    </div>
+    <div class="con con2">
+      <h3>관능의 DT(Digital Transformation)를 통한 맛의 객관화 실현</h3>
+      <p>
+        관능 평가란 사람의 미각, 후각, 촉각, 청각, 시각 등의 감각을 이용해 식품의 특성을 평가하는 것입니다.롯데중앙연구소는 사람이 행하는 주관적인 평가를 ‘객관화’하기 위해 관능의 디지털 트랜스포메이션(DT)을 연구하고 있습니다. 관능 DT란 전자혀(미각), 전자코(후각), TA & 근전도 측정기(촉각, 식감), 전자귀(청각), 전자눈(시각) 등의 장비로 분석한 반응을 해석하는 기술입니다. 인간의 오감(五感)에 대한 DT뿐만 아니라, 감성과 무의식적 판단을 분석하기 위해 뇌파 분석까지 영역을 확장하며 차별화된 신제품 개발을 도모하고 있습니다.
+      </p>
+    </div>
+  </div>
+</body>
+</html>
